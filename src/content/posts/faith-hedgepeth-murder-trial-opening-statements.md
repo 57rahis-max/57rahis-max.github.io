@@ -47,7 +47,7 @@ wpId: 165
 
 <p>Garcia-Lamarca also described Hedgepeth as hoping to become the first person in her family to graduate from college, the AP and WRAL reported.</p>
 
-<figure><img loading="lazy" decoding="async" width="1200" height="700" src="/images/2026/10/hedgepeth-case-timeline.jpg" alt="Timeline of the Faith Hedgepeth case from Sept. 7, 2012, to the Oct. 7, 2026, opening statements" class="wp-image-163" srcset="/images/2026/10/hedgepeth-case-timeline.jpg 1200w, /images/2026/10/hedgepeth-case-timeline.jpg 300w, /images/2026/10/hedgepeth-case-timeline.jpg 1024w, /images/2026/10/hedgepeth-case-timeline.jpg 768w" sizes="auto, (max-width: 1200px) 100vw, 1200px" /></figure>
+<figure><img loading="lazy" decoding="async" width="1200" height="700" src="/images/2026/10/hedgepeth-case-timeline.jpg" alt="Timeline of the Faith Hedgepeth case from Sept. 7, 2012, to the Oct. 7, 2026, opening statements" srcset="/images/2026/10/hedgepeth-case-timeline.jpg 1200w, /images/2026/10/hedgepeth-case-timeline.jpg 300w, /images/2026/10/hedgepeth-case-timeline.jpg 1024w, /images/2026/10/hedgepeth-case-timeline.jpg 768w" sizes="auto, (max-width: 1200px) 100vw, 1200px" /></figure>
 
 <h2>What the defense argued</h2>
 

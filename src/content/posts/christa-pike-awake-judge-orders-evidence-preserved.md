@@ -49,7 +49,7 @@ wpId: 154
 
 <p>Her attorneys have said they believe her IV lines were improperly placed or a vein had blown, sending the drug into her arm rather than her bloodstream, USA TODAY and CBS News reported.</p>
 
-<figure><img loading="lazy" decoding="async" width="1200" height="760" src="/images/2026/10/christa-pike-timeline-card.jpg" alt="Timeline of Christa Pike's case from Sept. 30 to Oct. 7, 2026" class="wp-image-151" srcset="/images/2026/10/christa-pike-timeline-card.jpg 1200w, /images/2026/10/christa-pike-timeline-card.jpg 300w, /images/2026/10/christa-pike-timeline-card.jpg 1024w, /images/2026/10/christa-pike-timeline-card.jpg 768w" sizes="auto, (max-width: 1200px) 100vw, 1200px" /></figure>
+<figure><img loading="lazy" decoding="async" width="1200" height="760" src="/images/2026/10/christa-pike-timeline-card.jpg" alt="Timeline of Christa Pike's case from Sept. 30 to Oct. 7, 2026" srcset="/images/2026/10/christa-pike-timeline-card.jpg 1200w, /images/2026/10/christa-pike-timeline-card.jpg 300w, /images/2026/10/christa-pike-timeline-card.jpg 1024w, /images/2026/10/christa-pike-timeline-card.jpg 768w" sizes="auto, (max-width: 1200px) 100vw, 1200px" /></figure>
 
 <h2>From ‘brain dead’ to awake</h2>
 
@@ -69,7 +69,7 @@ wpId: 154
 
 <h2>Calls for clemency</h2>
 
-<figure><img loading="lazy" decoding="async" width="1000" height="1361" src="/images/2026/10/christa-pike-tennessee-state-capitol.jpg" alt="Tennessee State Capitol building in Nashville" class="wp-image-152" srcset="/images/2026/10/christa-pike-tennessee-state-capitol.jpg 1000w, /images/2026/10/christa-pike-tennessee-state-capitol.jpg 220w, /images/2026/10/christa-pike-tennessee-state-capitol.jpg 752w, /images/2026/10/christa-pike-tennessee-state-capitol.jpg 768w" sizes="auto, (max-width: 1000px) 100vw, 1000px" /><figcaption class="wp-element-caption">The Tennessee State Capitol in Nashville, in a 2008 file photo. Photo: Harrison Keely / <a href="https://commons.wikimedia.org/wiki/File:The_Tennessee_State_Capitol_building_in_Nashville.jpg" target="_blank" rel="noopener">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by/4.0" target="_blank" rel="noopener">CC BY 4.0</a>.</figcaption></figure>
+<figure><img loading="lazy" decoding="async" width="1000" height="1361" src="/images/2026/10/christa-pike-tennessee-state-capitol.jpg" alt="Tennessee State Capitol building in Nashville" srcset="/images/2026/10/christa-pike-tennessee-state-capitol.jpg 1000w, /images/2026/10/christa-pike-tennessee-state-capitol.jpg 220w, /images/2026/10/christa-pike-tennessee-state-capitol.jpg 752w, /images/2026/10/christa-pike-tennessee-state-capitol.jpg 768w" sizes="auto, (max-width: 1000px) 100vw, 1000px" /><figcaption>The Tennessee State Capitol in Nashville, in a 2008 file photo. Photo: Harrison Keely / <a href="https://commons.wikimedia.org/wiki/File:The_Tennessee_State_Capitol_building_in_Nashville.jpg" target="_blank" rel="noopener">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by/4.0" target="_blank" rel="noopener">CC BY 4.0</a>.</figcaption></figure>
 
 <p>Pike’s attorneys are asking Tennessee Gov. Bill Lee to commute her sentence to life in prison without the possibility of parole, according to <a href="https://www.scrippsnews.com/us-news/crime/christa-pike-is-conscious-and-speaking-after-tennessee-failed-execution-her-attorneys-say" target="_blank" rel="noopener">Scripps News</a>, CBS News and USA TODAY.</p>
 

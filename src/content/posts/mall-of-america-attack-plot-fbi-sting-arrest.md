@@ -49,7 +49,7 @@ wpId: 160
 
 <p>The complaint also says Mohamud sent the informant a video in which he pledged allegiance to ISIS, CBS News Minnesota and the Star Tribune reported.</p>
 
-<figure><img loading="lazy" decoding="async" width="1200" height="800" src="/images/2026/10/mall-of-america-plot-timeline.jpg" alt="Timeline of the Mall of America plot case from December 2024 to Oct. 24, 2026, according to the criminal complaint" class="wp-image-157" srcset="/images/2026/10/mall-of-america-plot-timeline.jpg 1200w, /images/2026/10/mall-of-america-plot-timeline.jpg 300w, /images/2026/10/mall-of-america-plot-timeline.jpg 1024w, /images/2026/10/mall-of-america-plot-timeline.jpg 768w" sizes="auto, (max-width: 1200px) 100vw, 1200px" /></figure>
+<figure><img loading="lazy" decoding="async" width="1200" height="800" src="/images/2026/10/mall-of-america-plot-timeline.jpg" alt="Timeline of the Mall of America plot case from December 2024 to Oct. 24, 2026, according to the criminal complaint" srcset="/images/2026/10/mall-of-america-plot-timeline.jpg 1200w, /images/2026/10/mall-of-america-plot-timeline.jpg 300w, /images/2026/10/mall-of-america-plot-timeline.jpg 1024w, /images/2026/10/mall-of-america-plot-timeline.jpg 768w" sizes="auto, (max-width: 1200px) 100vw, 1200px" /></figure>
 
 <h2>A nearly two-year investigation</h2>
 
