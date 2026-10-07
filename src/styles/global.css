@@ -102,3 +102,20 @@ h1, h2, h3, .headline { font-family: var(--serif); color: var(--ink); letter-spa
 
 /* Search (Pagefind) */
 .pagefind-ui { --pagefind-ui-primary: var(--accent); --pagefind-ui-text: var(--ink); --pagefind-ui-background: var(--card); --pagefind-ui-border: var(--rule); --pagefind-ui-tag: var(--rule); --pagefind-ui-font: var(--sans); --pagefind-ui-border-radius: 6px; }
+
+/* Print: article only, no chrome */
+@media print {
+  .site-header, .site-footer, .art-side, .share, .skip, .new-updates { display: none !important; }
+  body { background: #fff; color: #000; font-size: 11.5pt; }
+  .prose { max-width: none; font-size: 11.5pt; }
+  a { color: #000; text-decoration: none; }
+  .prose a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 9pt; color: #555; }
+  .hero img { max-height: 3.5in; }
+}
+
+/* Correction and editor's-note callouts (replaces WordPress's inline-styled boxes) */
+.prose .callout { margin: 1.8em 0; padding: 18px 22px; border: 1px solid var(--rule); border-left: 4px solid var(--accent); border-radius: var(--radius); background: var(--card); font-size: 17px; }
+.prose .callout > :first-child { margin-top: 0; }
+.prose .callout > :last-child { margin-bottom: 0; }
+.prose .callout-title { color: var(--accent); letter-spacing: .04em; text-transform: uppercase; font: 800 13px/1.4 var(--sans); margin-bottom: .6em; }
+.prose .callout-note { font: 500 13.5px/1.4 var(--sans); color: var(--muted); }
