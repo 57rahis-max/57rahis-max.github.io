@@ -4,7 +4,15 @@ export type Post = CollectionEntry<'posts'>;
 
 export async function allPosts(): Promise<Post[]> {
   const posts = await getCollection('posts', ({ data }) => !data.draft);
-  return posts.sort((a, b) => lastTouched(b).getTime() - lastTouched(a).getTime());
+  return posts.sort((a, b) => sortTime(b) - sortTime(a));
+}
+
+/**
+ * Where a story sits in the lists: its publish date, or for a live story its
+ * newest update. An old story corrected later does not jump to the top.
+ */
+export function sortTime(p: Post): number {
+  return (p.data.live === 'live' ? lastTouched(p) : p.data.date).getTime();
 }
 
 /** The newest of the publish date, the last edit, and the latest live update. */
@@ -20,7 +28,7 @@ export function related(post: Post, posts: Post[], n = 3): Post[] {
   return posts
     .filter((p) => p.id !== post.id)
     .map((p) => ({ p, s: score(p) }))
-    .sort((a, b) => b.s - a.s || lastTouched(b.p).getTime() - lastTouched(a.p).getTime())
+    .sort((a, b) => b.s - a.s || sortTime(b.p) - sortTime(a.p))
     .slice(0, n)
     .map((x) => x.p);
 }

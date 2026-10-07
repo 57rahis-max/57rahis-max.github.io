@@ -1,9 +1,10 @@
 ---
 title: "Arcadia Couple Plead Not Guilty to Abusing at Least 14 Surrogate-Born Children in ‘House of Horrors’ Case"
+seoTitle: "Arcadia Couple Plead Not Guilty in Surrogate Child Abuse Case"
 description: "Guojun Xuan and Silvia Zhang pleaded not guilty Oct. 6, 2026, to charges of abusing at least 14 surrogate-born children at their Arcadia, California, home."
 date: 2026-10-07T20:53:34Z
 author: henry
-category: "Crime News"
+category: "Courts"
 image:
   src: "/images/2026/10/arcadia-surrogacy-case-summary.jpg"
   alt: "Summary card: two adults charged in Arcadia, California, with abusing at least 14 surrogate-born children; bail set at $20 million each; both pleaded not guilty"
@@ -51,7 +52,7 @@ wpId: 170
 
 <p class="wp-block-paragraph">Between April 27, 2025, and May 7, 2025, some of the nannies were caught on video spanking, slapping or hitting the children, the complaint says. On April 30, 2025, Xuan allegedly told a nanny to strike a child harder and then hit the child himself, according to the district attorney&#8217;s office and <a href="https://abcnews.com/US/wireStory/california-couple-arrested-child-abuse-charges-surrogacy-investigation-137041187" target="_blank" rel="noopener">The Associated Press</a>.</p>
 
-<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="1200" height="780" src="/images/2026/10/arcadia-surrogacy-case-timeline.jpg" alt="Timeline of the Arcadia surrogacy abuse case from April 2025 to Oct. 6, 2026, according to prosecutors" class="wp-image-168" srcset="/images/2026/10/arcadia-surrogacy-case-timeline.jpg 1200w, /images/2026/10/arcadia-surrogacy-case-timeline-300x195.jpg 300w, /images/2026/10/arcadia-surrogacy-case-timeline-1024x666.jpg 1024w, /images/2026/10/arcadia-surrogacy-case-timeline-768x499.jpg 768w" sizes="auto, (max-width: 1200px) 100vw, 1200px" /></figure>
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="1200" height="780" src="/images/2026/10/arcadia-surrogacy-case-timeline.jpg" alt="Timeline of the Arcadia surrogacy abuse case from April 2025 to Oct. 6, 2026, according to prosecutors" class="wp-image-168" srcset="/images/2026/10/arcadia-surrogacy-case-timeline.jpg 1200w, /images/2026/10/arcadia-surrogacy-case-timeline.jpg 300w, /images/2026/10/arcadia-surrogacy-case-timeline.jpg 1024w, /images/2026/10/arcadia-surrogacy-case-timeline.jpg 768w" sizes="auto, (max-width: 1200px) 100vw, 1200px" /></figure>
 
 <p class="wp-block-paragraph">The case came to light after a 2-month-old boy in the home suffered a head injury. Prosecutors say a nanny, Chunmei Li, hit the baby on May 4, 2025, and that Xuan and Zhang did not seek medical treatment until two days later, when they told medical staff he had fallen from a bed, according to the district attorney&#8217;s office and the BBC.</p>
 

@@ -3,7 +3,7 @@ title: "Bushwick Man Dies After Early-Morning Grattan Street Assault"
 description: "A 42-year-old Bushwick man died after an early-morning confrontation outside his building on Grattan Street, and the suspected attacker remains […]"
 date: 2026-09-04T22:35:53Z
 author: henry
-category: "NY Post Killed"
+category: "Crime News"
 image:
   src: "/images/2026/09/Bushwick-Man-Dies-After-Early-Morning-Grattan-Street-Assault.jpg"
   alt: "Bushwick Man Dies After Early-Morning Grattan Street Assault"

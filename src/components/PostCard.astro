@@ -1,31 +1,46 @@
 ---
 import type { Post } from '../lib/posts';
-import { postUrl, fmtDate, categoryUrl } from '../lib/site';
 import { lastTouched } from '../lib/posts';
-interface Props { post: Post; size?: 'lead' | 'normal' | 'compact'; authorName?: string }
+import { postUrl, fmtDate, fmtTime, categoryUrl, thumb } from '../lib/site';
+interface Props { post: Post; size?: 'lead' | 'normal' | 'side' | 'compact'; authorName?: string }
 const { post, size = 'normal', authorName } = Astro.props;
 const d = post.data;
+const live = d.live === 'live';
+const when = live ? lastTouched(post) : d.date;
+const img = size === 'lead' ? d.image?.src : thumb(d.image?.src);
+const showImg = size !== 'compact' && !!d.image;
 ---
-<article class={`card ${size}`}>
-  {size !== 'compact' && d.image && (
-    <a href={postUrl(post.id)} tabindex="-1" aria-hidden="true">
-      <img class="card-img" src={d.image.src} alt="" loading={size === 'lead' ? 'eager' : 'lazy'} width="800" height="450" />
+<article class={`card ${size}${showImg ? '' : ' noimg'}`}>
+  {showImg && (
+    <a href={postUrl(post.id)} class="img-link" tabindex="-1" aria-hidden="true">
+      <img class="card-img" src={img} alt="" loading={size === 'lead' ? 'eager' : 'lazy'} decoding="async" width="800" height="450" />
     </a>
   )}
   <div class="card-body">
     <p class="kicker">
-      {d.live === 'live' ? <span class="live-pill">Live</span> : <a href={categoryUrl(d.category)} class="cat">{d.category}</a>}
+      {live ? <span class="live-pill">Live</span> : <a href={categoryUrl(d.category)} class="cat">{d.category}</a>}
     </p>
     <h3 class="card-title"><a href={postUrl(post.id)}>{d.title}</a></h3>
-    {size !== 'compact' && <p class="card-dek">{d.description}</p>}
-    <p class="meta"><time datetime={lastTouched(post).toISOString()}>{fmtDate(lastTouched(post))}</time>{authorName && <> · {authorName}</>}</p>
+    {(size === 'lead' || size === 'normal') && <p class="card-dek">{d.description}</p>}
+    <p class="meta">
+      <time datetime={when.toISOString()}>{live ? `Updated ${fmtTime(when)}` : fmtDate(when)}</time>{authorName && <> · {authorName}</>}
+    </p>
   </div>
 </article>
 <style>
-  .card { display: grid; gap: 10px; }
+  .card { display: grid; gap: 12px; align-content: start; }
   .card .cat { text-decoration: none; }
-  .lead .card-title { font-size: clamp(1.6rem, 3.2vw, 2.4rem); line-height: 1.12; }
-  .lead .card-dek { font-size: 17px; }
-  .compact { border-top: 1px solid var(--rule); padding-top: 12px; }
+  .img-link { display: block; overflow: hidden; border-radius: var(--radius); }
+  .card-img { transition: transform .35s ease; }
+  .card:hover .card-img { transform: scale(1.03); }
+  .lead .card-title { font-size: clamp(1.7rem, 3.3vw, 2.5rem); line-height: 1.1; font-weight: 800; }
+  .lead .card-dek { font-size: 17.5px; line-height: 1.5; }
+  .side { grid-template-columns: minmax(0, 1fr) 112px; gap: 14px; border-top: 1px solid var(--rule); padding-top: 14px; }
+  .side .img-link { order: 2; }
+  .side.noimg { grid-template-columns: 1fr; }
+  .side .card-img { aspect-ratio: 4 / 3; }
+  .side .card-title { font-size: 1.02rem; margin-top: .25em; }
+  .compact { border-top: 1px solid var(--rule); padding-top: 12px; gap: 0; }
   .compact .card-title { font-size: 1.02rem; }
+  @media (prefers-reduced-motion: reduce) { .card-img { transition: none; } .card:hover .card-img { transform: none; } }
 </style>

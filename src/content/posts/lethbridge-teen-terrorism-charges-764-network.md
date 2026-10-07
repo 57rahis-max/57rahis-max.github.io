@@ -1,5 +1,6 @@
 ---
 title: "Lethbridge, Alta., Teen Faces Six Charges Including Terrorism Offences in RCMP 764 Investigation"
+seoTitle: "Lethbridge Teen Faces Terrorism Charges in 764 Investigation"
 description: "A 17-year-old from Lethbridge, Alta., faces six charges, including terrorism offences, in an RCMP investigation involving the 764 network."
 date: 2026-10-05T23:18:31Z
 updated: 2026-10-05T23:23:00Z
@@ -20,7 +21,7 @@ wpId: 139
 
 <p class="wp-block-paragraph">The Calgary Herald listed the charges as participation in activity of a terrorist group; facilitating terrorist activity; commission of offence for a terrorist group; distribution of child sexual abuse and exploitation material; possession of child sexual abuse and exploitation material; and causing unnecessary suffering to an animal. The allegations have not been proven in court.</p>
 
-<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="1200" height="800" src="/images/2026/10/lethbridge-charges-card.jpg" alt="The six charges against the Lethbridge teen, listed by the Calgary Herald; the allegations have not been proven in court" class="wp-image-141" srcset="/images/2026/10/lethbridge-charges-card.jpg 1200w, /images/2026/10/lethbridge-charges-card-300x200.jpg 300w, /images/2026/10/lethbridge-charges-card-1024x683.jpg 1024w, /images/2026/10/lethbridge-charges-card-768x512.jpg 768w" sizes="auto, (max-width: 1200px) 100vw, 1200px" /></figure>
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="1200" height="800" src="/images/2026/10/lethbridge-charges-card.jpg" alt="The six charges against the Lethbridge teen, listed by the Calgary Herald; the allegations have not been proven in court" class="wp-image-141" srcset="/images/2026/10/lethbridge-charges-card.jpg 1200w, /images/2026/10/lethbridge-charges-card.jpg 300w, /images/2026/10/lethbridge-charges-card.jpg 1024w, /images/2026/10/lethbridge-charges-card.jpg 768w" sizes="auto, (max-width: 1200px) 100vw, 1200px" /></figure>
 
 <p class="wp-block-paragraph">The teen, who cannot be named under the Youth Criminal Justice Act, is scheduled to appear in court in Lethbridge on Oct. 14, 2026, the Calgary Herald reported.</p>
 
@@ -48,4 +49,4 @@ wpId: 139
 
 <p class="wp-block-paragraph">Anyone with information about suspected terrorist activity or radicalization to violence can contact the RCMP&#8217;s National Security Information Network at 1-800-420-5805, according to the <a href="https://rcmp.ca/en/federal-policing/national-security/national-security-information-network" target="_blank" rel="noopener">RCMP</a>. For an immediate threat, call 911 or local police.</p>
 
-<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="1200" height="675" src="/images/2026/10/lethbridge-tip-line-card.jpg" alt="RCMP National Security Information Network: 1-800-420-5805; for an immediate threat, call 911" class="wp-image-143" srcset="/images/2026/10/lethbridge-tip-line-card.jpg 1200w, /images/2026/10/lethbridge-tip-line-card-300x169.jpg 300w, /images/2026/10/lethbridge-tip-line-card-1024x576.jpg 1024w, /images/2026/10/lethbridge-tip-line-card-768x432.jpg 768w" sizes="auto, (max-width: 1200px) 100vw, 1200px" /></figure>
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="1200" height="675" src="/images/2026/10/lethbridge-tip-line-card.jpg" alt="RCMP National Security Information Network: 1-800-420-5805; for an immediate threat, call 911" class="wp-image-143" srcset="/images/2026/10/lethbridge-tip-line-card.jpg 1200w, /images/2026/10/lethbridge-tip-line-card.jpg 300w, /images/2026/10/lethbridge-tip-line-card.jpg 1024w, /images/2026/10/lethbridge-tip-line-card.jpg 768w" sizes="auto, (max-width: 1200px) 100vw, 1200px" /></figure>

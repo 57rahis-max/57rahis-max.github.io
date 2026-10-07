@@ -1,5 +1,6 @@
 ---
 title: "From “Lake America” to “Trump Strait”: Trump’s Renaming Spree Draws Pushback From Canada to New Mexico to Iceland"
+seoTitle: "Trump's Renaming Spree Draws Pushback From Canada to Iceland"
 description: "Lake America, Trump Strait, New America: what Trump renamed in 2026, who pushed back, and what a president can and can't legally rename."
 date: 2026-09-12T23:38:03Z
 updated: 2026-09-12T23:38:04Z
@@ -76,6 +77,6 @@ wpId: 67
 
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
 
-<p class="wp-block-paragraph"><strong>More from Max Crime:</strong> <a href="https://maxcrime.com/texas-mother-linked-to-election-day-isis-plot-deported-in-first-ever-case-before-long-dormant-terrorism-court/">Texas Mother Linked to Election Day ISIS Plot Deported in First-Ever Case Before Long-Dormant Terrorism Court</a> · <a href="https://maxcrime.com/category/politics/">More politics coverage</a></p>
+<p class="wp-block-paragraph"><strong>More from Max Crime:</strong> <a href="/texas-mother-linked-to-election-day-isis-plot-deported-in-first-ever-case-before-long-dormant-terrorism-court/">Texas Mother Linked to Election Day ISIS Plot Deported in First-Ever Case Before Long-Dormant Terrorism Court</a> · <a href="/category/crime-news/">More politics coverage</a></p>
 
 <p class="wp-block-paragraph"><strong>Sources:</strong> <a href="https://www.whitehouse.gov/presidential-actions/2026/08/honoring-the-american-history-of-the-great-lakes-and-renaming-lake-ontario-as-lake-america-3a36/">The White House</a>; <a href="https://www.cnn.com/2026/08/27/politics/trump-canada-lake-ontario-america">CNN</a>; <a href="https://www.pbs.org/newshour/world/ontario-premier-answers-trumps-lake-america-with-giant-lake-ontario-sign">Associated Press</a>; <a href="https://www.washingtonpost.com/nation/2026/09/09/ap-says-it-will-refer-lake-ontario-by-its-original-name-despite-trumps-order/">The Washington Post</a>; <a href="https://www.nbcnews.com/world/europe/iceland-summons-us-ambassador-trump-posts-map-american-flag-rcna596537">Reuters</a>; <a href="https://www.nbcnews.com/politics/donald-trump/new-mexico-democrats-push-back-trump-posts-renaming-state-new-america-rcna596473">NBC News</a>; <a href="https://thehill.com/homenews/administration/6074249-trump-posts-map-labeling-new-mexico-as-new-america-after-online-hoax/">The Hill</a>; <a href="https://time.com/article/2026/09/02/trump-suggests-renaming-strait-of-hormuz-after-himself-iran-war/">TIME</a>; <a href="https://www.newsweek.com/trump-strait-hormuz-rename-iran-war-12396338">Newsweek</a>; <a href="https://www.abqjournal.com/news/nm-congressional-delegation-urges-google-apple-not-to-use-new-america-on-maps/3118687">Albuquerque Journal</a>; <a href="https://www.cnn.com/2026/09/09/entertainment/south-park-south-america-name-change-trump-hnk">CNN</a>; <a href="https://www.dailypress.com/2026/09/12/cartoon-renamed-america/">Daily Press / Tribune Content Agency (David Horsey cartoon)</a>.</p>

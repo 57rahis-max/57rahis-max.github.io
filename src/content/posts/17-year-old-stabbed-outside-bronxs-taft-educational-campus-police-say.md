@@ -1,5 +1,6 @@
 ---
 title: "17-Year-Old Stabbed Outside Bronx’s Taft Educational Campus, Police Say"
+seoTitle: "Teen Stabbed Outside Bronx's Taft Educational Campus"
 description: "A 17-year-old was stabbed outside the Bronx's Taft Educational Campus after arriving with his mother to register for classes. No arrests have been made."
 date: 2026-09-19T18:55:07Z
 updated: 2026-09-19T18:55:09Z
@@ -24,4 +25,4 @@ wpId: 79
 
 <p class="wp-block-paragraph">Anyone with information is asked to call <a href="https://crimestoppers.nypdonline.org/">NYPD Crime Stoppers</a> at 1-800-577-TIPS (8477). Tips can be made anonymously.</p>
 
-<p class="wp-block-paragraph"><strong>Related:</strong> <a href="https://maxcrime.com/guns-recovered-from-schools-in-queens-and-staten-island/">Guns Recovered From Schools In Queens And Staten Island</a> — two other New York City students were found with loaded guns at their schools the same morning.</p>
+<p class="wp-block-paragraph"><strong>Related:</strong> <a href="/guns-recovered-from-schools-in-queens-and-staten-island/">Guns Recovered From Schools In Queens And Staten Island</a> — two other New York City students were found with loaded guns at their schools the same morning.</p>

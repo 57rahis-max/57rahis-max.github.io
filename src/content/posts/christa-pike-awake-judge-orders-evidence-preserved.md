@@ -1,9 +1,10 @@
 ---
 title: "‘Where Am I?’: Christa Pike Wakes Up After Failed Execution as Judge Orders Tennessee to Preserve Evidence"
+seoTitle: "Christa Pike Wakes After Failed Execution; Judge Orders Evidence Kept"
 description: "Christa Pike woke up days after Tennessee's failed attempt to execute her. On Oct. 7, 2026, a judge ordered the state to preserve evidence from it."
 date: 2026-10-07T19:12:56Z
 author: alex
-category: "Crime News"
+category: "Courts"
 image:
   src: "/images/2026/10/christa-pike-davidson-county-courthouse.jpg"
   alt: "Davidson County Courthouse in Nashville, Tennessee"
@@ -42,13 +43,13 @@ wpId: 154
 
 <h2 class="wp-block-heading">What happened on Sept. 30</h2>
 
-<p class="wp-block-paragraph">Tennessee tried to execute Pike, 50, by lethal injection on Wednesday, Sept. 30, 2026, for the 1995 murder of her classmate Colleen Slemmer, 19. Pike was 18 at the time of the killing, CBS News and NBC News reported. She had been set to become the first woman executed in Tennessee in more than 200 years, as <a href="https://maxcrime.com/tennessee-christa-pike-execution/">Max Crime reported before the execution date</a>.</p>
+<p class="wp-block-paragraph">Tennessee tried to execute Pike, 50, by lethal injection on Wednesday, Sept. 30, 2026, for the 1995 murder of her classmate Colleen Slemmer, 19. Pike was 18 at the time of the killing, CBS News and NBC News reported. She had been set to become the first woman executed in Tennessee in more than 200 years, as <a href="/tennessee-christa-pike-execution/">Max Crime reported before the execution date</a>.</p>
 
 <p class="wp-block-paragraph">Pike survived two doses of pentobarbital and was taken to a hospital. She is believed to be the first person in the U.S. to survive after receiving execution drugs, according to USA TODAY and CBS News.</p>
 
 <p class="wp-block-paragraph">Her attorneys have said they believe her IV lines were improperly placed or a vein had blown, sending the drug into her arm rather than her bloodstream, USA TODAY and CBS News reported.</p>
 
-<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="1200" height="760" src="/images/2026/10/christa-pike-timeline-card.jpg" alt="Timeline of Christa Pike&#x27;s case from Sept. 30 to Oct. 7, 2026" class="wp-image-151" srcset="/images/2026/10/christa-pike-timeline-card.jpg 1200w, /images/2026/10/christa-pike-timeline-card-300x190.jpg 300w, /images/2026/10/christa-pike-timeline-card-1024x649.jpg 1024w, /images/2026/10/christa-pike-timeline-card-768x486.jpg 768w" sizes="auto, (max-width: 1200px) 100vw, 1200px" /></figure>
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="1200" height="760" src="/images/2026/10/christa-pike-timeline-card.jpg" alt="Timeline of Christa Pike&#x27;s case from Sept. 30 to Oct. 7, 2026" class="wp-image-151" srcset="/images/2026/10/christa-pike-timeline-card.jpg 1200w, /images/2026/10/christa-pike-timeline-card.jpg 300w, /images/2026/10/christa-pike-timeline-card.jpg 1024w, /images/2026/10/christa-pike-timeline-card.jpg 768w" sizes="auto, (max-width: 1200px) 100vw, 1200px" /></figure>
 
 <h2 class="wp-block-heading">From &#8216;brain dead&#8217; to awake</h2>
 
@@ -68,7 +69,7 @@ wpId: 154
 
 <h2 class="wp-block-heading">Calls for clemency</h2>
 
-<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="1000" height="1361" src="/images/2026/10/christa-pike-tennessee-state-capitol.jpg" alt="Tennessee State Capitol building in Nashville" class="wp-image-152" srcset="/images/2026/10/christa-pike-tennessee-state-capitol.jpg 1000w, /images/2026/10/christa-pike-tennessee-state-capitol-220x300.jpg 220w, /images/2026/10/christa-pike-tennessee-state-capitol-752x1024.jpg 752w, /images/2026/10/christa-pike-tennessee-state-capitol-768x1045.jpg 768w" sizes="auto, (max-width: 1000px) 100vw, 1000px" /><figcaption class="wp-element-caption">The Tennessee State Capitol in Nashville, in a 2008 file photo. Photo: Harrison Keely / <a href="https://commons.wikimedia.org/wiki/File:The_Tennessee_State_Capitol_building_in_Nashville.jpg" target="_blank" rel="noopener">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by/4.0" target="_blank" rel="noopener">CC BY 4.0</a>.</figcaption></figure>
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="1000" height="1361" src="/images/2026/10/christa-pike-tennessee-state-capitol.jpg" alt="Tennessee State Capitol building in Nashville" class="wp-image-152" srcset="/images/2026/10/christa-pike-tennessee-state-capitol.jpg 1000w, /images/2026/10/christa-pike-tennessee-state-capitol.jpg 220w, /images/2026/10/christa-pike-tennessee-state-capitol.jpg 752w, /images/2026/10/christa-pike-tennessee-state-capitol.jpg 768w" sizes="auto, (max-width: 1000px) 100vw, 1000px" /><figcaption class="wp-element-caption">The Tennessee State Capitol in Nashville, in a 2008 file photo. Photo: Harrison Keely / <a href="https://commons.wikimedia.org/wiki/File:The_Tennessee_State_Capitol_building_in_Nashville.jpg" target="_blank" rel="noopener">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by/4.0" target="_blank" rel="noopener">CC BY 4.0</a>.</figcaption></figure>
 
 <p class="wp-block-paragraph">Pike&#8217;s attorneys are asking Tennessee Gov. Bill Lee to commute her sentence to life in prison without the possibility of parole, according to <a href="https://www.scrippsnews.com/us-news/crime/christa-pike-is-conscious-and-speaking-after-tennessee-failed-execution-her-attorneys-say" target="_blank" rel="noopener">Scripps News</a>, CBS News and USA TODAY.</p>
 

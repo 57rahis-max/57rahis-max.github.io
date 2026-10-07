@@ -1,5 +1,6 @@
 ---
 title: "Texas Mother Linked to Election Day ISIS Plot Deported in First-Ever Case Before Long-Dormant Terrorism Court"
+seoTitle: "Texas Mother Linked to ISIS Plot Deported by Terrorism Court"
 description: "Nazira Haji Zada, 47, was deported to Afghanistan in the first case before the long-dormant Alien Terrorist Removal Court."
 date: 2026-09-12T23:21:51Z
 updated: 2026-09-12T23:21:53Z
@@ -8,7 +9,6 @@ category: "News"
 image:
   src: "/images/2026/09/Texas-Mother-Linked-to-Election-Day-ISIS-Plot-Deported-in-First-Ever-Case-Before-Long-Dormant-Terrorism-Court.jpg"
   alt: "Texas Mother Linked to Election Day ISIS Plot Deported in First-Ever Case Before Long-Dormant Terrorism Court"
-  caption: "Texas Mother Linked to Election Day ISIS Plot Deported in First-Ever Case Before Long-Dormant Terrorism Court"
 wpId: 63
 ---
 
@@ -20,7 +20,7 @@ wpId: 63
 
 <p class="wp-block-paragraph">Haji Zada came to the U.S. as a permanent resident in 2018 and was never charged with a crime. Her case was a civil deportation proceeding, not a criminal prosecution. According to court records reported by NPR, her admission cannot be used against her in a criminal case.</p>
 
-<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1024" height="614" src="/images/2026/09/Texas-Mother-Linked-to-Election-Day-ISIS-Plot-Deported-in-First-Ever-Case-Before-Long-Dormant-Terrorism-Court-1024x614.jpg" alt="Texas Mother Linked to Election Day ISIS Plot Deported in First-Ever Case Before Long-Dormant Terrorism Court" class="wp-image-65" srcset="/images/2026/09/Texas-Mother-Linked-to-Election-Day-ISIS-Plot-Deported-in-First-Ever-Case-Before-Long-Dormant-Terrorism-Court-1024x614.jpg 1024w, /images/2026/09/Texas-Mother-Linked-to-Election-Day-ISIS-Plot-Deported-in-First-Ever-Case-Before-Long-Dormant-Terrorism-Court-300x180.jpg 300w, /images/2026/09/Texas-Mother-Linked-to-Election-Day-ISIS-Plot-Deported-in-First-Ever-Case-Before-Long-Dormant-Terrorism-Court-768x461.jpg 768w, /images/2026/09/Texas-Mother-Linked-to-Election-Day-ISIS-Plot-Deported-in-First-Ever-Case-Before-Long-Dormant-Terrorism-Court.jpg 1200w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /></figure>
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1024" height="614" src="/images/2026/09/Texas-Mother-Linked-to-Election-Day-ISIS-Plot-Deported-in-First-Ever-Case-Before-Long-Dormant-Terrorism-Court.jpg" alt="Texas Mother Linked to Election Day ISIS Plot Deported in First-Ever Case Before Long-Dormant Terrorism Court" class="wp-image-65" srcset="/images/2026/09/Texas-Mother-Linked-to-Election-Day-ISIS-Plot-Deported-in-First-Ever-Case-Before-Long-Dormant-Terrorism-Court.jpg 1024w, /images/2026/09/Texas-Mother-Linked-to-Election-Day-ISIS-Plot-Deported-in-First-Ever-Case-Before-Long-Dormant-Terrorism-Court.jpg 300w, /images/2026/09/Texas-Mother-Linked-to-Election-Day-ISIS-Plot-Deported-in-First-Ever-Case-Before-Long-Dormant-Terrorism-Court.jpg 768w, /images/2026/09/Texas-Mother-Linked-to-Election-Day-ISIS-Plot-Deported-in-First-Ever-Case-Before-Long-Dormant-Terrorism-Court.jpg 1200w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /></figure>
 
 <h2 class="wp-block-heading">Timeline of the case</h2>
 

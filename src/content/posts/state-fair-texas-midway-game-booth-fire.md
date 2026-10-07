@@ -1,9 +1,10 @@
 ---
 title: "Dallas: Fire Heavily Damages State Fair of Texas Game Booth; No Injuries Reported"
+seoTitle: "Fire Damages State Fair of Texas Game Booth; No Injuries"
 description: "An early-morning fire damaged a Midway game booth at the State Fair of Texas in Dallas. No injuries were reported, and officials said operations would continue."
 date: 2026-10-06T16:32:35Z
 author: henry
-category: "Local News"
+category: "Crime News"
 image:
   src: "/images/2026/10/state-fair-of-texas-midway-2026.jpg"
   alt: "An aerial view of the State Fair of Texas Midway at Fair Park with the Texas Star Ferris wheel and blue booth canopies"
@@ -29,7 +30,7 @@ wpId: 148
 
 <h2 class="wp-block-heading">Fair stays open</h2>
 
-<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1024" height="576" src="/images/2026/10/state-fair-of-texas-midway-game-booths-1024x576.jpg" alt="Fairgoers walking past game booths under blue tents on the State Fair of Texas Midway" class="wp-image-147" srcset="/images/2026/10/state-fair-of-texas-midway-game-booths-1024x576.jpg 1024w, /images/2026/10/state-fair-of-texas-midway-game-booths-300x169.jpg 300w, /images/2026/10/state-fair-of-texas-midway-game-booths-768x432.jpg 768w, /images/2026/10/state-fair-of-texas-midway-game-booths.jpg 1200w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><figcaption class="wp-element-caption">File photo: Game booths on the Midway at the State Fair of Texas in 2019. Photo: Michael Barera / Wikimedia Commons (CC BY-SA 4.0)</figcaption></figure>
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1024" height="576" src="/images/2026/10/state-fair-of-texas-midway-game-booths.jpg" alt="Fairgoers walking past game booths under blue tents on the State Fair of Texas Midway" class="wp-image-147" srcset="/images/2026/10/state-fair-of-texas-midway-game-booths.jpg 1024w, /images/2026/10/state-fair-of-texas-midway-game-booths.jpg 300w, /images/2026/10/state-fair-of-texas-midway-game-booths.jpg 768w, /images/2026/10/state-fair-of-texas-midway-game-booths.jpg 1200w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><figcaption class="wp-element-caption">File photo: Game booths on the Midway at the State Fair of Texas in 2019. Photo: Michael Barera / Wikimedia Commons (CC BY-SA 4.0)</figcaption></figure>
 
 <p class="wp-block-paragraph">Karissa Condoianis, the fair&#8217;s senior vice president of public relations, told KRLD the fire appeared to be isolated to a couple of booths near the greenhouse. &#8220;It will not impact fair operations today,&#8221; she said, adding that the most important thing was that nobody was hurt.</p>
 

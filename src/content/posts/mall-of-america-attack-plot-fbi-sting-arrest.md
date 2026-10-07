@@ -1,5 +1,6 @@
 ---
 title: "Minnesota 18-Year-Old Accused of Plotting Mall of America Attack, Arrested After Buying Rifle in FBI Sting"
+seoTitle: "Teen Accused of Mall of America Attack Plot Held After FBI Sting"
 description: "Federal prosecutors say Sheikhdoon Abdullahi Mohamud, 18, planned an attack at the Mall of America and was arrested after buying an AK-47 in an FBI sting."
 date: 2026-10-07T19:37:34Z
 author: henry
@@ -48,7 +49,7 @@ wpId: 160
 
 <p class="wp-block-paragraph">The complaint also says Mohamud sent the informant a video in which he pledged allegiance to ISIS, CBS News Minnesota and the Star Tribune reported.</p>
 
-<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="1200" height="800" src="/images/2026/10/mall-of-america-plot-timeline.jpg" alt="Timeline of the Mall of America plot case from December 2024 to Oct. 24, 2026, according to the criminal complaint" class="wp-image-157" srcset="/images/2026/10/mall-of-america-plot-timeline.jpg 1200w, /images/2026/10/mall-of-america-plot-timeline-300x200.jpg 300w, /images/2026/10/mall-of-america-plot-timeline-1024x683.jpg 1024w, /images/2026/10/mall-of-america-plot-timeline-768x512.jpg 768w" sizes="auto, (max-width: 1200px) 100vw, 1200px" /></figure>
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="1200" height="800" src="/images/2026/10/mall-of-america-plot-timeline.jpg" alt="Timeline of the Mall of America plot case from December 2024 to Oct. 24, 2026, according to the criminal complaint" class="wp-image-157" srcset="/images/2026/10/mall-of-america-plot-timeline.jpg 1200w, /images/2026/10/mall-of-america-plot-timeline.jpg 300w, /images/2026/10/mall-of-america-plot-timeline.jpg 1024w, /images/2026/10/mall-of-america-plot-timeline.jpg 768w" sizes="auto, (max-width: 1200px) 100vw, 1200px" /></figure>
 
 <h2 class="wp-block-heading">A nearly two-year investigation</h2>
 
@@ -64,4 +65,4 @@ wpId: 160
 
 <p class="wp-block-paragraph">Mohamud was in custody as of Oct. 7, 2026, according to KSTP and the Star Tribune.</p>
 
-<p class="wp-block-paragraph">Max Crime has previously covered <a href="https://maxcrime.com/texas-mother-linked-to-election-day-isis-plot-deported-in-first-ever-case-before-long-dormant-terrorism-court/">another case linked to an alleged ISIS plot</a>.</p>
+<p class="wp-block-paragraph">Max Crime has previously covered <a href="/texas-mother-linked-to-election-day-isis-plot-deported-in-first-ever-case-before-long-dormant-terrorism-court/">another case linked to an alleged ISIS plot</a>.</p>

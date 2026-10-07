@@ -1,5 +1,6 @@
 ---
 title: "Traffic Stop In Clifton Park Leads To Over 400-Pound Cannabis Seizure"
+seoTitle: "Clifton Park Traffic Stop Yields 400-Pound Cannabis Seizure"
 description: "Saratoga County deputies seized 489 pounds of cannabis in a Clifton Park traffic stop on I-87. Two Franklin County men face first-degree felony charges."
 date: 2026-09-19T20:46:24Z
 updated: 2026-09-19T20:46:25Z
@@ -8,7 +9,6 @@ category: "Crime News"
 image:
   src: "/images/2026/09/Traffic-Stop-In-Clifton-Park-Leads-To-Over-400-Pound-Cannabis-Seizure.jpg"
   alt: "Traffic Stop In Clifton Park Leads To Over 400-Pound Cannabis Seizure"
-  caption: "Traffic Stop In Clifton Park Leads To Over 400-Pound Cannabis Seizure"
 wpId: 85
 ---
 
@@ -32,6 +32,6 @@ wpId: 85
 
 <p class="wp-block-paragraph">The two men were <a href="https://www.newportdispatch.com/2026/09/14/two-arrested-on-cannabis-charges-in-clifton-park/">arraigned before Judge Jennifer Jeram</a> in Clifton Park Town Court. Wilbur was remanded to the Saratoga County Jail. Carle was released on his own recognizance pending further proceedings in that court.</p>
 
-<p class="wp-block-paragraph">MaxCrime has also covered other recent court cases, including <a href="https://maxcrime.com/20-year-prison-sentence-for-glenville-man-in-child-sex-abuse-image-case/">a 20-year federal sentence for a Glenville man</a> and <a href="https://maxcrime.com/bradford-sword-attack-guilty-plea/">a guilty plea in a Pennsylvania sword attack</a>.</p>
+<p class="wp-block-paragraph">MaxCrime has also covered other recent court cases, including <a href="/20-year-prison-sentence-for-glenville-man-in-child-sex-abuse-image-case/">a 20-year federal sentence for a Glenville man</a> and <a href="/bradford-sword-attack-guilty-plea/">a guilty plea in a Pennsylvania sword attack</a>.</p>
 
 <p class="wp-block-paragraph"></p>

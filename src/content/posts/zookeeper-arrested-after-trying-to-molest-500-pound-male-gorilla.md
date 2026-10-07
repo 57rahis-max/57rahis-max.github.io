@@ -1,14 +1,14 @@
 ---
 title: "Zookeeper arrested after trying to sexually assault 500-pound male gorilla"
+seoTitle: "Zookeeper Arrested After Gorilla Assault Attempt"
 description: "The claim that a San Diego zookeeper was arrested for assaulting a 500-pound gorilla originated in a fictional story. Lead Stories and Africa Check both traced it to Worl"
 date: 2021-03-11T00:43:00Z
 updated: 2026-09-23T00:49:14Z
 author: staff
 category: "Crime News"
 image:
-  src: "/images/2026/09/Zookeeper-arrested-after-trying-to-sexually-assault-500-pound-male-gorilla.png"
+  src: "/images/2026/09/Zookeeper-arrested-after-trying-to-sexually-assault-500-pound-male-gorilla.jpg"
   alt: "Zookeeper arrested after trying to sexually assault 500-pound male gorilla"
-  caption: "Zookeeper arrested after trying to sexually assault 500-pound male gorilla"
 wpId: 103
 ---
 
@@ -28,7 +28,7 @@ wpId: 103
 
 <p class="wp-block-paragraph">Lead Stories published its findings on 3 December 2017. It traced the story to World News Daily Report and printed the site’s own disclaimer, which says it “assumes all responsibility for the satirical nature of its articles and for the fictional nature of their content.”</p>
 
-<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1024" height="712" src="/images/2026/09/Zookeeper-arrested-after-trying-to-sexually-assault-500-pound-male-gorilla-1024x712.png" alt="Zookeeper arrested after trying to sexually assault 500-pound male gorilla" class="wp-image-105" srcset="/images/2026/09/Zookeeper-arrested-after-trying-to-sexually-assault-500-pound-male-gorilla-1024x712.png 1024w, /images/2026/09/Zookeeper-arrested-after-trying-to-sexually-assault-500-pound-male-gorilla-300x208.png 300w, /images/2026/09/Zookeeper-arrested-after-trying-to-sexually-assault-500-pound-male-gorilla-768x534.png 768w, /images/2026/09/Zookeeper-arrested-after-trying-to-sexually-assault-500-pound-male-gorilla.png 1390w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /></figure>
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1024" height="712" src="/images/2026/09/Zookeeper-arrested-after-trying-to-sexually-assault-500-pound-male-gorilla.jpg" alt="Zookeeper arrested after trying to sexually assault 500-pound male gorilla" class="wp-image-105" srcset="/images/2026/09/Zookeeper-arrested-after-trying-to-sexually-assault-500-pound-male-gorilla.jpg 1024w, /images/2026/09/Zookeeper-arrested-after-trying-to-sexually-assault-500-pound-male-gorilla.jpg 300w, /images/2026/09/Zookeeper-arrested-after-trying-to-sexually-assault-500-pound-male-gorilla.jpg 768w, /images/2026/09/Zookeeper-arrested-after-trying-to-sexually-assault-500-pound-male-gorilla.jpg 1390w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /></figure>
 
 <p class="wp-block-paragraph">Then it followed the trail. A site called ActionNews3 had copied the article out, but left the satire disclaimer off. Huzlers ran a version too, this one crediting World News Daily Report and carrying a satire notice of its own.</p>
 

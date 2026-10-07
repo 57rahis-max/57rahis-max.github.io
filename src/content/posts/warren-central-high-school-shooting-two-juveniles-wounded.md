@@ -1,5 +1,6 @@
 ---
 title: "Two Juveniles Wounded in Shooting After Warren Central Football Game in Indianapolis"
+seoTitle: "Two Juveniles Shot After Warren Central Football Game"
 description: "Two juveniles were wounded in a shooting after Warren Central High School's football game in Indianapolis on Oct. 2, 2026, police said."
 date: 2026-10-05T21:59:27Z
 updated: 2026-10-05T21:59:29Z
@@ -20,7 +21,7 @@ wpId: 134
 
 <p class="wp-block-paragraph">Officers were called to the 9500 block of East 16th Street on a report of a person shot around 10:30 p.m., FOX59 reported, citing IMPD. An IMPD spokesperson told WTHR that officers with MSD Warren Township reported shots being fired near the school at 10:35 p.m. According to FOX59, IMPD confirmed that the game had concluded by the time the shooting occurred.</p>
 
-<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="1600" height="900" src="/images/2026/10/2-map-9500-block-east-16th-street.png" alt="Map of the 9500 block of East 16th Street in Indianapolis, near Warren Central High School" class="wp-image-128" srcset="/images/2026/10/2-map-9500-block-east-16th-street.png 1600w, /images/2026/10/2-map-9500-block-east-16th-street-300x169.png 300w, /images/2026/10/2-map-9500-block-east-16th-street-1024x576.png 1024w, /images/2026/10/2-map-9500-block-east-16th-street-768x432.png 768w, /images/2026/10/2-map-9500-block-east-16th-street-1536x864.png 1536w" sizes="auto, (max-width: 1600px) 100vw, 1600px" /><figcaption class="wp-element-caption">The 9500 block of East 16th Street in Indianapolis, where officers were called. Map: © OpenStreetMap contributors.</figcaption></figure>
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="1600" height="900" src="/images/2026/10/2-map-9500-block-east-16th-street.jpg" alt="Map of the 9500 block of East 16th Street in Indianapolis, near Warren Central High School" class="wp-image-128" srcset="/images/2026/10/2-map-9500-block-east-16th-street.jpg 1600w, /images/2026/10/2-map-9500-block-east-16th-street.jpg 300w, /images/2026/10/2-map-9500-block-east-16th-street.jpg 1024w, /images/2026/10/2-map-9500-block-east-16th-street.jpg 768w, /images/2026/10/2-map-9500-block-east-16th-street.jpg 1536w" sizes="auto, (max-width: 1600px) 100vw, 1600px" /><figcaption class="wp-element-caption">The 9500 block of East 16th Street in Indianapolis, where officers were called. Map: © OpenStreetMap contributors.</figcaption></figure>
 
 <p class="wp-block-paragraph">At 11:15 p.m. Friday, a large police presence could be seen on the school&#8217;s campus, with crime tape stretched around a parking lot, WTHR reported. Players and coaches were told to wait in the locker rooms until officers cleared them to exit, IndyStar reported.</p>
 
@@ -50,4 +51,4 @@ wpId: 134
 
 <p class="wp-block-paragraph">Anyone with information is asked to call IMPD Det. Best at 317-327-3475 or contact Crime Stoppers of Central Indiana at 317-262-TIPS (8477), according to WTHR.</p>
 
-<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="1200" height="675" src="/images/2026/10/3-tip-line-card.png" alt="Tip line: IMPD Det. Best at 317-327-3475 or Crime Stoppers of Central Indiana at 317-262-TIPS (8477)" class="wp-image-127" srcset="/images/2026/10/3-tip-line-card.png 1200w, /images/2026/10/3-tip-line-card-300x169.png 300w, /images/2026/10/3-tip-line-card-1024x576.png 1024w, /images/2026/10/3-tip-line-card-768x432.png 768w" sizes="auto, (max-width: 1200px) 100vw, 1200px" /></figure>
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="1200" height="675" src="/images/2026/10/3-tip-line-card.png" alt="Tip line: IMPD Det. Best at 317-327-3475 or Crime Stoppers of Central Indiana at 317-262-TIPS (8477)" class="wp-image-127" srcset="/images/2026/10/3-tip-line-card.png 1200w, /images/2026/10/3-tip-line-card.png 300w, /images/2026/10/3-tip-line-card.png 1024w, /images/2026/10/3-tip-line-card.png 768w" sizes="auto, (max-width: 1200px) 100vw, 1200px" /></figure>

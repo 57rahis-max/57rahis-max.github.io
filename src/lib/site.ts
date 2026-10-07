@@ -12,8 +12,16 @@ export const NAV = [
   { label: 'Crime News', href: '/category/crime-news/' },
   { label: 'Courts', href: '/category/courts/' },
   { label: 'Live', href: '/live/' },
-  { label: 'Standards', href: '/editorial-standards/' },
 ];
+
+import { existsSync } from 'node:fs';
+
+/** The 800px thumbnail made by scripts/thumbs.py, when there is one. */
+export function thumb(src?: string): string | undefined {
+  if (!src || !src.startsWith('/images/')) return src;
+  const t = src.replace(/\.(jpe?g|png|webp)$/i, '.w800.jpg');
+  return existsSync(`public${t}`) ? t : src;
+}
 
 export const slugify = (s: string) => s.toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 export const categoryUrl = (c: string) => `/category/${slugify(c)}/`;

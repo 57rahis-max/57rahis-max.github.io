@@ -1,5 +1,6 @@
 ---
 title: "Dover Police Identify Teen Killed in Dover CAVA Shooting, Seek Witnesses"
+seoTitle: "Dover Police Identify Teen Killed in CAVA Shooting"
 description: "Dover police have identified an 18-year-old Dover man as the victim of a fatal shooting outside a CAVA restaurant, and investigators are asking anyone with information to"
 date: 2026-09-05T15:11:15Z
 updated: 2026-09-05T16:33:57Z
@@ -8,7 +9,6 @@ category: "Crime News"
 image:
   src: "/images/2026/09/dover-cava-shooting-foster-trader.jpg"
   alt: "dover-cava-shooting-foster-trader"
-  caption: "dover-cava-shooting-foster-trader"
 wpId: 21
 ---
 
@@ -20,4 +20,4 @@ wpId: 21
 <p class="wp-block-paragraph">Investigators recovered spent shell casings from the scene, according to police. As of the department&#8217;s September 5 release, no arrests had been announced, and no description of a suspect or a suspect vehicle had been released. Police have not publicly stated what led to the shooting, and no motive has been released.</p>
 <h2 class="wp-block-heading">Dover Police Ask Witnesses to Come Forward</h2>
 <p class="wp-block-paragraph">Investigators are asking anyone who witnessed the shooting, or who has relevant surveillance footage or other information, to contact Detective Goad at 302-736-7143. Tips can also be <a href="https://doverpolice.org/contact-us/" target="_blank" rel="noopener noreferrer">submitted online</a> directly to Dover police, or anonymously to <a href="https://delaware.crimestoppersweb.com/" target="_blank" rel="noopener noreferrer">Delaware Crime Stoppers</a> at 1-800-TIP-3333.</p>
-<p class="wp-block-paragraph">This is a developing story. MaxCrime will update this report as the Dover Police Department releases additional information. For more coverage, visit MaxCrime&#8217;s <a href="https://maxcrime.com/category/crime-news/">Crime News</a> section.</p>
+<p class="wp-block-paragraph">This is a developing story. MaxCrime will update this report as the Dover Police Department releases additional information. For more coverage, visit MaxCrime&#8217;s <a href="/category/crime-news/">Crime News</a> section.</p>

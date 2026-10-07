@@ -1,9 +1,10 @@
 ---
 title: "Tennessee: Christa Pike Scheduled to Be First Woman Executed by the State in Over 200 Years"
+seoTitle: "Christa Pike Set to Be First Woman Executed in Tennessee in 200 Years"
 description: "The Supreme Court denied Christa Pike's stay request. Tennessee plans to execute her Sept. 30, its first execution of a woman in over 200 years."
 date: 2026-09-29T22:29:03Z
 author: henry
-category: "Crime News"
+category: "Courts"
 image:
   src: "/images/2026/09/christa-pike-tennessee-execution-courtroom.jpg"
   alt: "Christa Pike seated at a courtroom table in an archival photo"
@@ -34,7 +35,7 @@ wpId: 121
 
 <p class="wp-block-paragraph">On September 29, the Supreme Court denied the stay application, which Kavanaugh had referred to the full court, and declined to hear the case. The <a href="https://www.supremecourt.gov/orders/courtorders/092926zr4_2dp3.pdf" rel="nofollow noopener" target="_blank">one-paragraph order</a> gave no reasons and noted no dissents.</p>
 
-<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1024" height="576" src="/images/2026/09/tennessee-capitol-death-penalty-protest-christa-pike-1024x576.jpg" alt="Protesters holding anti-death penalty signs outside the Tennessee State Capitol in Nashville" class="wp-image-124" srcset="/images/2026/09/tennessee-capitol-death-penalty-protest-christa-pike-1024x576.jpg 1024w, /images/2026/09/tennessee-capitol-death-penalty-protest-christa-pike-300x169.jpg 300w, /images/2026/09/tennessee-capitol-death-penalty-protest-christa-pike-768x432.jpg 768w, /images/2026/09/tennessee-capitol-death-penalty-protest-christa-pike.jpg 1200w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><figcaption class="wp-element-caption">Death penalty opponents gather outside the Tennessee State Capitol in Nashville.</figcaption></figure>
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1024" height="576" src="/images/2026/09/tennessee-capitol-death-penalty-protest-christa-pike.jpg" alt="Protesters holding anti-death penalty signs outside the Tennessee State Capitol in Nashville" class="wp-image-124" srcset="/images/2026/09/tennessee-capitol-death-penalty-protest-christa-pike.jpg 1024w, /images/2026/09/tennessee-capitol-death-penalty-protest-christa-pike.jpg 300w, /images/2026/09/tennessee-capitol-death-penalty-protest-christa-pike.jpg 768w, /images/2026/09/tennessee-capitol-death-penalty-protest-christa-pike.jpg 1200w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><figcaption class="wp-element-caption">Death penalty opponents gather outside the Tennessee State Capitol in Nashville.</figcaption></figure>
 
 <h2 class="wp-block-heading">The killing of Colleen Slemmer</h2>
 

@@ -1,9 +1,10 @@
 ---
 title: "‘Louder Than the Noise’: Trial Opens 14 Years After UNC Student Faith Hedgepeth Was Killed"
+seoTitle: "Faith Hedgepeth Murder Trial Opens 14 Years After UNC Killing"
 description: "Opening statements began Oct. 7, 2026, in the trial of Miguel Salguero Olivares, accused of killing UNC student Faith Hedgepeth in 2012."
 date: 2026-10-07T20:04:29Z
 author: alex
-category: "Crime News"
+category: "Courts"
 image:
   src: "/images/2026/10/hedgepeth-durham-county-courthouse.jpg"
   alt: "Durham County Courthouse in Durham, North Carolina"
@@ -46,7 +47,7 @@ wpId: 165
 
 <p class="wp-block-paragraph">Garcia-Lamarca also described Hedgepeth as hoping to become the first person in her family to graduate from college, the AP and WRAL reported.</p>
 
-<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="1200" height="700" src="/images/2026/10/hedgepeth-case-timeline.jpg" alt="Timeline of the Faith Hedgepeth case from Sept. 7, 2012, to the Oct. 7, 2026, opening statements" class="wp-image-163" srcset="/images/2026/10/hedgepeth-case-timeline.jpg 1200w, /images/2026/10/hedgepeth-case-timeline-300x175.jpg 300w, /images/2026/10/hedgepeth-case-timeline-1024x597.jpg 1024w, /images/2026/10/hedgepeth-case-timeline-768x448.jpg 768w" sizes="auto, (max-width: 1200px) 100vw, 1200px" /></figure>
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="1200" height="700" src="/images/2026/10/hedgepeth-case-timeline.jpg" alt="Timeline of the Faith Hedgepeth case from Sept. 7, 2012, to the Oct. 7, 2026, opening statements" class="wp-image-163" srcset="/images/2026/10/hedgepeth-case-timeline.jpg 1200w, /images/2026/10/hedgepeth-case-timeline.jpg 300w, /images/2026/10/hedgepeth-case-timeline.jpg 1024w, /images/2026/10/hedgepeth-case-timeline.jpg 768w" sizes="auto, (max-width: 1200px) 100vw, 1200px" /></figure>
 
 <h2 class="wp-block-heading">What the defense argued</h2>
 

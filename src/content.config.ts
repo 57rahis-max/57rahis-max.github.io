@@ -13,6 +13,8 @@ const posts = defineCollection({
   loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/posts' }),
   schema: z.object({
     title: z.string(),
+    /** Short headline for the <title> tag and social cards; the full title stays on the page. */
+    seoTitle: z.string().max(70).optional(),
     description: z.string().max(170),
     date: z.coerce.date(),
     updated: z.coerce.date().optional(),

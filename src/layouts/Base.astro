@@ -6,6 +6,8 @@ import { SITE } from '../lib/site';
 
 interface Props {
   title: string;
+  /** Short form for the <title> tag when the headline is long (search engines show ~60 chars). */
+  seoTitle?: string;
   description?: string;
   image?: string;
   imageAlt?: string;
@@ -14,10 +16,11 @@ interface Props {
   modified?: Date;
   schema?: object[];
   noindex?: boolean;
+  home?: boolean;
 }
-const { title, description = SITE.description, image, imageAlt, type = 'website', published, modified, schema = [], noindex = false } = Astro.props;
+const { title, seoTitle, description = SITE.description, image, imageAlt, type = 'website', published, modified, schema = [], noindex = false, home = false } = Astro.props;
 const canonical = new URL(Astro.url.pathname, SITE.url).href;
-const fullTitle = title === SITE.name ? `${SITE.name}: ${SITE.tagline}` : `${title} | ${SITE.name}`;
+const fullTitle = title === SITE.name ? `${SITE.name}: ${SITE.tagline}` : `${seoTitle ?? title} | ${SITE.name}`;
 const ogImage = image ? new URL(image, SITE.url).href : new URL('/og-default.png', SITE.url).href;
 ---
 <!doctype html>
@@ -31,6 +34,8 @@ const ogImage = image ? new URL(image, SITE.url).href : new URL('/og-default.png
     {noindex && <meta name="robots" content="noindex" />}
     {!noindex && <meta name="robots" content="index, follow, max-image-preview:large" />}
     <meta name="theme-color" content="#111317" />
+    <link rel="preload" href="/fonts/source-serif-4-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="alternate" type="application/rss+xml" title={SITE.name} href="/rss.xml" />
     <link rel="sitemap" href="/sitemap-index.xml" />
@@ -57,7 +62,7 @@ const ogImage = image ? new URL(image, SITE.url).href : new URL('/og-default.png
   </head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
-    <Header />
+    <Header home={home} />
     <main id="main"><slot /></main>
     <Footer />
   </body>

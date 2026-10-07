@@ -10,7 +10,7 @@ import Tweet from '../components/Tweet.astro';
 import PullQuote from '../components/PullQuote.astro';
 import { allPosts, related, lastTouched, type Post } from '../lib/posts';
 import { articleSchema, crumbsFor } from '../lib/schema';
-import { fmtDateTime, categoryUrl, authorUrl, postUrl, readingMinutes, SITE } from '../lib/site';
+import { fmtDateTime, categoryUrl, authorUrl, postUrl, readingMinutes, thumb, SITE } from '../lib/site';
 
 export async function getStaticPaths() {
   const posts = await allPosts();
@@ -28,11 +28,14 @@ const authors = Object.fromEntries((await Promise.all(more.map((p) => getEntry(p
 const modified = lastTouched(post);
 const wasUpdated = modified.getTime() - d.date.getTime() > 5 * 60 * 1000;
 const body = post.body ?? '';
+const heroThumb = thumb(d.image?.src);
+const heroSet = d.image && heroThumb && heroThumb !== d.image.src ? `${heroThumb} 800w, ${d.image.src} 1600w` : undefined;
 const shareUrl = encodeURIComponent(new URL(postUrl(post.id), SITE.url).href);
 const shareText = encodeURIComponent(d.title);
 ---
 <Base
   title={d.title}
+  seoTitle={d.seoTitle}
   description={d.description}
   image={d.image?.src}
   imageAlt={d.image?.alt}
@@ -41,8 +44,8 @@ const shareText = encodeURIComponent(d.title);
   modified={modified}
   schema={[articleSchema(post, a, body), crumbsFor(post)]}
 >
-  <article class="wrap article">
-    <nav class="crumbs meta" aria-label="Breadcrumb">
+  <article class="wrap article" data-pagefind-body>
+    <nav class="crumbs meta" aria-label="Breadcrumb" data-pagefind-ignore>
       <a href="/">Home</a> <span aria-hidden="true">›</span> <a href={categoryUrl(d.category)}>{d.category}</a>
     </nav>
 
@@ -67,7 +70,7 @@ const shareText = encodeURIComponent(d.title);
 
     {d.image && (
       <figure class="hero">
-        <img src={d.image.src} alt={d.image.alt} width="1600" height="900" loading="eager" fetchpriority="high" />
+        <img src={d.image.src} srcset={heroSet} sizes="(max-width: 760px) 100vw, 1000px" alt={d.image.alt} width="1600" height="900" loading="eager" fetchpriority="high" data-pagefind-meta="image[src]" />
         {(d.image.caption || d.image.credit) && (
           <figcaption class="figure-caption">{d.image.caption}{d.image.credit && <> <span set:html={d.image.credit} /></>}</figcaption>
         )}
@@ -99,12 +102,12 @@ const shareText = encodeURIComponent(d.title);
           <a href={`mailto:?subject=${shareText}&body=${shareUrl}`}>Email</a>
         </div>
 
-        <AuthorBox {...a} />
+        <div data-pagefind-ignore><AuthorBox {...a} /></div>
       </div>
 
-      <aside class="art-side" aria-label="More from Max Crime">
+      <aside class="art-side" aria-label="More from Max Crime" data-pagefind-ignore>
         <div class="rule-head"><h2>More from Max Crime</h2></div>
-        {more.map((p) => <PostCard post={p} size="compact" authorName={authors[p.data.author.id]} />)}
+        {more.map((p) => <PostCard post={p} size="side" authorName={authors[p.data.author.id]} />)}
       </aside>
     </div>
   </article>
@@ -120,8 +123,8 @@ const shareText = encodeURIComponent(d.title);
   .by { margin: 0 0 2px; font: 700 15px/1.2 var(--sans); }
   .by a { text-decoration: none; }
   .byline .meta { margin: 0; }
-  .hero { margin: 0 0 26px; max-width: 1000px; }
-  .hero img { width: 100%; border-radius: var(--radius); }
+  .hero { margin: 0 0 28px; max-width: 1000px; }
+  .hero img { width: 100%; max-height: min(620px, 70vh); object-fit: contain; background: var(--card); border: 1px solid var(--rule); border-radius: var(--radius); }
   .art-grid { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 56px; }
   .sources { max-width: var(--measure); margin-top: 36px; padding-top: 18px; border-top: 2px solid var(--ink); }
   .sources h2 { font: 800 14px/1 var(--sans); letter-spacing: .12em; text-transform: uppercase; margin: 0 0 12px; }

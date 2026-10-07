@@ -1,54 +1,111 @@
 ---
 import { NAV, SITE } from '../lib/site';
+interface Props { home?: boolean }
+const { home = false } = Astro.props;
 const path = Astro.url.pathname;
-const today = new Date().toLocaleDateString('en-US', { timeZone: 'America/New_York', weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
+const Mark = home ? 'h1' : 'div';
 ---
 <header class="site-header">
   <div class="topbar">
     <div class="wrap topbar-in">
-      <span class="meta">{today}</span>
-      <button class="theme-toggle" type="button" aria-label="Switch light or dark theme" data-theme-toggle>
-        <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9Z"/></svg>
-      </button>
+      <span class="today" data-today aria-live="off"></span>
+      <div class="top-actions">
+        <a href="/about/" class="toplink">About</a>
+        <a href="/editorial-standards/" class="toplink">Standards</a>
+        <a href="/search/" class="icon-btn" aria-label="Search">
+          <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15Zm5.3-2.2L21 21"/></svg>
+        </a>
+        <button class="icon-btn" type="button" aria-label="Switch light or dark theme" data-theme-toggle>
+          <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9Z"/></svg>
+        </button>
+      </div>
     </div>
   </div>
+
   <div class="wrap masthead">
-    <a href="/" class="wordmark" aria-label={`${SITE.name} home`}>
-      <span class="bar" aria-hidden="true"></span>MAX<span>CRIME</span>
-    </a>
+    <Mark class="wordmark-wrap">
+      <a href="/" class="wordmark" aria-label={`${SITE.name}, home`}>
+        <span class="bar" aria-hidden="true"></span><span class="w1">MAX</span><span class="w2">CRIME</span>
+      </a>
+      {home && <span class="sr-only">: crime and court news, sourced and attributed</span>}
+    </Mark>
     <p class="tagline">{SITE.tagline}</p>
   </div>
+
   <nav class="mainnav" aria-label="Main">
-    <div class="wrap">
-      <ul>
+    <div class="wrap nav-in">
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav-list" data-menu>
+        <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <span>Menu</span>
+      </button>
+      <ul id="nav-list">
         {NAV.map((n) => (
           <li><a href={n.href} aria-current={path === n.href ? 'page' : undefined} class={n.label === 'Live' ? 'nav-live' : ''}>{n.label}</a></li>
         ))}
       </ul>
+      <a href="/search/" class="nav-search" aria-label="Search">
+        <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15Zm5.3-2.2L21 21"/></svg>
+      </a>
     </div>
   </nav>
 </header>
+
 <script>
+  // The date is the reader's today, not the day the site was built.
+  const t = document.querySelector('[data-today]');
+  if (t) t.textContent = new Date().toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
+
   document.querySelector('[data-theme-toggle]')?.addEventListener('click', () => {
     const root = document.documentElement;
     const dark = root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
     root.dataset.theme = dark ? 'light' : 'dark';
     try { localStorage.setItem('mc-theme', root.dataset.theme); } catch {}
   });
+
+  const btn = document.querySelector<HTMLButtonElement>('[data-menu]');
+  btn?.addEventListener('click', () => {
+    const open = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!open));
+    document.getElementById('nav-list')?.classList.toggle('open', !open);
+  });
 </script>
+
 <style>
-  .topbar { border-bottom: 1px solid var(--rule); }
-  .topbar-in { display: flex; justify-content: space-between; align-items: center; height: 36px; }
-  .theme-toggle { background: none; border: 1px solid var(--rule); color: var(--ink); border-radius: 50%; width: 28px; height: 28px; display: grid; place-items: center; cursor: pointer; }
-  .masthead { text-align: center; padding: 22px 20px 14px; }
-  .wordmark { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font: 900 clamp(34px, 6vw, 56px)/1 var(--serif); letter-spacing: .04em; color: var(--ink); }
-  .wordmark span { color: var(--accent); margin-left: .18em; }
-  .wordmark .bar { width: 10px; height: .82em; background: var(--accent); margin: 0; }
-  .tagline { margin: 8px 0 0; font: 500 13px/1.3 var(--sans); color: var(--muted); letter-spacing: .02em; }
-  .mainnav { border-top: 1px solid var(--rule); border-bottom: 3px solid var(--ink); position: sticky; top: 0; background: var(--paper); z-index: 20; }
-  .mainnav ul { list-style: none; display: flex; justify-content: center; gap: 4px; margin: 0; padding: 0; overflow-x: auto; scrollbar-width: none; }
-  .mainnav a { display: block; padding: 12px 14px; font: 700 13px/1 var(--sans); letter-spacing: .08em; text-transform: uppercase; text-decoration: none; white-space: nowrap; }
-  .mainnav a[aria-current='page'] { color: var(--accent); }
-  .nav-live::before { content: ''; display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--live); margin-right: 6px; vertical-align: 1px; }
-  @media (max-width: 640px) { .mainnav ul { justify-content: flex-start; } .tagline { display: none; } }
+  .topbar { background: #111317; color: #d9d7d2; }
+  .topbar-in { display: flex; justify-content: space-between; align-items: center; height: 38px; gap: 12px; }
+  .today { font: 500 12.5px/1 var(--sans); letter-spacing: .02em; }
+  .top-actions { display: flex; align-items: center; gap: 6px; }
+  .toplink { font: 600 12.5px/1 var(--sans); color: #d9d7d2; text-decoration: none; padding: 6px 8px; }
+  .toplink:hover { color: #fff; }
+  .icon-btn { background: none; border: 0; color: #d9d7d2; width: 32px; height: 32px; display: grid; place-items: center; border-radius: 50%; cursor: pointer; }
+  .icon-btn:hover { background: #2a2e36; color: #fff; }
+
+  .masthead { text-align: center; padding: 26px 20px 16px; }
+  .wordmark-wrap { margin: 0; font-size: inherit; }
+  .wordmark { display: inline-flex; align-items: center; text-decoration: none; font: 900 clamp(36px, 6.4vw, 60px)/1 var(--serif); letter-spacing: .03em; color: var(--ink); }
+  .wordmark .bar { width: .17em; height: .78em; background: var(--accent); margin-right: .2em; border-radius: 1px; }
+  .wordmark .w2 { color: var(--accent); margin-left: .22em; }
+  .tagline { margin: 10px 0 0; font: 500 13px/1.3 var(--sans); color: var(--muted); letter-spacing: .03em; }
+
+  .mainnav { border-top: 1px solid var(--rule); border-bottom: 3px solid var(--ink); position: sticky; top: 0; background: var(--paper); z-index: 30; }
+  .nav-in { display: flex; align-items: center; justify-content: center; position: relative; }
+  .mainnav ul { list-style: none; display: flex; justify-content: center; gap: 2px; margin: 0; padding: 0; }
+  .mainnav a { display: block; padding: 13px 15px; font: 700 13px/1 var(--sans); letter-spacing: .08em; text-transform: uppercase; text-decoration: none; white-space: nowrap; }
+  .mainnav ul a[aria-current='page'] { color: var(--accent); box-shadow: inset 0 -3px 0 var(--accent); }
+  .nav-live::before { content: ''; display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--live); margin-right: 7px; vertical-align: 1px; }
+  .nav-search { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); padding: 8px !important; color: var(--ink); }
+  .menu-btn { display: none; align-items: center; gap: 8px; background: none; border: 0; color: var(--ink); font: 800 13px/1 var(--sans); letter-spacing: .08em; text-transform: uppercase; padding: 12px 0; cursor: pointer; }
+
+  @media (max-width: 720px) {
+    .tagline { display: none; }
+    .masthead { padding: 18px 20px 12px; }
+    .toplink { display: none; }
+    .nav-in { justify-content: space-between; }
+    .menu-btn { display: inline-flex; }
+    .nav-search { position: static; transform: none; }
+    .mainnav ul { display: none; position: absolute; left: 0; right: 0; top: 100%; flex-direction: column; background: var(--paper); border-bottom: 3px solid var(--ink); padding: 6px 20px 12px; box-shadow: 0 12px 24px rgb(0 0 0 / .12); }
+    .mainnav ul.open { display: flex; }
+    .mainnav ul a { padding: 14px 0; border-bottom: 1px solid var(--rule); }
+    .mainnav ul a[aria-current='page'] { box-shadow: none; }
+  }
 </style>

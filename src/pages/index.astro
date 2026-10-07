@@ -8,52 +8,81 @@ import { SITE, postUrl } from '../lib/site';
 
 const posts = await allPosts();
 const names = Object.fromEntries((await getCollection('authors')).map((a) => [a.id, a.data.name]));
+const name = (p: (typeof posts)[number]) => names[p.data.author.id];
 const live = posts.filter((p) => p.data.live === 'live');
-const [lead, ...rest] = posts;
-const side = rest.slice(0, 4);
-const grid = rest.slice(4, 13);
-const older = rest.slice(13, 25);
+
+const used = new Set<string>();
+const take = (list: typeof posts, n: number) => {
+  const out = list.filter((p) => !used.has(p.id)).slice(0, n);
+  out.forEach((p) => used.add(p.id));
+  return out;
+};
+const [lead] = take(posts.filter((p) => p.data.image), 1);
+const side = take(posts, 4);
+const latest = take(posts, 6);
+// The Courts band is filled to four when it can: court stories already shown
+// above may repeat here (never the lead), rather than leave the band half empty.
+const courtPosts = posts.filter((p) => p.data.category === 'Courts' && p.id !== lead?.id);
+const courts = [...take(courtPosts, 4)];
+for (const p of courtPosts) if (courts.length < 4 && !courts.includes(p)) courts.push(p);
+const more = take(posts, 12);
 ---
-<Base title={SITE.name} schema={[website, { '@context': 'https://schema.org', ...publisher }]}>
+<Base title={SITE.name} home schema={[website, { '@context': 'https://schema.org', ...publisher }]}>
   <div class="wrap">
     {live.length > 0 && (
       <div class="live-strip" role="region" aria-label="Live coverage">
         <span class="live-pill">Live</span>
-        {live.map((p) => <a href={postUrl(p.id)}>{p.data.title}</a>)}
+        <ul>{live.map((p) => <li><a href={postUrl(p.id)}>{p.data.title}</a></li>)}</ul>
       </div>
     )}
 
     {lead && (
-      <section class="top">
-        <div class="top-lead"><PostCard post={lead} size="lead" authorName={names[lead.data.author.id]} /></div>
+      <section class="top" aria-label="Top stories">
+        <div class="top-lead"><PostCard post={lead} size="lead" authorName={name(lead)} /></div>
         <div class="top-side">
-          {side.map((p) => <PostCard post={p} size="compact" authorName={names[p.data.author.id]} />)}
+          <h2 class="side-head">Top stories</h2>
+          {side.map((p) => <PostCard post={p} size="side" authorName={name(p)} />)}
         </div>
       </section>
     )}
 
-    {grid.length > 0 && (
-      <section>
-        <div class="rule-head"><h2>Latest</h2></div>
-        <div class="grid">{grid.map((p) => <PostCard post={p} authorName={names[p.data.author.id]} />)}</div>
+    {latest.length > 0 && (
+      <section aria-labelledby="h-latest">
+        <div class="rule-head"><h2 id="h-latest">Latest</h2></div>
+        <div class="grid">{latest.map((p) => <PostCard post={p} authorName={name(p)} />)}</div>
       </section>
     )}
 
-    {older.length > 0 && (
-      <section>
-        <div class="rule-head"><h2>More stories</h2></div>
-        <div class="list">{older.map((p) => <PostCard post={p} size="compact" authorName={names[p.data.author.id]} />)}</div>
+    {courts.length > 0 && (
+      <section aria-labelledby="h-courts" class="band">
+        <div class="rule-head"><h2 id="h-courts">Courts</h2><a class="all" href="/category/courts/">All court stories →</a></div>
+        <div class="grid four">{courts.map((p) => <PostCard post={p} authorName={name(p)} />)}</div>
+      </section>
+    )}
+
+    {more.length > 0 && (
+      <section aria-labelledby="h-more">
+        <div class="rule-head"><h2 id="h-more">More stories</h2><a class="all" href="/category/crime-news/">All crime news →</a></div>
+        <div class="list">{more.map((p) => <PostCard post={p} size="side" authorName={name(p)} />)}</div>
       </section>
     )}
   </div>
 </Base>
 <style>
-  .live-strip { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; margin: 18px 0 0; padding: 12px 16px; background: var(--card); border: 1px solid var(--rule); border-left: 4px solid var(--live); border-radius: var(--radius); font: 700 15px/1.35 var(--serif); }
+  .live-strip { display: flex; gap: 14px; align-items: center; margin: 20px 0 0; padding: 12px 16px; background: var(--card); border: 1px solid var(--rule); border-left: 4px solid var(--live); border-radius: var(--radius); }
+  .live-strip ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px 18px; font: 700 15px/1.35 var(--serif); }
   .live-strip a { text-decoration: none; }
-  .top { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: 36px; margin-top: 26px; padding-bottom: 8px; }
-  .top-side { display: grid; gap: 14px; align-content: start; }
-  .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 30px 26px; }
-  .list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 36px; }
-  @media (max-width: 900px) { .top { grid-template-columns: 1fr; } .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-  @media (max-width: 600px) { .grid, .list { grid-template-columns: 1fr; } }
+  .top { display: grid; grid-template-columns: minmax(0, 1.85fr) minmax(0, 1fr); gap: 40px; margin-top: 28px; }
+  .top-side { display: grid; gap: 16px; align-content: start; }
+  .side-head { margin: 0; font: 800 13px/1 var(--sans); letter-spacing: .12em; text-transform: uppercase; padding-bottom: 10px; border-bottom: 3px solid var(--accent); }
+  .top-side :global(.side:first-of-type) { border-top: 0; padding-top: 0; }
+  .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 34px 28px; }
+  .grid.four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 40px; }
+  .band { margin-top: 40px; padding: 4px 24px 28px; background: var(--card); border: 1px solid var(--rule); border-radius: 10px; }
+  .band .rule-head { margin-top: 22px; }
+  .all { font: 700 13px/1 var(--sans); color: var(--accent); text-decoration: none; white-space: nowrap; order: 3; }
+  @media (max-width: 980px) { .top { grid-template-columns: 1fr; gap: 28px; } .grid.four { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 760px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .list { grid-template-columns: 1fr; } }
+  @media (max-width: 560px) { .grid, .grid.four { grid-template-columns: 1fr; } .band { padding: 4px 16px 20px; } }
 </style>

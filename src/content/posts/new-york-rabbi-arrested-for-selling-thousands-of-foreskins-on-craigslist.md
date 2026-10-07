@@ -1,21 +1,21 @@
 ---
 title: "New York Rabbi Arrested For Selling Thousands Of Foreskins On Craigslist is a Satire Claim"
+seoTitle: "'Rabbi Sold Foreskins on Craigslist' Story Is Satire"
 description: "The claim that a New York rabbi sold foreskins on Craigslist originated on a website that explicitly labels its stories and characters fictional."
 date: 2021-03-11T00:42:00Z
 updated: 2026-09-23T00:37:55Z
 author: staff
-category: "Crime"
+category: "Crime News"
 image:
   src: "/images/2020/11/new-york-rabbi-arrested-for-selling-thousands-of-foreskins-on-craigslist.jpg"
   alt: "new-york-rabbi-arrested-for-selling-thousands-of-foreskins-on-craigslist"
-  caption: "new-york-rabbi-arrested-for-selling-thousands-of-foreskins-on-craigslist"
 wpId: 95
 ---
 
 <div class="wp-block-group has-border-color has-background is-layout-constrained wp-container-core-group-is-layout-38270525 wp-block-group-is-layout-constrained" style="border-color:#b3261e;border-width:2px;border-radius:4px;background-color:#fdf1f0;padding-top:1em;padding-right:1.25em;padding-bottom:1em;padding-left:1.25em">
 <p class="has-text-color wp-block-paragraph" style="color:#b3261e"><strong>CORRECTION — 23 SEPTEMBER 2026</strong></p>
 
-<p class="wp-block-paragraph">This page previously presented this story as a factual news report. That was an error. The account was fictional, and this page reproduced it without identifying it as fiction. The original text has been removed and replaced with the fact-check below. An <a href="https://web.archive.org/web/20210517172658/https://maxcrime.com/new-york-rabbi-arrested-for-selling-thousands-of-foreskins-on-craigslist/" target="_blank" rel="nofollow noopener">archived copy of the earlier version</a> remains available. This verification was carried out in September 2026, during the restoration of this page. It was not part of the version published here in November 2020.</p>
+<p class="wp-block-paragraph">This page previously presented this story as a factual news report. That was an error. The account was fictional, and this page reproduced it without identifying it as fiction. The original text has been removed and replaced with the fact-check below. An <a href="https://web.archive.org/web/20210517172658//new-york-rabbi-arrested-for-selling-thousands-of-foreskins-on-craigslist/" target="_blank" rel="nofollow noopener">archived copy of the earlier version</a> remains available. This verification was carried out in September 2026, during the restoration of this page. It was not part of the version published here in November 2020.</p>
 </div>
 
 <p class="has-text-color wp-block-paragraph" style="color:#555555;font-size:0.9em">Corrected and updated 23 September 2026.</p>
@@ -26,7 +26,7 @@ wpId: 95
 
 <p class="wp-block-paragraph">The following claims appear in the World News Daily Report story. They are summarized here as elements of that fictional account, not as verified facts.</p>
 
-<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1024" height="576" src="/images/2020/11/new-york-rabbi-arrested-for-selling-thousands-of-foreskins-on-craigslist-1024x576.jpg" alt="new-york-rabbi-arrested-for-selling-thousands-of-foreskins-on-craigslist" class="wp-image-98" srcset="/images/2020/11/new-york-rabbi-arrested-for-selling-thousands-of-foreskins-on-craigslist-1024x576.jpg 1024w, /images/2020/11/new-york-rabbi-arrested-for-selling-thousands-of-foreskins-on-craigslist-300x169.jpg 300w, /images/2020/11/new-york-rabbi-arrested-for-selling-thousands-of-foreskins-on-craigslist-768x432.jpg 768w, /images/2020/11/new-york-rabbi-arrested-for-selling-thousands-of-foreskins-on-craigslist.jpg 1200w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /></figure>
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1024" height="576" src="/images/2020/11/new-york-rabbi-arrested-for-selling-thousands-of-foreskins-on-craigslist.jpg" alt="new-york-rabbi-arrested-for-selling-thousands-of-foreskins-on-craigslist" class="wp-image-98" srcset="/images/2020/11/new-york-rabbi-arrested-for-selling-thousands-of-foreskins-on-craigslist.jpg 1024w, /images/2020/11/new-york-rabbi-arrested-for-selling-thousands-of-foreskins-on-craigslist.jpg 300w, /images/2020/11/new-york-rabbi-arrested-for-selling-thousands-of-foreskins-on-craigslist.jpg 768w, /images/2020/11/new-york-rabbi-arrested-for-selling-thousands-of-foreskins-on-craigslist.jpg 1200w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /></figure>
 
 <figure class="wp-block-table"><table><thead><tr><th>Element of the fictional account</th><th>What the article itself provides</th></tr></thead><tbody><tr><td>A New York rabbi, named in the article as Aaron Zayin, was arrested.</td><td>The publisher states that the characters in its articles are fictional.</td></tr><tr><td>The arrest followed an exchange with a federal agent posing as a Craigslist buyer, “according to the criminal complaint”.</td><td>The article refers to a criminal complaint but provides no linked document or case identifier.</td></tr><tr><td>Approximately 5,200 foreskins allegedly sold since 2015.</td><td>The article presents the figure as an estimate and gives no source for it.</td></tr><tr><td>Quotations attributed to a named police officer and to a police department spokesman.</td><td>Quotations within the fictional account, attributed to a character the publisher identifies as fictional.</td></tr><tr><td>Assertions about the man’s religious practice and customers.</td><td>Elements of the same fictional account.</td></tr><tr><td>A possible $500,000 fine and 1,087 years in prison.</td><td>Attributed in the article to unnamed “experts”, with no statute cited.</td></tr></tbody></table></figure>
 
@@ -46,7 +46,7 @@ wpId: 95
 
 <h2 class="wp-block-heading">Publication and republication history</h2>
 
-<p class="wp-block-paragraph">The archived page’s publication metadata dates the story to 7 June 2019. This page republished the text on 17 November 2020, the date recorded on the <a href="https://web.archive.org/web/20210517172658/https://maxcrime.com/new-york-rabbi-arrested-for-selling-thousands-of-foreskins-on-craigslist/" rel="nofollow noopener" target="_blank">archived copy of this page</a>.</p>
+<p class="wp-block-paragraph">The archived page’s publication metadata dates the story to 7 June 2019. This page republished the text on 17 November 2020, the date recorded on the <a href="https://web.archive.org/web/20210517172658//new-york-rabbi-arrested-for-selling-thousands-of-foreskins-on-craigslist/" rel="nofollow noopener" target="_blank">archived copy of this page</a>.</p>
 
 <p class="wp-block-paragraph">Those are two separate events: the publication date recorded in the original page’s metadata, and the date this page reproduced the text. Neither records an arrest, and neither should be read as one.</p>
 

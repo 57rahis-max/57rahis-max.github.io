@@ -4,7 +4,7 @@ description: "Loaded firearms were recovered from high schools in Queens and Sta
 date: 2026-09-17T23:30:01Z
 updated: 2026-09-19T17:30:50Z
 author: alex
-category: "Local News"
+category: "Crime News"
 image:
   src: "/images/2026/09/guns-recovered-from-schools-in-queens-and-staten-island.jpg"
   alt: "Handguns and firearms recovered in school weapons security operations"
@@ -16,7 +16,7 @@ wpId: 75
 
 <p class="wp-block-paragraph">According to reports, the student was fighting with another student on Hamilton Avenue in the St. George neighborhood around 10:20 AM when school safety agents intervened and broke up the fight. It was during this incident that they found the loaded gun in the backpack. The school reportedly does not have metal detectors.</p>
 
-<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1024" height="576" src="/images/2026/09/guns-recovered-from-schools-in-queens-and-staten-island.jpg" alt="Handguns and firearms recovered in school weapons security operations" class="wp-image-74" srcset="/images/2026/09/guns-recovered-from-schools-in-queens-and-staten-island.jpg 1024w, /images/2026/09/guns-recovered-from-schools-in-queens-and-staten-island-300x169.jpg 300w, /images/2026/09/guns-recovered-from-schools-in-queens-and-staten-island-768x432.jpg 768w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><figcaption class="wp-element-caption">Loaded firearms recovered during school security screening incidents in New York City.</figcaption></figure>
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1024" height="576" src="/images/2026/09/guns-recovered-from-schools-in-queens-and-staten-island.jpg" alt="Handguns and firearms recovered in school weapons security operations" class="wp-image-74" srcset="/images/2026/09/guns-recovered-from-schools-in-queens-and-staten-island.jpg 1024w, /images/2026/09/guns-recovered-from-schools-in-queens-and-staten-island.jpg 300w, /images/2026/09/guns-recovered-from-schools-in-queens-and-staten-island.jpg 768w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><figcaption class="wp-element-caption">Loaded firearms recovered during school security screening incidents in New York City.</figcaption></figure>
 
 <p class="wp-block-paragraph">The statement released by the Department of Education read, &#8220;Weapons have no place in our schools or our city. The incident was quickly and safely addressed by our School Safety Agents, and no students or staff were injured. The gun was safely recovered after a search was conducted of the student’s bookbag. NYPD was called immediately upon discovery of the firearm.”</p>
 

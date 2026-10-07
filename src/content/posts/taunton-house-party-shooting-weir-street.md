@@ -1,10 +1,11 @@
 ---
 title: "One Dead, Seven Others Injured After Shooting at Taunton House Party"
+seoTitle: "One Dead, Seven Hurt in Taunton House Party Shooting"
 description: "One dead and seven injured after a house party shooting on Weir Street in Taunton. Officials identified the deceased as 22-year-old Zirovick Depina of Brockton."
 date: 2026-09-06T15:24:03Z
 updated: 2026-09-06T22:11:00Z
 author: henry
-category: "Crime &amp; Tragedy"
+category: "Crime News"
 image:
   src: "/images/2026/09/taunton-weir-street-house-party-shooting-scene.jpg"
   alt: "Taunton police vehicles with flashing emergency lights line Weir Street near a railroad crossing following a house party shooting"
@@ -18,7 +19,7 @@ wpId: 57
 
 <p class="wp-block-paragraph">Taunton Police received several 911 calls around 12:30 a.m. Sunday, Sept. 6, reporting shots fired and multiple people shot in the area of Weir and Sumner streets, according to <a href="https://news.jgpr.net/2026/09/06/taunton-police-investigating-shooting-at-weir-street-house-party/" target="_blank" rel="noopener noreferrer">a police release issued through John Guilfoil Public Relations</a>. Responding officers determined the shooting occurred at a home on Weir Street near its intersection with Sumner Street, where they located multiple gunshot victims.</p>
 
-<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1200" height="675" src="/images/2026/09/taunton-house-party-shooting-map.jpg" alt="Map showing the location of a house party shooting in Taunton near Weir and Sumner streets" class="wp-image-55" srcset="/images/2026/09/taunton-house-party-shooting-map.jpg 1200w, /images/2026/09/taunton-house-party-shooting-map-300x169.jpg 300w, /images/2026/09/taunton-house-party-shooting-map-1024x576.jpg 1024w, /images/2026/09/taunton-house-party-shooting-map-768x432.jpg 768w" sizes="auto, (max-width: 1200px) 100vw, 1200px" /><figcaption class="wp-element-caption">Map indicating the area of Weir and Sumner streets in Taunton where police responded to multiple gunshot victims early Sunday.</figcaption></figure>
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1200" height="675" src="/images/2026/09/taunton-house-party-shooting-map.jpg" alt="Map showing the location of a house party shooting in Taunton near Weir and Sumner streets" class="wp-image-55" srcset="/images/2026/09/taunton-house-party-shooting-map.jpg 1200w, /images/2026/09/taunton-house-party-shooting-map.jpg 300w, /images/2026/09/taunton-house-party-shooting-map.jpg 1024w, /images/2026/09/taunton-house-party-shooting-map.jpg 768w" sizes="auto, (max-width: 1200px) 100vw, 1200px" /><figcaption class="wp-element-caption">Map indicating the area of Weir and Sumner streets in Taunton where police responded to multiple gunshot victims early Sunday.</figcaption></figure>
 
 <h2 class="wp-block-heading">Eight Shot, One Fatally</h2>
 
@@ -34,4 +35,4 @@ wpId: 57
 
 <p class="wp-block-paragraph"><em>This report is based on reporting from <a href="https://www.cbsnews.com/boston/news/taunton-massachusetts-shooting-weir-street/" target="_blank" rel="noopener noreferrer">CBS Boston</a> and <a href="https://www.nbcboston.com/news/local/taunton-mass-shooting-fatal-multiple-people-injured/4010264/" target="_blank" rel="noopener noreferrer">NBC Boston</a>, both citing Taunton Police and the Bristol County District Attorney&#8217;s Office, and an initial <a href="https://news.jgpr.net/2026/09/06/taunton-police-investigating-shooting-at-weir-street-house-party/" target="_blank" rel="noopener noreferrer">Taunton Police release via John Guilfoil Public Relations</a>.</em></p>
 
-<p class="wp-block-paragraph">MaxCrime has covered other recent weekend shootings at social gatherings and residential areas, including <a href="https://maxcrime.com/fresno-backyard-shooting-east-washington-avenue/">a shooting during a Fresno backyard celebration</a> and <a href="https://maxcrime.com/buford-triple-shooting-laurel-crossing/">a weekend triple shooting in Buford, Georgia</a>. Additional local crime reporting is available in MaxCrime’s <a href="https://maxcrime.com/category/crime-news/">Crime News</a> section.</p>
+<p class="wp-block-paragraph">MaxCrime has covered other recent weekend shootings at social gatherings and residential areas, including <a href="/fresno-backyard-shooting-east-washington-avenue/">a shooting during a Fresno backyard celebration</a> and <a href="/buford-triple-shooting-laurel-crossing/">a weekend triple shooting in Buford, Georgia</a>. Additional local crime reporting is available in MaxCrime’s <a href="/category/crime-news/">Crime News</a> section.</p>

@@ -1,10 +1,11 @@
 ---
 title: "Suspect Arrested in South Carolina After Fatal Uptown Charlotte Shooting, Police Say"
+seoTitle: "Suspect Arrested After Fatal Uptown Charlotte Shooting"
 description: "A 36-year-old man is facing a murder charge in connection with a shooting that killed a man in uptown Charlotte […]"
 date: 2026-09-07T23:16:18Z
 updated: 2026-09-07T23:16:20Z
 author: alex
-category: "Crime &amp; Tragedy"
+category: "Crime News"
 image:
   src: "/images/2026/09/charlotte-police-west-trade-street-investigation.jpg"
   alt: "Charlotte-Mecklenburg Police cruisers cordoning off a crime scene on West Trade Street in uptown Charlotte"
@@ -24,7 +25,7 @@ wpId: 61
 
 <p class="wp-block-paragraph">Homicide detectives, Crime Scene Search investigators, and Victim Services staff all responded that morning.</p>
 
-<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1376" height="768" src="/images/2026/09/charlotte-police-west-trade-street-investigation.jpg" alt="Charlotte-Mecklenburg Police cruisers cordoning off a crime scene on West Trade Street in uptown Charlotte" class="wp-image-60" srcset="/images/2026/09/charlotte-police-west-trade-street-investigation.jpg 1376w, /images/2026/09/charlotte-police-west-trade-street-investigation-300x167.jpg 300w, /images/2026/09/charlotte-police-west-trade-street-investigation-1024x572.jpg 1024w, /images/2026/09/charlotte-police-west-trade-street-investigation-768x429.jpg 768w" sizes="auto, (max-width: 1376px) 100vw, 1376px" /><figcaption class="wp-element-caption">Charlotte-Mecklenburg Police secured the scene on West Trade Street near Johnson &amp; Wales University following a fatal shooting early Sunday morning.</figcaption></figure>
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1376" height="768" src="/images/2026/09/charlotte-police-west-trade-street-investigation.jpg" alt="Charlotte-Mecklenburg Police cruisers cordoning off a crime scene on West Trade Street in uptown Charlotte" class="wp-image-60" srcset="/images/2026/09/charlotte-police-west-trade-street-investigation.jpg 1376w, /images/2026/09/charlotte-police-west-trade-street-investigation.jpg 300w, /images/2026/09/charlotte-police-west-trade-street-investigation.jpg 1024w, /images/2026/09/charlotte-police-west-trade-street-investigation.jpg 768w" sizes="auto, (max-width: 1376px) 100vw, 1376px" /><figcaption class="wp-element-caption">Charlotte-Mecklenburg Police secured the scene on West Trade Street near Johnson &amp; Wales University following a fatal shooting early Sunday morning.</figcaption></figure>
 
 <h2 class="wp-block-heading">Arrest Made in Union County, South Carolina</h2>
 
@@ -42,4 +43,4 @@ wpId: 61
 
 <p class="wp-block-paragraph">Anyone with information is asked to call CMPD’s Homicide Unit at 704-432-8477 and ask for a detective, or contact Crime Stoppers anonymously at 704-334-1600.</p>
 
-<p class="wp-block-paragraph">MaxCrime has covered other recent Labor Day weekend shooting investigations across the country, including <a href="https://maxcrime.com/taunton-house-party-shooting-weir-street/">a fatal shooting at a Taunton house party</a>, <a href="https://maxcrime.com/chicago-shootings-two-teens-wounded-saturday-night/">separate Saturday-night shootings in Chicago</a>, and <a href="https://maxcrime.com/fresno-backyard-shooting-east-washington-avenue/">a backyard celebration shooting in Fresno</a>. Additional local reports are available in MaxCrime’s <a href="https://maxcrime.com/category/crime-news/">Crime News</a> section.</p>
+<p class="wp-block-paragraph">MaxCrime has covered other recent Labor Day weekend shooting investigations across the country, including <a href="/taunton-house-party-shooting-weir-street/">a fatal shooting at a Taunton house party</a>, <a href="/chicago-shootings-two-teens-wounded-saturday-night/">separate Saturday-night shootings in Chicago</a>, and <a href="/fresno-backyard-shooting-east-washington-avenue/">a backyard celebration shooting in Fresno</a>. Additional local reports are available in MaxCrime’s <a href="/category/crime-news/">Crime News</a> section.</p>

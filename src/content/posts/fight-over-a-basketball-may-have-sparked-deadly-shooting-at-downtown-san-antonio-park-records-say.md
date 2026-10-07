@@ -1,5 +1,6 @@
 ---
 title: "Fight Over a Basketball May Have Sparked Deadly Shooting at Downtown San Antonio Park, Records Say"
+seoTitle: "Basketball Dispute May Have Sparked Fatal San Antonio Park Shooting"
 description: "A dispute involving a basketball preceded a fatal shooting at Hemisfair, the downtown San Antonio park and event space, according to newly […]"
 date: 2026-09-04T21:13:41Z
 author: alex

@@ -102,7 +102,7 @@ for p in posts:
     title = text(p["title"]["rendered"])
     yoast = (p.get("yoast_head_json") or {}).get("description")
     desc = (yoast or text(p["excerpt"]["rendered"]) or title)[:170]
-    cat = cats.get((p.get("categories") or [0])[0], "Crime News")
+    cat = html.unescape(cats.get((p.get("categories") or [0])[0], "Crime News"))
     if cat == "Uncategorized":
         cat = "Crime News"
 

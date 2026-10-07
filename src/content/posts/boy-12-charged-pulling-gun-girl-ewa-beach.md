@@ -1,5 +1,6 @@
 ---
 title: "Boy, 12, Charged After Allegedly Pulling A Gun On A Girl In Ewa Beach"
+seoTitle: "Boy, 12, Charged After Allegedly Pulling Gun in Ewa Beach"
 description: "Police charged a 12-year-old boy in an Ewa Beach gun case after he allegedly pulled a firearm on a girl, 13, on Fort Weaver Road, Hawaii News Now reported."
 date: 2026-09-19T20:48:37Z
 updated: 2026-09-19T20:48:39Z
@@ -8,7 +9,6 @@ category: "Crime News"
 image:
   src: "/images/2026/09/Boy-12-Charged-After-Allegedly-Pulling-A-Gun-On-A-Girl-In-Ewa-Beach.jpg"
   alt: "Boy, 12, Charged After Allegedly Pulling A Gun On A Girl In Ewa Beach"
-  caption: "Boy, 12, Charged After Allegedly Pulling A Gun On A Girl In Ewa Beach"
 wpId: 86
 ---
 
@@ -26,4 +26,4 @@ wpId: 86
 
 <p class="wp-block-paragraph">No one was hurt. The investigation is continuing, and police have not released further details, including where the boy got the gun or which school he attends, <a href="https://www.staradvertiser.com/2026/09/19/breaking-news/boy-12-charged-after-allegedly-pulling-gun-on-girl-in-ewa-beach/">the Honolulu Star-Advertiser reported</a>.</p>
 
-<p class="wp-block-paragraph"><strong>Related:</strong> <a href="https://maxcrime.com/guns-recovered-from-schools-in-queens-and-staten-island/">Guns Recovered From Schools In Queens And Staten Island</a> — school safety agents found a loaded gun in a student’s bag in Staten Island days earlier.</p>
+<p class="wp-block-paragraph"><strong>Related:</strong> <a href="/guns-recovered-from-schools-in-queens-and-staten-island/">Guns Recovered From Schools In Queens And Staten Island</a> — school safety agents found a loaded gun in a student’s bag in Staten Island days earlier.</p>
