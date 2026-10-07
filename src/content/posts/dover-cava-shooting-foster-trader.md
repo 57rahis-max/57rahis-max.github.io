@@ -1,7 +1,7 @@
 ---
 title: "Dover Police Identify Teen Killed in Dover CAVA Shooting, Seek Witnesses"
 seoTitle: "Dover Police Identify Teen Killed in CAVA Shooting"
-description: "Dover police have identified an 18-year-old Dover man as the victim of a fatal shooting outside a CAVA restaurant, and investigators are asking anyone with information to"
+description: "Dover police have identified an 18-year-old Dover man as the victim of a fatal shooting outside a CAVA restaurant, and investigators are asking anyone."
 date: 2026-09-05T15:11:15Z
 updated: 2026-09-05T16:33:57Z
 author: alex

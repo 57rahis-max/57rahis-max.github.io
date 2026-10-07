@@ -1,6 +1,6 @@
 ---
 title: "Two Teens Wounded in Separate Saturday-Night Chicago Shootings"
-description: "Two teenage boys were hospitalized after separate shootings in Chicago on South Dorchester Avenue and South Claremont Avenue Saturday night. No suspects are in custody."
+description: "Two teenage boys were hospitalized after separate shootings in Chicago on South Dorchester Avenue and South Claremont Avenue Saturday night. No suspects."
 date: 2026-09-06T14:36:39Z
 updated: 2026-09-06T14:36:40Z
 author: henry

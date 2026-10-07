@@ -4,7 +4,7 @@ import Base from '../layouts/Base.astro';
 import PostCard from '../components/PostCard.astro';
 import { allPosts, lastTouched, type Post } from '../lib/posts';
 import { website, publisher } from '../lib/schema';
-import { SITE, postUrl, categoryUrl, fmtDate, fmtTime, thumb } from '../lib/site';
+import { SITE, postUrl, categoryUrl, fmtDate, fmtTime, srcsetFor, imageSize } from '../lib/site';
 
 const posts = await allPosts();
 const names = Object.fromEntries((await getCollection('authors')).map((a) => [a.id, a.data.name]));
@@ -57,7 +57,7 @@ const ticker = posts.slice(0, 8);
       <section class="front" aria-label="Top of the front page">
         <article class="hero">
           <a href={postUrl(hero.id)} class="hero-link">
-            <img src={hero.data.image!.src} srcset={`${thumb(hero.data.image!.src)} 800w, ${hero.data.image!.src} 1600w`} sizes="(max-width: 980px) 100vw, 760px" alt="" width="1600" height="900" loading="eager" fetchpriority="high" />
+            <img src={hero.data.image!.src} srcset={srcsetFor(hero.data.image!.src)} sizes="(max-width: 980px) 100vw, 760px" alt="" width={(imageSize(hero.data.image!.src) ?? { width: 1600 }).width} height={(imageSize(hero.data.image!.src) ?? { height: 900 }).height} loading="eager" fetchpriority="high" />
             <div class="hero-text">
               <p class="kicker light">{hero.data.live === 'live' ? <span class="live-pill">Live</span> : hero.data.category}</p>
               <h2 class="hero-title">{hero.data.title}</h2>

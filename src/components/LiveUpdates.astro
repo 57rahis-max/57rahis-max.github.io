@@ -26,21 +26,30 @@ const sorted = [...updates].sort((a, b) => b.time.getTime() - a.time.getTime());
   </ol>
 </section>
 {status === 'live' && (
-  <script>
-    // Check for a newer version every two minutes while coverage is live.
-    const stamp = document.querySelector('.timeline time')?.getAttribute('datetime');
-    setInterval(async () => {
+  <script define:vars={{ newestIso: sorted[0]?.time.toISOString() ?? '', slug: Astro.url.pathname }}>
+    // While coverage is live, look for a newer version every two minutes.
+    // Compares against the small JSON stamp the build writes for this story
+    // (fetched with a cache-busting query, so a CDN copy cannot fool it),
+    // pauses while the tab is hidden, and stops once coverage has ended.
+    let timer;
+    const check = async () => {
+      if (document.hidden) return;
       try {
-        const html = await (await fetch(location.pathname, { cache: 'no-store' })).text();
-        const m = html.match(/class="timeline"[\s\S]*?<time datetime="([^"]+)"/);
-        if (m && stamp && m[1] !== stamp && !document.querySelector('.new-updates')) {
+        const r = await fetch(`${slug}live.json?t=${Date.now()}`, { cache: 'no-store' });
+        if (!r.ok) return;
+        const j = await r.json();
+        if (j.newest && j.newest !== newestIso && !document.querySelector('.new-updates')) {
           const b = document.createElement('button');
-          b.className = 'new-updates'; b.textContent = 'New updates — tap to refresh';
+          b.className = 'new-updates';
+          b.textContent = j.status === 'ended' ? 'Coverage has ended — tap to see the final update' : 'New updates — tap to refresh';
           b.onclick = () => location.reload();
           document.querySelector('.live-head')?.after(b);
+          clearInterval(timer);
         }
       } catch {}
-    }, 120000);
+    };
+    timer = setInterval(check, 120000);
+    document.addEventListener('visibilitychange', () => { if (!document.hidden) check(); });
   </script>
 )}
 <style>

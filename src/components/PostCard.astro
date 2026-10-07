@@ -1,19 +1,20 @@
 ---
 import type { Post } from '../lib/posts';
 import { lastTouched } from '../lib/posts';
-import { postUrl, fmtDate, fmtTime, categoryUrl, thumb } from '../lib/site';
+import { postUrl, fmtDate, fmtTime, categoryUrl, thumb, imageSize } from '../lib/site';
 interface Props { post: Post; size?: 'lead' | 'normal' | 'side' | 'compact'; authorName?: string }
 const { post, size = 'normal', authorName } = Astro.props;
 const d = post.data;
 const live = d.live === 'live';
 const when = live ? lastTouched(post) : d.date;
 const img = size === 'lead' ? d.image?.src : thumb(d.image?.src);
+const dim = imageSize(img) ?? { width: 800, height: 450 };
 const showImg = size !== 'compact' && !!d.image;
 ---
 <article class={`card ${size}${showImg ? '' : ' noimg'}`}>
   {showImg && (
     <a href={postUrl(post.id)} class="img-link" tabindex="-1" aria-hidden="true">
-      <img class="card-img" src={img} alt="" loading={size === 'lead' ? 'eager' : 'lazy'} decoding="async" width="800" height="450" />
+      <img class="card-img" src={img} alt="" loading={size === 'lead' ? 'eager' : 'lazy'} decoding="async" width={dim.width} height={dim.height} />
     </a>
   )}
   <div class="card-body">

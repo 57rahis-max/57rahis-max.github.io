@@ -1,6 +1,6 @@
 ---
 title: "Morgue Worker ‘Dead Man’s Baby’ Arrest Story Was Fiction"
-description: "The claim has been debunked since 2010. Snopes, Lead Stories, Truth or Fiction, Check Your Fact and Africa Check all trace it to satirical websites that labelled their co"
+description: "The claim has been debunked since 2010. Snopes, Lead Stories, Truth or Fiction, Check Your Fact and Africa Check all trace it to satirical websites that."
 date: 2026-09-23T01:25:27Z
 updated: 2026-09-23T01:25:28Z
 author: staff

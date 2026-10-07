@@ -10,7 +10,7 @@ import Tweet from '../components/Tweet.astro';
 import PullQuote from '../components/PullQuote.astro';
 import { allPosts, related, lastTouched, type Post } from '../lib/posts';
 import { articleSchema, crumbsFor } from '../lib/schema';
-import { fmtDateTime, categoryUrl, authorUrl, postUrl, readingMinutes, thumb, SITE } from '../lib/site';
+import { fmtDateTime, categoryUrl, authorUrl, postUrl, readingMinutes, srcsetFor, imageSize, SITE } from '../lib/site';
 
 export async function getStaticPaths() {
   const posts = await allPosts();
@@ -26,10 +26,11 @@ const posts = await allPosts();
 const more = related(post, posts, 4);
 const authors = Object.fromEntries((await Promise.all(more.map((p) => getEntry(p.data.author)))).map((x) => [x!.id, x!.data.name]));
 const modified = lastTouched(post);
-const wasUpdated = modified.getTime() - d.date.getTime() > 5 * 60 * 1000;
+// Shown only for a real later edit or a live update, not the save WordPress made moments after publishing.
+const wasUpdated = modified.getTime() - d.date.getTime() > 60 * 60 * 1000;
 const body = post.body ?? '';
-const heroThumb = thumb(d.image?.src);
-const heroSet = d.image && heroThumb && heroThumb !== d.image.src ? `${heroThumb} 800w, ${d.image.src} 1600w` : undefined;
+const heroSet = srcsetFor(d.image?.src);
+const heroDim = imageSize(d.image?.src) ?? { width: 1600, height: 900 };
 const shareUrl = encodeURIComponent(new URL(postUrl(post.id), SITE.url).href);
 const shareText = encodeURIComponent(d.title);
 ---
@@ -70,7 +71,7 @@ const shareText = encodeURIComponent(d.title);
 
     {d.image && (
       <figure class="hero">
-        <img src={d.image.src} srcset={heroSet} sizes="(max-width: 760px) 100vw, 1000px" alt={d.image.alt} width="1600" height="900" loading="eager" fetchpriority="high" data-pagefind-meta="image[src]" />
+        <img src={d.image.src} srcset={heroSet} sizes="(max-width: 760px) 100vw, 1000px" alt={d.image.alt} width={heroDim.width} height={heroDim.height} loading="eager" fetchpriority="high" data-pagefind-meta="image[src]" />
         {(d.image.caption || d.image.credit) && (
           <figcaption class="figure-caption">{d.image.caption}{d.image.credit && <> <span set:html={d.image.credit} /></>}</figcaption>
         )}

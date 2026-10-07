@@ -1,7 +1,7 @@
 ---
 title: "Zookeeper arrested after trying to sexually assault 500-pound male gorilla"
 seoTitle: "Zookeeper Arrested After Gorilla Assault Attempt"
-description: "The claim that a San Diego zookeeper was arrested for assaulting a 500-pound gorilla originated in a fictional story. Lead Stories and Africa Check both traced it to Worl"
+description: "The claim that a San Diego zookeeper was arrested for assaulting a 500-pound gorilla originated in a fictional story. Lead Stories and Africa Check both."
 date: 2021-03-11T00:43:00Z
 updated: 2026-09-23T00:49:14Z
 author: staff
