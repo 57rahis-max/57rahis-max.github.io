@@ -17,7 +17,7 @@ const schema = [
   breadcrumbs([{ name: 'Home', url: '/' }, { name: a.data.name, url: Astro.url.pathname }]),
 ];
 ---
-<Base title={`${a.data.name}, ${a.data.role}`} description={a.data.bio} schema={schema}>
+<Base title={`${a.data.name}, ${a.data.role}`} description={`${a.data.name}, ${a.data.role} at Max Crime: ${posts.length} ${posts.length === 1 ? "story" : "stories"} on US crime and courts, each sourced to at least two outlets or an official record.`} schema={schema}>
   <div class="wrap">
     <header class="profile">
       <Avatar initials={a.data.initials} color={a.data.color} size={96} label={a.data.name} />
