@@ -2,33 +2,40 @@
 import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import PostCard from '../components/PostCard.astro';
-import { allPosts } from '../lib/posts';
+import { allPosts, lastTouched, type Post } from '../lib/posts';
 import { website, publisher } from '../lib/schema';
-import { SITE, postUrl } from '../lib/site';
+import { SITE, postUrl, categoryUrl, fmtDate, fmtTime, thumb } from '../lib/site';
 
 const posts = await allPosts();
 const names = Object.fromEntries((await getCollection('authors')).map((a) => [a.id, a.data.name]));
-const name = (p: (typeof posts)[number]) => names[p.data.author.id];
+const name = (p: Post) => names[p.data.author.id];
 const live = posts.filter((p) => p.data.live === 'live');
 
+// A real photograph leads the page. Information cards (timelines, summaries)
+// are good inside a story but read as a slide on a front page.
+const isPhoto = (p: Post) => !!p.data.image && !/card|timeline|summary/i.test(p.data.image.src);
+
 const used = new Set<string>();
-const take = (list: typeof posts, n: number) => {
+const take = (list: Post[], n: number) => {
   const out = list.filter((p) => !used.has(p.id)).slice(0, n);
   out.forEach((p) => used.add(p.id));
   return out;
 };
-const [lead] = take(posts.filter((p) => p.data.image), 1);
-const side = take(posts, 4);
+const [hero] = take(posts.filter(isPhoto), 1);
+const heroSide = take(posts.filter(isPhoto), 2);   // two photo stories beside the hero
+const top = take(posts, 5);                          // numbered headline list
 const latest = take(posts, 6);
-// The Courts band is filled to four when it can: court stories already shown
-// above may repeat here (never the lead), rather than leave the band half empty.
-const courtPosts = posts.filter((p) => p.data.category === 'Courts' && p.id !== lead?.id);
-const courts = [...take(courtPosts, 4)];
-for (const p of courtPosts) if (courts.length < 4 && !courts.includes(p)) courts.push(p);
-const more = take(posts, 12);
+// The band leads with a photo story too; card-only stories go in the list beside it.
+const courtPool = posts.filter((p) => p.data.category === 'Courts' && p.id !== hero?.id);
+const courtLead = courtPool.find(isPhoto) ?? courtPool[0];
+const courts = courtLead ? [courtLead, ...courtPool.filter((p) => p.id !== courtLead.id).slice(0, 3)] : [];
+courts.forEach((p) => used.add(p.id));
+const more = take(posts, 10);
+const ticker = posts.slice(0, 8);
 ---
 <Base title={SITE.name} home schema={[website, { '@context': 'https://schema.org', ...publisher }]}>
   <div class="wrap">
+
     {live.length > 0 && (
       <div class="live-strip" role="region" aria-label="Live coverage">
         <span class="live-pill">Live</span>
@@ -36,53 +43,144 @@ const more = take(posts, 12);
       </div>
     )}
 
-    {lead && (
-      <section class="top" aria-label="Top stories">
-        <div class="top-lead"><PostCard post={lead} size="lead" authorName={name(lead)} /></div>
-        <div class="top-side">
-          <h2 class="side-head">Top stories</h2>
-          {side.map((p) => <PostCard post={p} size="side" authorName={name(p)} />)}
+    <!-- Headline ticker: the newest eight, scrolling on narrow screens -->
+    <div class="ticker" role="region" aria-label="Latest headlines">
+      <span class="ticker-label">Latest</span>
+      <ul>
+        {ticker.map((p) => (
+          <li><a href={postUrl(p.id)}><time datetime={lastTouched(p).toISOString()}>{fmtTime(lastTouched(p))}</time> {p.data.title}</a></li>
+        ))}
+      </ul>
+    </div>
+
+    {hero && (
+      <section class="front" aria-label="Top of the front page">
+        <article class="hero">
+          <a href={postUrl(hero.id)} class="hero-link">
+            <img src={hero.data.image!.src} srcset={`${thumb(hero.data.image!.src)} 800w, ${hero.data.image!.src} 1600w`} sizes="(max-width: 980px) 100vw, 760px" alt="" width="1600" height="900" loading="eager" fetchpriority="high" />
+            <div class="hero-text">
+              <p class="kicker light">{hero.data.live === 'live' ? <span class="live-pill">Live</span> : hero.data.category}</p>
+              <h2 class="hero-title">{hero.data.title}</h2>
+              <p class="hero-dek">{hero.data.description}</p>
+              <p class="hero-meta">{name(hero)} · <time datetime={hero.data.date.toISOString()}>{fmtDate(hero.data.date)}</time></p>
+            </div>
+          </a>
+        </article>
+
+        <div class="front-col">
+          {heroSide.map((p) => <PostCard post={p} size="normal" authorName={name(p)} />)}
+        </div>
+
+        <aside class="front-list" aria-labelledby="h-top">
+          <h2 id="h-top" class="side-head">Top stories</h2>
+          <ol class="numbered">
+            {top.map((p) => (
+              <li>
+                <a href={postUrl(p.id)}>
+                  <span class="num" aria-hidden="true"></span>
+                  <span>
+                    <span class="n-kicker">{p.data.category}</span>
+                    <span class="n-title">{p.data.title}</span>
+                    <span class="meta">{fmtDate(p.data.date)}</span>
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ol>
+        </aside>
+      </section>
+    )}
+
+    <section aria-labelledby="h-latest" class="block">
+      <div class="rule-head"><h2 id="h-latest">Latest news</h2><a class="all" href="/category/crime-news/">All crime news →</a></div>
+      <div class="grid three">{latest.map((p) => <PostCard post={p} authorName={name(p)} />)}</div>
+    </section>
+
+    {courts.length > 0 && (
+      <section aria-labelledby="h-courts" class="block band">
+        <div class="rule-head"><h2 id="h-courts">Courts &amp; trials</h2><a class="all" href="/category/courts/">All court stories →</a></div>
+        <div class="band-grid">
+          <div class="band-lead"><PostCard post={courts[0]} size="lead" authorName={name(courts[0])} /></div>
+          <div class="band-rest">{courts.slice(1).map((p) => <PostCard post={p} size="side" authorName={name(p)} />)}</div>
         </div>
       </section>
     )}
 
-    {latest.length > 0 && (
-      <section aria-labelledby="h-latest">
-        <div class="rule-head"><h2 id="h-latest">Latest</h2></div>
-        <div class="grid">{latest.map((p) => <PostCard post={p} authorName={name(p)} />)}</div>
-      </section>
-    )}
-
-    {courts.length > 0 && (
-      <section aria-labelledby="h-courts" class="band">
-        <div class="rule-head"><h2 id="h-courts">Courts</h2><a class="all" href="/category/courts/">All court stories →</a></div>
-        <div class="grid four">{courts.map((p) => <PostCard post={p} authorName={name(p)} />)}</div>
-      </section>
-    )}
-
     {more.length > 0 && (
-      <section aria-labelledby="h-more">
-        <div class="rule-head"><h2 id="h-more">More stories</h2><a class="all" href="/category/crime-news/">All crime news →</a></div>
+      <section aria-labelledby="h-more" class="block">
+        <div class="rule-head"><h2 id="h-more">More stories</h2></div>
         <div class="list">{more.map((p) => <PostCard post={p} size="side" authorName={name(p)} />)}</div>
       </section>
     )}
+
+    <section class="promise" aria-label="How Max Crime reports">
+      <div>
+        <p class="kicker">How we report</p>
+        <h2>Every claim names its source.</h2>
+        <p>A fact appears here only if two independent outlets report it, or it comes from a police, prosecutor or court record. Charges are allegations until a court rules.</p>
+        <a href="/editorial-standards/" class="btn">Read our standards</a>
+      </div>
+    </section>
   </div>
 </Base>
+
 <style>
-  .live-strip { display: flex; gap: 14px; align-items: center; margin: 20px 0 0; padding: 12px 16px; background: var(--card); border: 1px solid var(--rule); border-left: 4px solid var(--live); border-radius: var(--radius); }
+  .live-strip { display: flex; gap: 14px; align-items: center; margin: 18px 0 0; padding: 12px 16px; background: var(--card); border: 1px solid var(--rule); border-left: 4px solid var(--live); border-radius: var(--radius); }
   .live-strip ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px 18px; font: 700 15px/1.35 var(--serif); }
   .live-strip a { text-decoration: none; }
-  .top { display: grid; grid-template-columns: minmax(0, 1.85fr) minmax(0, 1fr); gap: 40px; margin-top: 28px; }
-  .top-side { display: grid; gap: 16px; align-content: start; }
-  .side-head { margin: 0; font: 800 13px/1 var(--sans); letter-spacing: .12em; text-transform: uppercase; padding-bottom: 10px; border-bottom: 3px solid var(--accent); }
-  .top-side :global(.side:first-of-type) { border-top: 0; padding-top: 0; }
-  .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 34px 28px; }
-  .grid.four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-  .list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 40px; }
-  .band { margin-top: 40px; padding: 4px 24px 28px; background: var(--card); border: 1px solid var(--rule); border-radius: 10px; }
+
+  /* Ticker */
+  .ticker { display: flex; align-items: stretch; margin: 16px 0 0; border: 1px solid var(--rule); border-radius: var(--radius); background: var(--card); overflow: hidden; }
+  .ticker-label { flex: none; display: grid; place-items: center; padding: 0 14px; background: var(--accent); color: #fff; font: 800 11px/1 var(--sans); letter-spacing: .14em; text-transform: uppercase; }
+  .ticker ul { list-style: none; margin: 0; padding: 0 8px; display: flex; gap: 0; overflow-x: auto; scrollbar-width: none; }
+  .ticker ul::-webkit-scrollbar { display: none; }
+  .ticker li { flex: none; }
+  .ticker a { display: block; padding: 10px 14px; font: 600 13.5px/1.3 var(--sans); text-decoration: none; white-space: nowrap; border-right: 1px solid var(--rule); max-width: 420px; overflow: hidden; text-overflow: ellipsis; }
+  .ticker time { color: var(--accent); font-weight: 800; margin-right: 6px; }
+
+  /* Front: hero + two photo stories + numbered list */
+  .front { display: grid; grid-template-columns: minmax(0, 1.9fr) minmax(0, 1fr) minmax(0, 1fr); gap: 28px; margin-top: 22px; }
+  .hero { position: relative; }
+  .hero-link { display: block; position: relative; border-radius: 8px; overflow: hidden; text-decoration: none; color: #fff; background: #111; aspect-ratio: 4 / 3; }
+  .hero-link img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .6s ease; }
+  .hero-link:hover img { transform: scale(1.03); }
+  .hero-text { position: absolute; inset: auto 0 0 0; padding: 120px 28px 26px; background: linear-gradient(to top, rgb(0 0 0 / .88) 0%, rgb(0 0 0 / .55) 55%, transparent 100%); }
+  .kicker.light { color: #ff6b77; }
+  .hero-title { margin: 8px 0 10px; font: 800 clamp(1.6rem, 2.6vw, 2.35rem)/1.1 var(--serif); color: #fff; text-shadow: 0 1px 2px rgb(0 0 0 / .4); }
+  .hero-dek { margin: 0 0 10px; font: 400 15.5px/1.5 var(--sans); color: #e8e6e1; max-width: 60ch; }
+  .hero-meta { margin: 0; font: 600 12.5px/1 var(--sans); color: #c9c7c2; }
+  .front-col { display: grid; gap: 24px; align-content: start; }
+  .front-list { border-left: 1px solid var(--rule); padding-left: 24px; }
+  .side-head { margin: 0 0 6px; font: 800 13px/1 var(--sans); letter-spacing: .12em; text-transform: uppercase; padding-bottom: 10px; border-bottom: 3px solid var(--accent); }
+  .numbered { list-style: none; margin: 0; padding: 0; counter-reset: top; }
+  .numbered li { counter-increment: top; border-bottom: 1px solid var(--rule); }
+  .numbered a { display: grid; grid-template-columns: 34px 1fr; gap: 10px; padding: 13px 0; text-decoration: none; }
+  .numbered .num::before { content: counter(top); font: 900 1.9rem/1 var(--serif); color: var(--accent); }
+  .n-kicker { display: block; font: 700 11px/1 var(--sans); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-bottom: 5px; }
+  .n-title { display: block; font: 700 1rem/1.3 var(--serif); margin-bottom: 4px; }
+  .numbered a:hover .n-title { text-decoration: underline; }
+
+  .block { margin-top: 44px; }
+  .grid.three { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 34px 28px; }
+  .band { padding: 6px 28px 30px; background: var(--card); border: 1px solid var(--rule); border-top: 4px solid var(--ink); border-radius: 10px; }
   .band .rule-head { margin-top: 22px; }
+  .band-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 32px; }
+  .band-rest { display: grid; align-content: start; }
+  .band-rest :global(.side:first-child) { border-top: 0; padding-top: 0; }
+  .list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 44px; }
   .all { font: 700 13px/1 var(--sans); color: var(--accent); text-decoration: none; white-space: nowrap; order: 3; }
-  @media (max-width: 980px) { .top { grid-template-columns: 1fr; gap: 28px; } .grid.four { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-  @media (max-width: 760px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .list { grid-template-columns: 1fr; } }
-  @media (max-width: 560px) { .grid, .grid.four { grid-template-columns: 1fr; } .band { padding: 4px 16px 20px; } }
+
+  .promise { margin-top: 56px; padding: 40px 32px; background: var(--ink); color: var(--paper); border-radius: 10px; text-align: center; }
+  .promise > div { max-width: 620px; margin: 0 auto; }
+  .promise .kicker { color: #ff6b77; }
+  .promise h2 { color: inherit; font-size: clamp(1.5rem, 3vw, 2.1rem); margin: 8px 0 10px; }
+  .promise p { margin: 0 0 18px; color: #d4d2cd; font-size: 16px; }
+  .btn { display: inline-block; padding: 11px 20px; background: var(--accent); color: #fff; font: 700 13px/1 var(--sans); letter-spacing: .06em; text-transform: uppercase; text-decoration: none; border-radius: 999px; }
+  :root[data-theme='dark'] .promise, :root:not([data-theme='light']) .promise { background: var(--card); border: 1px solid var(--rule); }
+
+  @media (max-width: 1100px) { .front { grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); } .front-list { grid-column: 1 / -1; border-left: 0; padding-left: 0; border-top: 1px solid var(--rule); padding-top: 18px; } .numbered { columns: 2; column-gap: 40px; } .numbered li { break-inside: avoid; } }
+  @media (max-width: 980px) { .band-grid { grid-template-columns: 1fr; } }
+  @media (max-width: 760px) { .front { grid-template-columns: 1fr; } .numbered { columns: 1; } .grid.three { grid-template-columns: 1fr 1fr; } .list { grid-template-columns: 1fr; } .hero-link { aspect-ratio: 4 / 5; } .hero-text { padding: 70px 18px 18px; } .hero-dek { display: none; } .hero-title { font-size: 1.45rem; } .band { padding: 4px 16px 20px; } }
+  @media (max-width: 560px) { .grid.three { grid-template-columns: 1fr; } .ticker-label { padding: 0 10px; } }
+  @media (prefers-reduced-motion: reduce) { .hero-link img { transition: none; } .hero-link:hover img { transform: none; } }
 </style>
