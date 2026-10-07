@@ -1,0 +1,29 @@
+---
+// Privacy-friendly YouTube embed: a poster until the reader clicks, then the
+// player loads from youtube-nocookie.com. Use only for official or newsworthy
+// footage that the publisher allows to be embedded.
+interface Props { id: string; title: string; caption?: string }
+const { id, title, caption } = Astro.props;
+---
+<figure class="yt">
+  <button type="button" class="yt-poster" data-yt={id} aria-label={`Play video: ${title}`} style={`background-image:url(https://i.ytimg.com/vi/${id}/hqdefault.jpg)`}>
+    <span class="yt-play" aria-hidden="true">▶</span>
+  </button>
+  {caption && <figcaption>{caption}</figcaption>}
+</figure>
+<script>
+  document.querySelectorAll<HTMLButtonElement>('[data-yt]').forEach((b) => b.addEventListener('click', () => {
+    const f = document.createElement('iframe');
+    f.src = `https://www.youtube-nocookie.com/embed/${b.dataset.yt}?autoplay=1&rel=0`;
+    f.title = b.getAttribute('aria-label') ?? 'Video';
+    f.allow = 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture';
+    f.allowFullscreen = true;
+    f.className = 'yt-frame';
+    b.replaceWith(f);
+  }, { once: true }));
+</script>
+<style is:global>
+  .yt-poster, .yt-frame { width: 100%; aspect-ratio: 16 / 9; border: 0; border-radius: var(--radius); }
+  .yt-poster { background: #000 center / cover no-repeat; cursor: pointer; display: grid; place-items: center; }
+  .yt-play { width: 68px; height: 48px; border-radius: 12px; background: var(--accent); color: #fff; display: grid; place-items: center; font-size: 22px; }
+</style>

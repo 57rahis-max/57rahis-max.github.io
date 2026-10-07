@@ -1,0 +1,31 @@
+---
+import type { Post } from '../lib/posts';
+import { postUrl, fmtDate, categoryUrl } from '../lib/site';
+import { lastTouched } from '../lib/posts';
+interface Props { post: Post; size?: 'lead' | 'normal' | 'compact'; authorName?: string }
+const { post, size = 'normal', authorName } = Astro.props;
+const d = post.data;
+---
+<article class={`card ${size}`}>
+  {size !== 'compact' && d.image && (
+    <a href={postUrl(post.id)} tabindex="-1" aria-hidden="true">
+      <img class="card-img" src={d.image.src} alt="" loading={size === 'lead' ? 'eager' : 'lazy'} width="800" height="450" />
+    </a>
+  )}
+  <div class="card-body">
+    <p class="kicker">
+      {d.live === 'live' ? <span class="live-pill">Live</span> : <a href={categoryUrl(d.category)} class="cat">{d.category}</a>}
+    </p>
+    <h3 class="card-title"><a href={postUrl(post.id)}>{d.title}</a></h3>
+    {size !== 'compact' && <p class="card-dek">{d.description}</p>}
+    <p class="meta"><time datetime={lastTouched(post).toISOString()}>{fmtDate(lastTouched(post))}</time>{authorName && <> · {authorName}</>}</p>
+  </div>
+</article>
+<style>
+  .card { display: grid; gap: 10px; }
+  .card .cat { text-decoration: none; }
+  .lead .card-title { font-size: clamp(1.6rem, 3.2vw, 2.4rem); line-height: 1.12; }
+  .lead .card-dek { font-size: 17px; }
+  .compact { border-top: 1px solid var(--rule); padding-top: 12px; }
+  .compact .card-title { font-size: 1.02rem; }
+</style>

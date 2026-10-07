@@ -1,0 +1,42 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Avatar from '../../components/Avatar.astro';
+import PostCard from '../../components/PostCard.astro';
+import { allPosts, type Post } from '../../lib/posts';
+import { person, breadcrumbs } from '../../lib/schema';
+
+export async function getStaticPaths() {
+  const authors = await getCollection('authors');
+  const posts = await allPosts();
+  return authors.map((a) => ({ params: { author: a.id }, props: { a, posts: posts.filter((p) => p.data.author.id === a.id) } }));
+}
+const { a, posts } = Astro.props as { a: CollectionEntry<'authors'>; posts: Post[] };
+const schema = [
+  { '@context': 'https://schema.org', '@type': 'ProfilePage', mainEntity: person(a.id, a.data) },
+  breadcrumbs([{ name: 'Home', url: '/' }, { name: a.data.name, url: Astro.url.pathname }]),
+];
+---
+<Base title={`${a.data.name}, ${a.data.role}`} description={a.data.bio} schema={schema}>
+  <div class="wrap">
+    <header class="profile">
+      <Avatar initials={a.data.initials} color={a.data.color} size={96} label={a.data.name} />
+      <div>
+        <p class="kicker">{a.data.role}</p>
+        <h1>{a.data.name}</h1>
+        <p class="bio">{a.data.bio}</p>
+        <p class="meta">{posts.length} {posts.length === 1 ? 'story' : 'stories'}</p>
+      </div>
+    </header>
+    <div class="rule-head"><h2>Stories by {a.data.name}</h2></div>
+    <div class="grid">{posts.map((p) => <PostCard post={p} />)}</div>
+  </div>
+</Base>
+<style>
+  .profile { display: flex; gap: 24px; align-items: center; padding: 34px 0 6px; max-width: 820px; }
+  .profile h1 { margin: 6px 0 8px; font-size: 2.3rem; line-height: 1.1; }
+  .bio { margin: 0 0 6px; font: 400 1.05rem/1.55 var(--serif); color: var(--ink-2); }
+  .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 30px 26px; }
+  @media (max-width: 900px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 600px) { .grid { grid-template-columns: 1fr; } .profile { flex-direction: column; align-items: flex-start; } }
+</style>

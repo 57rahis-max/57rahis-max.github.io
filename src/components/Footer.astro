@@ -1,0 +1,32 @@
+---
+import { SITE } from '../lib/site';
+const year = new Date().getFullYear();
+---
+<footer class="site-footer">
+  <div class="wrap foot">
+    <div>
+      <a href="/" class="foot-mark">MAX<span>CRIME</span></a>
+      <p class="meta">{SITE.description}</p>
+    </div>
+    <nav aria-label="Footer">
+      <ul>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/editorial-standards/">Editorial standards</a></li>
+        <li><a href="/corrections/">Corrections</a></li>
+        <li><a href="/contact/">Contact</a></li>
+        <li><a href="/rss.xml">RSS</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="wrap meta copy">© {year} {SITE.name}. Charges are allegations; everyone accused is presumed innocent unless proven guilty in court.</div>
+</footer>
+<style>
+  .site-footer { margin-top: 64px; border-top: 3px solid var(--ink); background: var(--card); }
+  .foot { display: grid; grid-template-columns: 1.4fr 1fr; gap: 32px; padding-top: 32px; padding-bottom: 20px; }
+  .foot-mark { font: 900 28px/1 var(--serif); text-decoration: none; letter-spacing: .04em; }
+  .foot-mark span { color: var(--accent); margin-left: .15em; }
+  .foot ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; font: 600 14px/1.3 var(--sans); }
+  .foot a { text-decoration: none; }
+  .copy { padding-bottom: 28px; border-top: 1px solid var(--rule); padding-top: 14px; }
+  @media (max-width: 720px) { .foot { grid-template-columns: 1fr; } }
+</style>

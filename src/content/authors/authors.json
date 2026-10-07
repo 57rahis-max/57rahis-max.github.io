@@ -1,0 +1,8 @@
+[
+  { "id": "alex", "name": "Alex", "role": "Crime & Courts Reporter", "initials": "A", "color": "#B3121F",
+    "bio": "Alex covers breaking crime, courts and capital cases for Max Crime. Every story is built from at least two independent news reports or an official record, and each claim is attributed to its source." },
+  { "id": "henry", "name": "Henry", "role": "Crime & Investigations Reporter", "initials": "H", "color": "#1F3A5F",
+    "bio": "Henry covers arrests, charges and criminal investigations for Max Crime. Every story is built from at least two independent news reports or an official record, and each claim is attributed to its source." },
+  { "id": "staff", "name": "Max Crime Staff", "role": "Newsroom", "initials": "MC", "color": "#111317",
+    "bio": "Reporting from the Max Crime newsroom." }
+]

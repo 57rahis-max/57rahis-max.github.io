@@ -1,0 +1,59 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import PostCard from '../components/PostCard.astro';
+import { allPosts } from '../lib/posts';
+import { website, publisher } from '../lib/schema';
+import { SITE, postUrl } from '../lib/site';
+
+const posts = await allPosts();
+const names = Object.fromEntries((await getCollection('authors')).map((a) => [a.id, a.data.name]));
+const live = posts.filter((p) => p.data.live === 'live');
+const [lead, ...rest] = posts;
+const side = rest.slice(0, 4);
+const grid = rest.slice(4, 13);
+const older = rest.slice(13, 25);
+---
+<Base title={SITE.name} schema={[website, { '@context': 'https://schema.org', ...publisher }]}>
+  <div class="wrap">
+    {live.length > 0 && (
+      <div class="live-strip" role="region" aria-label="Live coverage">
+        <span class="live-pill">Live</span>
+        {live.map((p) => <a href={postUrl(p.id)}>{p.data.title}</a>)}
+      </div>
+    )}
+
+    {lead && (
+      <section class="top">
+        <div class="top-lead"><PostCard post={lead} size="lead" authorName={names[lead.data.author.id]} /></div>
+        <div class="top-side">
+          {side.map((p) => <PostCard post={p} size="compact" authorName={names[p.data.author.id]} />)}
+        </div>
+      </section>
+    )}
+
+    {grid.length > 0 && (
+      <section>
+        <div class="rule-head"><h2>Latest</h2></div>
+        <div class="grid">{grid.map((p) => <PostCard post={p} authorName={names[p.data.author.id]} />)}</div>
+      </section>
+    )}
+
+    {older.length > 0 && (
+      <section>
+        <div class="rule-head"><h2>More stories</h2></div>
+        <div class="list">{older.map((p) => <PostCard post={p} size="compact" authorName={names[p.data.author.id]} />)}</div>
+      </section>
+    )}
+  </div>
+</Base>
+<style>
+  .live-strip { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; margin: 18px 0 0; padding: 12px 16px; background: var(--card); border: 1px solid var(--rule); border-left: 4px solid var(--live); border-radius: var(--radius); font: 700 15px/1.35 var(--serif); }
+  .live-strip a { text-decoration: none; }
+  .top { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: 36px; margin-top: 26px; padding-bottom: 8px; }
+  .top-side { display: grid; gap: 14px; align-content: start; }
+  .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 30px 26px; }
+  .list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 36px; }
+  @media (max-width: 900px) { .top { grid-template-columns: 1fr; } .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 600px) { .grid, .list { grid-template-columns: 1fr; } }
+</style>

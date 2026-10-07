@@ -1,0 +1,15 @@
+---
+// An X/Twitter post, embedded the way X documents it: the post's text as a
+// blockquote (readable even if the script never loads), upgraded by widgets.js.
+interface Props { url: string; author: string; text: string; date: string }
+const { url, author, text, date } = Astro.props;
+---
+<figure class="tweet">
+  <blockquote class="twitter-tweet" data-dnt="true">
+    <p lang="en" dir="ltr">{text}</p>— {author} <a href={url}>{date}</a>
+  </blockquote>
+</figure>
+<script is:inline async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<style>
+  .tweet .twitter-tweet { border: 1px solid var(--rule); border-left: 3px solid var(--ink); border-radius: var(--radius); padding: 14px 16px; font: 400 15px/1.5 var(--sans); font-style: normal; background: var(--card); }
+</style>

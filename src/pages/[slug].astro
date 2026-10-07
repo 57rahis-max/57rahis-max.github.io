@@ -1,0 +1,135 @@
+---
+import { getEntry, render } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import Avatar from '../components/Avatar.astro';
+import AuthorBox from '../components/AuthorBox.astro';
+import PostCard from '../components/PostCard.astro';
+import LiveUpdates from '../components/LiveUpdates.astro';
+import YouTube from '../components/YouTube.astro';
+import Tweet from '../components/Tweet.astro';
+import PullQuote from '../components/PullQuote.astro';
+import { allPosts, related, lastTouched, type Post } from '../lib/posts';
+import { articleSchema, crumbsFor } from '../lib/schema';
+import { fmtDateTime, categoryUrl, authorUrl, postUrl, readingMinutes, SITE } from '../lib/site';
+
+export async function getStaticPaths() {
+  const posts = await allPosts();
+  return posts.map((post) => ({ params: { slug: post.id }, props: { post } }));
+}
+
+const { post } = Astro.props as { post: Post };
+const d = post.data;
+const author = (await getEntry(d.author))!;
+const a = { id: author.id, ...author.data };
+const { Content } = await render(post);
+const posts = await allPosts();
+const more = related(post, posts, 4);
+const authors = Object.fromEntries((await Promise.all(more.map((p) => getEntry(p.data.author)))).map((x) => [x!.id, x!.data.name]));
+const modified = lastTouched(post);
+const wasUpdated = modified.getTime() - d.date.getTime() > 5 * 60 * 1000;
+const body = post.body ?? '';
+const shareUrl = encodeURIComponent(new URL(postUrl(post.id), SITE.url).href);
+const shareText = encodeURIComponent(d.title);
+---
+<Base
+  title={d.title}
+  description={d.description}
+  image={d.image?.src}
+  imageAlt={d.image?.alt}
+  type="article"
+  published={d.date}
+  modified={modified}
+  schema={[articleSchema(post, a, body), crumbsFor(post)]}
+>
+  <article class="wrap article">
+    <nav class="crumbs meta" aria-label="Breadcrumb">
+      <a href="/">Home</a> <span aria-hidden="true">›</span> <a href={categoryUrl(d.category)}>{d.category}</a>
+    </nav>
+
+    <header class="art-head">
+      <p class="kicker">
+        {d.live === 'live' ? <span class="live-pill">Live</span> : d.live === 'ended' ? <span class="live-pill ended">Live coverage ended</span> : d.category}
+      </p>
+      <h1 class="headline">{d.title}</h1>
+      <p class="dek">{d.description}</p>
+      <div class="byline">
+        <Avatar initials={a.initials} color={a.color} size={44} label={a.name} />
+        <div>
+          <p class="by">By <a href={authorUrl(a.id)} rel="author">{a.name}</a></p>
+          <p class="meta">
+            Published <time datetime={d.date.toISOString()}>{fmtDateTime(d.date)}</time>
+            {wasUpdated && <> · Updated <time datetime={modified.toISOString()}>{fmtDateTime(modified)}</time></>}
+            {' '}· {readingMinutes(body)} min read
+          </p>
+        </div>
+      </div>
+    </header>
+
+    {d.image && (
+      <figure class="hero">
+        <img src={d.image.src} alt={d.image.alt} width="1600" height="900" loading="eager" fetchpriority="high" />
+        {(d.image.caption || d.image.credit) && (
+          <figcaption class="figure-caption">{d.image.caption}{d.image.credit && <> <span set:html={d.image.credit} /></>}</figcaption>
+        )}
+      </figure>
+    )}
+
+    <div class="art-grid">
+      <div class="art-main">
+        {d.updates.length > 0 && <LiveUpdates updates={d.updates} status={d.live} />}
+        <div class="prose">
+          <Content components={{ YouTube, Tweet, PullQuote }} />
+        </div>
+
+        {d.sources.length > 0 && (
+          <section class="sources" aria-label="Sources">
+            <h2>Sources</h2>
+            <ul>
+              {d.sources.map((s) => (
+                <li><a href={s.url} target="_blank" rel="noopener">{s.name}{s.title && <>: {s.title}</>}</a>{s.date && <span class="meta"> ({s.date})</span>}</li>
+              ))}
+            </ul>
+          </section>
+        )}
+
+        <div class="share" aria-label="Share this story">
+          <span class="meta">Share</span>
+          <a href={`https://x.com/intent/post?url=${shareUrl}&text=${shareText}`} target="_blank" rel="noopener">X</a>
+          <a href={`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`} target="_blank" rel="noopener">Facebook</a>
+          <a href={`mailto:?subject=${shareText}&body=${shareUrl}`}>Email</a>
+        </div>
+
+        <AuthorBox {...a} />
+      </div>
+
+      <aside class="art-side" aria-label="More from Max Crime">
+        <div class="rule-head"><h2>More from Max Crime</h2></div>
+        {more.map((p) => <PostCard post={p} size="compact" authorName={authors[p.data.author.id]} />)}
+      </aside>
+    </div>
+  </article>
+</Base>
+
+<style>
+  .article { padding-top: 20px; }
+  .crumbs a { text-decoration: none; }
+  .art-head { max-width: 860px; margin: 14px 0 22px; }
+  .headline { font-size: clamp(2rem, 4.4vw, 3.1rem); line-height: 1.08; margin: 10px 0 12px; font-weight: 800; }
+  .dek { font: 400 1.25rem/1.45 var(--serif); color: var(--muted); margin: 0 0 18px; }
+  .byline { display: flex; gap: 12px; align-items: center; padding-top: 14px; border-top: 1px solid var(--rule); }
+  .by { margin: 0 0 2px; font: 700 15px/1.2 var(--sans); }
+  .by a { text-decoration: none; }
+  .byline .meta { margin: 0; }
+  .hero { margin: 0 0 26px; max-width: 1000px; }
+  .hero img { width: 100%; border-radius: var(--radius); }
+  .art-grid { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 56px; }
+  .sources { max-width: var(--measure); margin-top: 36px; padding-top: 18px; border-top: 2px solid var(--ink); }
+  .sources h2 { font: 800 14px/1 var(--sans); letter-spacing: .12em; text-transform: uppercase; margin: 0 0 12px; }
+  .sources ul { padding-left: 1.1em; margin: 0; font-size: 15px; }
+  .sources li { margin: 6px 0; }
+  .share { display: flex; gap: 14px; align-items: center; margin: 28px 0 0; font: 700 14px/1 var(--sans); }
+  .share a { text-decoration: none; padding: 8px 12px; border: 1px solid var(--rule); border-radius: 999px; }
+  .art-side { position: sticky; top: 64px; align-self: start; }
+  .art-side .rule-head { margin-top: 0; }
+  @media (max-width: 960px) { .art-grid { grid-template-columns: 1fr; gap: 20px; } .art-side { position: static; } }
+</style>
