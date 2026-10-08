@@ -71,7 +71,15 @@ Edit `src/content/authors/authors.json`. Each author has a name, a role, a bio, 
 ## Deploy and domain
 
 1. Push to GitHub. In the repository's **Settings → Pages**, set **Source** to **GitHub Actions**.
-2. To serve the site on maxcrime.com, add a `public/CNAME` file containing `maxcrime.com`, and point the domain's DNS at GitHub Pages. That means `A` records to `185.199.108.153`, `185.199.109.153`, `185.199.110.153` and `185.199.111.153`, and a `CNAME` record from `www` to `<user>.github.io`.
+2. To serve the site on maxcrime.com:
+   - In the DNS (Cloudflare for maxcrime.com), remove the old `A`, `AAAA` and `CNAME` records for `@` and `www`, then add these, all set to **DNS only** (grey cloud) so GitHub can issue the HTTPS certificate:
+     - `A` `@` to `185.199.108.153`, `185.199.109.153`, `185.199.110.153` and `185.199.111.153`
+     - `AAAA` `@` to `2606:50c0:8000::153`, `2606:50c0:8001::153`, `2606:50c0:8002::153` and `2606:50c0:8003::153`
+     - `CNAME` `www` to `57rahis-max.github.io`
+   - Leave `MX` and `TXT` records alone; they carry email and verification.
+   - Set the custom domain in the repository's **Settings → Pages → Custom domain** (or `gh api -X PUT repos/57rahis-max/57rahis-max.github.io/pages -f cname=maxcrime.com`). A `CNAME` file is not used: GitHub ignores it when the site deploys from Actions.
+   - When the certificate is issued, turn on **Enforce HTTPS** on the same page.
+   - Optional but recommended: verify the domain under your GitHub account's **Settings → Pages**, so no one else can claim it.
 
 ## Migration
 

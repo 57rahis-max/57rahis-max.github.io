@@ -7,8 +7,9 @@ updated: 2026-09-23T00:49:14Z
 author: staff
 category: "Crime News"
 image:
-  src: "/images/2026/09/Zookeeper-arrested-after-trying-to-sexually-assault-500-pound-male-gorilla.jpg"
-  alt: "Zookeeper arrested after trying to sexually assault 500-pound male gorilla"
+  src: "/images/2026/09/zookeeper-gorilla-claim-fact-check-card.jpg"
+  alt: "Fact check card: false, no zookeeper was arrested over a 500-pound gorilla. The story began on a satire site, as Lead Stories and Africa Check found."
+  credit: "Graphic: Max Crime"
 wpId: 103
 ---
 
@@ -27,7 +28,6 @@ wpId: 103
 
 <p>Lead Stories published its findings on 3 December 2017. It traced the story to World News Daily Report and printed the site’s own disclaimer, which says it “assumes all responsibility for the satirical nature of its articles and for the fictional nature of their content.”</p>
 
-<figure><img loading="lazy" decoding="async" width="1024" height="712" src="/images/2026/09/Zookeeper-arrested-after-trying-to-sexually-assault-500-pound-male-gorilla.jpg" alt="Zookeeper arrested after trying to sexually assault 500-pound male gorilla" srcset="/images/2026/09/Zookeeper-arrested-after-trying-to-sexually-assault-500-pound-male-gorilla.jpg 1024w, /images/2026/09/Zookeeper-arrested-after-trying-to-sexually-assault-500-pound-male-gorilla.jpg 300w, /images/2026/09/Zookeeper-arrested-after-trying-to-sexually-assault-500-pound-male-gorilla.jpg 768w, /images/2026/09/Zookeeper-arrested-after-trying-to-sexually-assault-500-pound-male-gorilla.jpg 1390w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /></figure>
 
 <p>Then it followed the trail. A site called ActionNews3 had copied the article out, but left the satire disclaimer off. Huzlers ran a version too, this one crediting World News Daily Report and carrying a satire notice of its own.</p>
 

@@ -7,8 +7,10 @@ updated: 2026-09-19T20:46:25Z
 author: alex
 category: "Crime News"
 image:
-  src: "/images/2026/09/Traffic-Stop-In-Clifton-Park-Leads-To-Over-400-Pound-Cannabis-Seizure.jpg"
-  alt: "Traffic Stop In Clifton Park Leads To Over 400-Pound Cannabis Seizure"
+  src: "/images/2026/09/clifton-park-cannabis-seizure-sheriff-photos.jpg"
+  alt: "Booking photos of the two men charged, beside vacuum-sealed bags of cannabis stacked in front of a Saratoga County Sheriff's Office backdrop"
+  caption: "Kevin C. Wilbur, 46, and Quinton L. Carle, 23, and the cannabis deputies say they seized. The allegations have not been proven in court."
+  credit: "Photos: Saratoga County Sheriff's Office"
 wpId: 85
 ---
 
