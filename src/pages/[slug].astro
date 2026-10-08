@@ -10,6 +10,7 @@ import Tweet from '../components/Tweet.astro';
 import PullQuote from '../components/PullQuote.astro';
 import { allPosts, related, lastTouched, type Post } from '../lib/posts';
 import { articleSchema, crumbsFor } from '../lib/schema';
+import { sanitizeCredit } from '../lib/html';
 import { fmtDateTime, categoryUrl, authorUrl, postUrl, readingMinutes, srcsetFor, imageSize, SITE } from '../lib/site';
 
 export async function getStaticPaths() {
@@ -47,7 +48,11 @@ const shareText = encodeURIComponent(d.title);
 >
   <article class="wrap article" data-pagefind-body>
     <nav class="crumbs meta" aria-label="Breadcrumb" data-pagefind-ignore>
-      <a href="/">Home</a> <span aria-hidden="true">›</span> <a href={categoryUrl(d.category)}>{d.category}</a>
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href={categoryUrl(d.category)}>{d.category}</a></li>
+        <li aria-current="page">{d.seoTitle ?? d.title}</li>
+      </ol>
     </nav>
 
     <header class="art-head">
@@ -73,7 +78,7 @@ const shareText = encodeURIComponent(d.title);
       <figure class="hero">
         <img src={d.image.src} srcset={heroSet} sizes="(max-width: 760px) 100vw, 1000px" alt={d.image.alt} width={heroDim.width} height={heroDim.height} loading="eager" fetchpriority="high" data-pagefind-meta="image[src]" />
         {(d.image.caption || d.image.credit) && (
-          <figcaption class="figure-caption">{d.image.caption}{d.image.credit && <> <span set:html={d.image.credit} /></>}</figcaption>
+          <figcaption class="figure-caption">{d.image.caption}{d.image.credit && <> <span set:html={sanitizeCredit(d.image.credit)} /></>}</figcaption>
         )}
       </figure>
     )}
@@ -90,7 +95,7 @@ const shareText = encodeURIComponent(d.title);
             <h2>Sources</h2>
             <ul>
               {d.sources.map((s) => (
-                <li><a href={s.url} target="_blank" rel="noopener">{s.name}{s.title && <>: {s.title}</>}</a>{s.date && <span class="meta"> ({s.date})</span>}</li>
+                <li><a href={s.url} target="_blank" rel="noopener" aria-label={s.title ? `${s.name}: ${s.title} (opens in a new tab)` : `${s.name} (opens in a new tab)`}>{s.name}{s.title && <>: {s.title}</>}</a>{s.date && <span class="meta"> ({s.date})</span>}</li>
               ))}
             </ul>
           </section>
@@ -116,6 +121,9 @@ const shareText = encodeURIComponent(d.title);
 
 <style>
   .article { padding-top: 20px; }
+  .crumbs ol { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+  .crumbs li + li::before { content: '›'; margin-right: 6px; color: var(--muted); }
+  .crumbs li[aria-current] { color: var(--muted); max-width: 48ch; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .crumbs a { text-decoration: none; }
   .art-head { max-width: 860px; margin: 14px 0 22px; }
   .headline { font-size: clamp(2rem, 4.4vw, 3.1rem); line-height: 1.08; margin: 10px 0 12px; font-weight: 800; }

@@ -8,7 +8,7 @@ const Mark = home ? 'h1' : 'div';
 <header class="site-header">
   <div class="topbar">
     <div class="wrap topbar-in">
-      <span class="today" data-today aria-live="off"></span>
+      <span class="today" data-today>{new Date().toLocaleDateString('en-US', { timeZone: 'America/New_York', weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' })}</span>
       <div class="top-actions">
         <a href="/about/" class="toplink">About</a>
         <a href="/editorial-standards/" class="toplink">Standards</a>
@@ -101,10 +101,13 @@ const Mark = home ? 'h1' : 'div';
     .masthead { padding: 18px 20px 12px; }
     .toplink { display: none; }
     .nav-in { justify-content: space-between; }
-    .menu-btn { display: inline-flex; }
     .nav-search { position: static; transform: none; }
-    .mainnav ul { display: none; position: absolute; left: 0; right: 0; top: 100%; flex-direction: column; background: var(--paper); border-bottom: 3px solid var(--ink); padding: 6px 20px 12px; box-shadow: 0 12px 24px rgb(0 0 0 / .12); }
-    .mainnav ul.open { display: flex; }
+    /* Without JavaScript the list stays visible (stacked). JS adds .js and collapses it behind the Menu button. */
+    .mainnav ul { flex-direction: column; padding: 0 0 8px; }
+    :global(html.js) .mainnav ul { display: none; position: absolute; left: 0; right: 0; top: 100%; background: var(--paper); border-bottom: 3px solid var(--ink); padding: 6px 20px 12px; box-shadow: 0 12px 24px rgb(0 0 0 / .12); }
+    :global(html.js) .mainnav ul.open { display: flex; }
+    .menu-btn { display: none; }
+    :global(html.js) .menu-btn { display: inline-flex; }
     .mainnav ul a { padding: 14px 0; border-bottom: 1px solid var(--rule); }
     .mainnav ul a[aria-current='page'] { box-shadow: none; }
   }

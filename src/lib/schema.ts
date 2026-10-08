@@ -45,7 +45,7 @@ export function articleSchema(post: Post, author: { id: string; name: string; ro
     author: [person(author.id, author)],
     publisher,
     articleSection: d.category,
-    keywords: d.tags.join(', ') || undefined,
+    keywords: d.tags.map((t) => t.replace(/<[^>]*>/g, '').trim()).filter(Boolean).join(', ') || undefined,
     isAccessibleForFree: true,
     inLanguage: 'en-US',
     wordCount: bodyText.split(/\s+/).filter(Boolean).length,

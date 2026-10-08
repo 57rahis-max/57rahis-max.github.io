@@ -1,5 +1,6 @@
 ---
 import { fmtTime, fmtDate } from '../lib/site';
+import { sanitizeUpdate } from '../lib/html';
 interface Props { updates: { time: Date; title?: string; body: string }[]; status?: 'live' | 'ended' }
 const { updates, status } = Astro.props;
 const sorted = [...updates].sort((a, b) => b.time.getTime() - a.time.getTime());
@@ -18,7 +19,7 @@ const sorted = [...updates].sort((a, b) => b.time.getTime() - a.time.getTime());
         </div>
         <div class="entry">
           {u.title && <h3>{u.title}</h3>}
-          <div class="prose" set:html={u.body} />
+          <div class="prose" set:html={sanitizeUpdate(u.body)} />
           <a class="perma meta" href={`#update-${sorted.length - i}`}>Link to this update</a>
         </div>
       </li>
