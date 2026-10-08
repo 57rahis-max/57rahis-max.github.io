@@ -84,7 +84,7 @@ h1, h2, h3, .headline { font-family: var(--serif); color: var(--ink); letter-spa
 .card-dek { font-size: 15px; color: var(--muted); margin: 0 0 .4em; }
 
 .rule-head { display: flex; align-items: center; gap: 12px; margin: 34px 0 16px; }
-.rule-head h2 { font: 800 14px/1 var(--sans); letter-spacing: .12em; text-transform: uppercase; margin: 0; color: var(--ink); }
+.rule-head :is(h1, h2) { font: 800 14px/1 var(--sans); letter-spacing: .12em; text-transform: uppercase; margin: 0; color: var(--ink); }
 .rule-head::after { content: ''; flex: 1; border-top: 2px solid var(--ink); }
 
 /* Content carried over from WordPress */
@@ -105,7 +105,8 @@ h1, h2, h3, .headline { font-family: var(--serif); color: var(--ink); letter-spa
 
 /* Print: article only, no chrome */
 @media print {
-  .site-header, .site-footer, .art-side, .share, .skip, .new-updates { display: none !important; }
+  :root, :root[data-theme='dark'] { --ink: #000; --ink-2: #222; --muted: #444; --paper: #fff; --card: #fff; --rule: #bbb; --accent: #000; --accent-ink: #000; --live: #000; }
+  .site-header, .site-footer, .art-side, .share, .skip, .new-updates, .live-notice, .ticker, .live-strip, .crumbs, .author-box, .promise, .yt, .tweet { display: none !important; }
   body { background: #fff; color: #000; font-size: 11.5pt; }
   .prose { max-width: none; font-size: 11.5pt; }
   a { color: #000; text-decoration: none; }

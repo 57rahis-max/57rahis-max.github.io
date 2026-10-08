@@ -15,19 +15,27 @@ export const NAV = [
 ];
 
 import { existsSync, readFileSync } from 'node:fs';
+import { resolve, sep } from 'node:path';
+
+/** The on-disk file for a site image, or undefined if the path would leave public/images. */
+function imageFile(src: string): string | undefined {
+  const p = resolve('public', '.' + src);
+  return p.startsWith(resolve('public/images') + sep) ? p : undefined;
+}
 
 /** The 800px thumbnail made by scripts/thumbs.py, when there is one. */
 export function thumb(src?: string): string | undefined {
   if (!src || !src.startsWith('/images/')) return src;
   const t = src.replace(/\.(jpe?g|png|webp)$/i, '.w800.jpg');
-  return existsSync(`public${t}`) ? t : src;
+  const f = imageFile(t);
+  return f && existsSync(f) ? t : src;
 }
 
 /** Pixel size of an image under public/, read from the file header (JPEG/PNG/WebP). */
 export function imageSize(src?: string): { width: number; height: number } | undefined {
   if (!src || !src.startsWith('/images/')) return undefined;
-  const p = `public${src}`;
-  if (!existsSync(p)) return undefined;
+  const p = imageFile(src);
+  if (!p || !existsSync(p)) return undefined;
   const b = readFileSync(p);
   if (b[0] === 0x89 && b[1] === 0x50) return { width: b.readUInt32BE(16), height: b.readUInt32BE(20) };
   if (b[0] === 0xff && b[1] === 0xd8) {
@@ -70,4 +78,7 @@ export const fmtDate = (d: Date) => d.toLocaleDateString('en-US', { timeZone: TZ
 export const fmtDateTime = (d: Date) =>
   d.toLocaleString('en-US', { timeZone: TZ, month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: '2-digit', timeZoneName: 'short' });
 export const fmtTime = (d: Date) => d.toLocaleTimeString('en-US', { timeZone: TZ, hour: 'numeric', minute: '2-digit', timeZoneName: 'short' });
+const dayKey = (d: Date) => d.toLocaleDateString('en-CA', { timeZone: TZ });
+/** Lists show a clock time for something from today (Eastern) and a date for anything older. */
+export const fmtWhen = (d: Date) => (dayKey(d) === dayKey(new Date()) ? fmtTime(d) : fmtDate(d));
 

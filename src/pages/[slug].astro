@@ -8,7 +8,7 @@ import LiveUpdates from '../components/LiveUpdates.astro';
 import YouTube from '../components/YouTube.astro';
 import Tweet from '../components/Tweet.astro';
 import PullQuote from '../components/PullQuote.astro';
-import { allPosts, related, lastTouched, type Post } from '../lib/posts';
+import { allPosts, related, lastTouched, sortedUpdates, type Post } from '../lib/posts';
 import { articleSchema, crumbsFor } from '../lib/schema';
 import { sanitizeCredit } from '../lib/html';
 import { fmtDateTime, categoryUrl, authorUrl, postUrl, readingMinutes, srcsetFor, imageSize, SITE } from '../lib/site';
@@ -26,10 +26,14 @@ const { Content } = await render(post);
 const posts = await allPosts();
 const more = related(post, posts, 4);
 const authors = Object.fromEntries((await Promise.all(more.map((p) => getEntry(p.data.author)))).map((x) => [x!.id, x!.data.name]));
-const modified = lastTouched(post);
-// Shown only for a real later edit or a live update, not the save WordPress made moments after publishing.
-const wasUpdated = modified.getTime() - d.date.getTime() > 60 * 60 * 1000;
+const touched = lastTouched(post);
+// An "updated" time is shown, and sent to search engines, only for a real later
+// edit or a live update, not the save WordPress made moments after publishing.
+const wasUpdated = touched.getTime() - d.date.getTime() > 60 * 60 * 1000;
+const modified = wasUpdated ? touched : d.date;
 const body = post.body ?? '';
+const bodyText = body.replace(/<[^>]+>/g, ' ');
+const hasX = d.embeds.some((e) => e.type === 'x');
 const heroSet = srcsetFor(d.image?.src);
 const heroDim = imageSize(d.image?.src) ?? { width: 1600, height: 900 };
 const shareUrl = encodeURIComponent(new URL(postUrl(post.id), SITE.url).href);
@@ -43,8 +47,8 @@ const shareText = encodeURIComponent(d.title);
   imageAlt={d.image?.alt}
   type="article"
   published={d.date}
-  modified={modified}
-  schema={[articleSchema(post, a, body), crumbsFor(post)]}
+  modified={wasUpdated ? modified : undefined}
+  schema={[articleSchema(post, a, bodyText, modified), crumbsFor(post)]}
 >
   <article class="wrap article" data-pagefind-body>
     <nav class="crumbs meta" aria-label="Breadcrumb" data-pagefind-ignore>
@@ -85,10 +89,21 @@ const shareText = encodeURIComponent(d.title);
 
     <div class="art-grid">
       <div class="art-main">
-        {d.updates.length > 0 && <LiveUpdates updates={d.updates} status={d.live} />}
+        {d.updates.length > 0 && <LiveUpdates updates={sortedUpdates(post)} status={d.live} stamp={touched.toISOString()} />}
         <div class="prose">
-          <Content components={{ YouTube, Tweet, PullQuote }} />
+          <Content />
         </div>
+
+        {d.embeds.length > 0 && (
+          <section class="embeds" aria-label="Video, posts and quotes">
+            {d.embeds.map((e) =>
+              e.type === 'youtube' ? <YouTube id={e.id} title={e.title} caption={e.caption} />
+              : e.type === 'x' ? <Tweet url={e.url} author={e.author} text={e.text} date={e.date} />
+              : <PullQuote cite={e.cite} source={e.source}>{e.text}</PullQuote>
+            )}
+          </section>
+        )}
+        {hasX && <script is:inline async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>}
 
         {d.sources.length > 0 && (
           <section class="sources" aria-label="Sources">
@@ -101,7 +116,7 @@ const shareText = encodeURIComponent(d.title);
           </section>
         )}
 
-        <div class="share" aria-label="Share this story">
+        <div class="share" role="group" aria-label="Share this story">
           <span class="meta">Share</span>
           <a href={`https://x.com/intent/post?url=${shareUrl}&text=${shareText}`} target="_blank" rel="noopener">X</a>
           <a href={`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`} target="_blank" rel="noopener">Facebook</a>
@@ -135,6 +150,7 @@ const shareText = encodeURIComponent(d.title);
   .hero { margin: 0 0 28px; max-width: 1000px; }
   .hero img { width: 100%; max-height: min(620px, 70vh); object-fit: contain; background: var(--card); border: 1px solid var(--rule); border-radius: var(--radius); }
   .art-grid { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 56px; }
+  .embeds { max-width: var(--measure); display: grid; gap: 28px; margin-top: 28px; }
   .sources { max-width: var(--measure); margin-top: 36px; padding-top: 18px; border-top: 2px solid var(--ink); }
   .sources h2 { font: 800 14px/1 var(--sans); letter-spacing: .12em; text-transform: uppercase; margin: 0 0 12px; }
   .sources ul { padding-left: 1.1em; margin: 0; font-size: 15px; }

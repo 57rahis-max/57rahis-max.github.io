@@ -1,5 +1,5 @@
 import rss from '@astrojs/rss';
-import { allPosts, lastTouched } from '../lib/posts';
+import { allPosts } from '../lib/posts';
 import { SITE, postUrl } from '../lib/site';
 
 export async function GET(context: { site: URL }) {
@@ -11,7 +11,7 @@ export async function GET(context: { site: URL }) {
     items: posts.slice(0, 50).map((p) => ({
       title: p.data.title,
       description: p.data.description,
-      pubDate: lastTouched(p),
+      pubDate: p.data.date,
       link: postUrl(p.id),
       categories: [p.data.category, ...p.data.tags],
     })),

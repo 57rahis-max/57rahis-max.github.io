@@ -21,6 +21,19 @@ export function lastTouched(p: Post): Date {
   return new Date(Math.max(...times.map((t) => t.getTime())));
 }
 
+/**
+ * Live updates, newest first, each numbered by its place in time (the first
+ * update is 1). The page's anchors and the LiveBlogPosting schema both use
+ * this, so #update-3 on the page is the same update the schema calls 3.
+ */
+export function sortedUpdates(p: Post): { time: Date; title?: string; body: string; n: number }[] {
+  return [...p.data.updates]
+    .map((u) => ({ ...u }))
+    .sort((a, b) => a.time.getTime() - b.time.getTime())
+    .map((u, i) => ({ ...u, n: i + 1 }))
+    .reverse();
+}
+
 /** Related stories: same category or shared tags, never the story itself. */
 export function related(post: Post, posts: Post[], n = 3): Post[] {
   const score = (p: Post) =>

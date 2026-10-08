@@ -1,18 +1,21 @@
 ---
 import { fmtTime, fmtDate } from '../lib/site';
 import { sanitizeUpdate } from '../lib/html';
-interface Props { updates: { time: Date; title?: string; body: string }[]; status?: 'live' | 'ended' }
-const { updates, status } = Astro.props;
-const sorted = [...updates].sort((a, b) => b.time.getTime() - a.time.getTime());
+// `updates` come from sortedUpdates(): newest first, each with its number.
+// `stamp` is the story's lastTouched time; the build writes the same value to
+// <slug>/live.json, so the poller compares like with like.
+interface Props { updates: { time: Date; title?: string; body: string; n: number }[]; status?: 'live' | 'ended'; stamp: string }
+const { updates, status, stamp } = Astro.props;
 ---
 <section class="live" aria-label="Live updates">
   <header class="live-head">
     <span class={`live-pill ${status === 'ended' ? 'ended' : ''}`}>{status === 'ended' ? 'Coverage ended' : 'Live updates'}</span>
-    <span class="meta">{sorted.length} update{sorted.length === 1 ? '' : 's'} · newest first</span>
+    <span class="meta">{updates.length} update{updates.length === 1 ? '' : 's'} · newest first</span>
   </header>
+  <div class="live-notice" aria-live="polite"></div>
   <ol class="timeline">
-    {sorted.map((u, i) => (
-      <li id={`update-${sorted.length - i}`}>
+    {updates.map((u) => (
+      <li id={`update-${u.n}`}>
         <div class="when">
           <time datetime={u.time.toISOString()}>{fmtTime(u.time)}</time>
           <span class="meta">{fmtDate(u.time)}</span>
@@ -20,18 +23,18 @@ const sorted = [...updates].sort((a, b) => b.time.getTime() - a.time.getTime());
         <div class="entry">
           {u.title && <h3>{u.title}</h3>}
           <div class="prose" set:html={sanitizeUpdate(u.body)} />
-          <a class="perma meta" href={`#update-${sorted.length - i}`}>Link to this update</a>
+          <a class="perma meta" href={`#update-${u.n}`}>Link to this update</a>
         </div>
       </li>
     ))}
   </ol>
 </section>
 {status === 'live' && (
-  <script define:vars={{ newestIso: sorted[0]?.time.toISOString() ?? '', slug: Astro.url.pathname }}>
+  <script define:vars={{ stamp, slug: Astro.url.pathname }}>
     // While coverage is live, look for a newer version every two minutes.
-    // Compares against the small JSON stamp the build writes for this story
-    // (fetched with a cache-busting query, so a CDN copy cannot fool it),
-    // pauses while the tab is hidden, and stops once coverage has ended.
+    // Compares the page's build stamp against the small JSON stamp written for
+    // this story (fetched with a cache-busting query, so a CDN copy cannot fool
+    // it), pauses while the tab is hidden, and stops once a change is seen.
     let timer;
     const check = async () => {
       if (document.hidden) return;
@@ -39,12 +42,13 @@ const sorted = [...updates].sort((a, b) => b.time.getTime() - a.time.getTime());
         const r = await fetch(`${slug}live.json?t=${Date.now()}`, { cache: 'no-store' });
         if (!r.ok) return;
         const j = await r.json();
-        if (j.newest && j.newest !== newestIso && !document.querySelector('.new-updates')) {
+        if (j.newest && j.newest !== stamp && !document.querySelector('.new-updates')) {
           const b = document.createElement('button');
+          b.type = 'button';
           b.className = 'new-updates';
-          b.textContent = j.status === 'ended' ? 'Coverage has ended — tap to see the final update' : 'New updates — tap to refresh';
+          b.textContent = j.status === 'ended' ? 'Coverage has ended. Tap to see the final update.' : 'New updates. Tap to refresh.';
           b.onclick = () => location.reload();
-          document.querySelector('.live-head')?.after(b);
+          document.querySelector('.live-notice')?.append(b);
           clearInterval(timer);
         }
       } catch {}
@@ -54,15 +58,19 @@ const sorted = [...updates].sort((a, b) => b.time.getTime() - a.time.getTime());
   </script>
 )}
 <style>
-  .live { max-width: var(--measure); margin: 28px 0; }
-  .live-head { display: flex; align-items: center; gap: 12px; padding-bottom: 12px; border-bottom: 2px solid var(--ink); }
+  .live { max-width: var(--measure); margin: 28px 0 36px; border: 1px solid var(--rule); border-top: 4px solid var(--live); border-radius: var(--radius); padding: 18px 22px 8px; background: var(--card); }
+  .live-head { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+  .live-notice:empty { display: none; }
+  .live-notice { margin: 6px 0 10px; }
+  :global(.new-updates) { display: block; width: 100%; padding: 10px 14px; background: var(--accent); color: #fff; border: 0; border-radius: var(--radius); font: 700 14px/1 var(--sans); cursor: pointer; }
   .timeline { list-style: none; margin: 0; padding: 0; }
-  .timeline li { display: grid; grid-template-columns: 96px 1fr; gap: 16px; padding: 20px 0; border-bottom: 1px solid var(--rule); position: relative; }
-  .when time { display: block; font: 800 15px/1.2 var(--sans); color: var(--live); }
+  .timeline li { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 16px; padding: 16px 0; border-top: 1px solid var(--rule); }
+  .when { display: grid; align-content: start; gap: 2px; }
+  .when time { font: 800 15px/1.2 var(--sans); color: var(--live); }
   .entry h3 { margin: 0 0 6px; font-size: 1.15rem; line-height: 1.3; }
-  .entry .prose { font-size: 17.5px; }
-  .entry .prose p:last-child { margin-bottom: 6px; }
-  .perma { text-decoration: none; }
-  :global(.new-updates) { margin: 12px 0; width: 100%; padding: 10px; background: var(--live); color: #fff; border: 0; border-radius: var(--radius); font: 700 14px/1 var(--sans); cursor: pointer; }
-  @media (max-width: 560px) { .timeline li { grid-template-columns: 1fr; gap: 4px; } }
+  .entry :global(.prose) { font-size: 16.5px; }
+  .entry :global(.prose p:first-child) { margin-top: 0; }
+  .entry :global(.prose p:last-child) { margin-bottom: 0; }
+  .perma { display: inline-block; margin-top: 8px; text-decoration: none; }
+  @media (max-width: 600px) { .timeline li { grid-template-columns: 1fr; gap: 6px; } .when { grid-auto-flow: column; justify-content: start; gap: 10px; } }
 </style>

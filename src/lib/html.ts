@@ -31,20 +31,31 @@ export function sanitizeUpdate(html: string): string { return sanitize(html, ['p
 function sanitize(html: string, allowed: string[]): string {
   const esc = (s: string) => s.replace(/&(?!(amp|lt|gt|quot|#\d+);)/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
   let out = '';
-  const re = /<\/?([a-zA-Z]+)([^>]*)>|([^<]+)/g;
+  // A tag, a run of text, or a bare "<" that starts no tag (kept as text).
+  const re = /<\/?([a-zA-Z]+)([^>]*)>|([^<]+)|(<)/g;
   let m: RegExpExecArray | null;
   const open: string[] = [];
+  let skippedLinks = 0; // <a> tags dropped because they sat inside another link
+  // Close every tag opened after `tag`, then `tag` itself. A stray closing tag
+  // with no matching opener is ignored, so the output always stays balanced.
+  const closeTo = (tag: string) => {
+    const at = open.lastIndexOf(tag);
+    if (at < 0) return;
+    while (open.length > at) out += `</${open.pop()}>`;
+  };
   while ((m = re.exec(html))) {
     if (m[3] !== undefined) { out += esc(m[3]); continue; }
+    if (m[4] !== undefined) { out += '&lt;'; continue; }
     const tag = m[1].toLowerCase(); const closing = m[0].startsWith('</');
     if (tag === 'a') {
-      if (closing) { if (open.pop() === 'a') out += '</a>'; continue; }
+      if (closing) { if (skippedLinks) skippedLinks--; else closeTo('a'); continue; }
+      if (open.includes('a')) { skippedLinks++; continue; } // a link inside a link is invalid HTML; its text stays
       const href = /href\s*=\s*["']([^"']+)["']/i.exec(m[2])?.[1] ?? '';
-      if (!/^https?:\/\//i.test(href)) { continue; }
+      if (!/^https?:\/\//i.test(href)) continue;
       open.push('a'); out += `<a href="${href.replace(/"/g, '&quot;')}" target="_blank" rel="noopener">`;
     } else if (allowed.includes(tag)) {
       if (tag === 'br') { out += '<br>'; continue; }
-      if (closing) { if (open.pop() === tag) out += `</${tag}>`; } else { open.push(tag); out += `<${tag}>`; }
+      if (closing) closeTo(tag); else { open.push(tag); out += `<${tag}>`; }
     }
     // any other tag is dropped
   }

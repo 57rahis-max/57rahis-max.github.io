@@ -1,6 +1,6 @@
 # Max Crime
 
-A fast, static crime-news site built with [Astro](https://astro.build). No database and no WordPress: every story is a Markdown or MDX file, and every push to `main` builds and deploys the site to GitHub Pages.
+A fast, static crime-news site built with [Astro](https://astro.build). No database and no WordPress: every story is a Markdown file, and every push to `main` builds and deploys the site to GitHub Pages.
 
 ## Features
 
@@ -11,10 +11,8 @@ A fast, static crime-news site built with [Astro](https://astro.build). No datab
   - `NewsArticle` on every story, and `LiveBlogPosting` with `liveBlogUpdate` on live stories.
   - `BreadcrumbList`, `ProfilePage`/`Person` on author pages, and `WebSite` + `NewsMediaOrganization` with publishing, corrections and ethics policies.
 - **SEO**: canonical URLs, Open Graph and Twitter cards, `sitemap-index.xml`, `rss.xml` and `robots.txt`.
-- **Embeds in MDX**:
-  - `<YouTube id="…" title="…" caption="…" />` loads the player only on click, from youtube-nocookie.
-  - `<Tweet url="…" author="…" text="…" date="…" />` is readable without JavaScript.
-  - `<PullQuote cite="…" source="…">…</PullQuote>`
+- **Embeds as data**: a story lists its `embeds` in the frontmatter (a YouTube video, an X post, a pull quote), and the page renders them with the matching component. The YouTube player loads only on click, from youtube-nocookie; an X post is readable without JavaScript.
+- **Bodies are sanitized**: story HTML is reduced to a fixed allowlist of tags and attributes at build time (`astro.config.mjs`). Scripts, iframes, inline event handlers and `javascript:` links never reach a reader, whatever a story file contains.
 - **Newsroom checks in CI**: `npm run check` blocks a deploy if a story has an image without alt text, a date without a year, relative wording such as "currently" or "latest", or charges reported without "The allegations have not been proven in court."
 
 ## Run it
@@ -27,9 +25,9 @@ npm run build    # static site in dist/
 
 ## Write a story
 
-Create `src/content/posts/<slug>.mdx`. The slug becomes the URL: `maxcrime.com/<slug>/`.
+Create `src/content/posts/<slug>.md` (top level, lowercase letters, digits and hyphens). The file name is the URL, `maxcrime.com/<slug>/`, and nothing in the frontmatter can change it.
 
-```mdx
+```md
 ---
 title: "Headline"
 description: "One or two sentences, at most 170 characters."
@@ -46,6 +44,19 @@ sources:
     title: "Article title"
     url: "https://…"
     date: "Oct. 7, 2026"
+embeds:                 # optional
+  - type: youtube
+    id: dQw4w9WgXcQ
+    title: "What the video shows"
+  - type: x
+    url: "https://x.com/user/status/123"
+    author: "Name (@user)"
+    text: "The post's text, word for word"
+    date: "October 7, 2026"
+  - type: quote
+    text: "A quotation, word for word from the source."
+    cite: "Who said it"
+    source: "Outlet that reported it"
 ---
 
 Story text…

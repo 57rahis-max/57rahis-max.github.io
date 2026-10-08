@@ -1,6 +1,6 @@
 import { SITE, postUrl, authorUrl, categoryUrl } from './site';
 import type { Post } from './posts';
-import { lastTouched } from './posts';
+import { sortedUpdates } from './posts';
 
 const abs = (p: string) => new URL(p, SITE.url).href;
 
@@ -29,7 +29,7 @@ export function person(id: string, a: { name: string; role: string; bio: string 
 }
 
 /** NewsArticle for every story; LiveBlogPosting (a NewsArticle subtype per Google) for live coverage. */
-export function articleSchema(post: Post, author: { id: string; name: string; role: string; bio: string }, bodyText: string) {
+export function articleSchema(post: Post, author: { id: string; name: string; role: string; bio: string }, bodyText: string, modified: Date) {
   const d = post.data;
   const url = abs(postUrl(post.id));
   const base: Record<string, unknown> = {
@@ -41,7 +41,7 @@ export function articleSchema(post: Post, author: { id: string; name: string; ro
     headline: d.title.slice(0, 110),
     description: d.description,
     datePublished: d.date.toISOString(),
-    dateModified: lastTouched(post).toISOString(),
+    dateModified: modified.toISOString(),
     author: [person(author.id, author)],
     publisher,
     articleSection: d.category,
@@ -56,13 +56,13 @@ export function articleSchema(post: Post, author: { id: string; name: string; ro
     const times = d.updates.map((u) => u.time.getTime());
     base.coverageStartTime = new Date(Math.min(...times)).toISOString();
     if (d.live === 'ended') base.coverageEndTime = new Date(Math.max(...times)).toISOString();
-    base.liveBlogUpdate = d.updates.map((u, i) => ({
+    base.liveBlogUpdate = sortedUpdates(post).map((u) => ({
       '@type': 'BlogPosting',
-      '@id': `${url}#update-${d.updates.length - i}`,
+      '@id': `${url}#update-${u.n}`,
       headline: u.title ?? d.title.slice(0, 110),
       datePublished: u.time.toISOString(),
-      articleBody: u.body.replace(/<[^>]+>/g, ''),
-      url: `${url}#update-${d.updates.length - i}`,
+      articleBody: u.body.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim(),
+      url: `${url}#update-${u.n}`,
     }));
   }
   return base;
