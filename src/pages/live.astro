@@ -20,7 +20,8 @@ const past = posts.filter((p) => p.data.live !== 'live');
 </Base>
 <style>
   .h { font: 800 14px/1 var(--sans); letter-spacing: .12em; text-transform: uppercase; margin: 0; }
-  .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 30px 26px; }
+  .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px 28px; }
+  .grid > :global(.card) { padding-bottom: 8px; }
   @media (max-width: 900px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
   @media (max-width: 600px) { .grid { grid-template-columns: 1fr; } }
 </style>

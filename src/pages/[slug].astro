@@ -11,7 +11,7 @@ import PullQuote from '../components/PullQuote.astro';
 import { allPosts, related, lastTouched, sortedUpdates, type Post } from '../lib/posts';
 import { articleSchema, crumbsFor } from '../lib/schema';
 import { sanitizeCredit } from '../lib/html';
-import { fmtDateTime, categoryUrl, authorUrl, postUrl, readingMinutes, srcsetFor, imageSize, SITE } from '../lib/site';
+import { fmtDateTime, fmtWhen, categoryUrl, authorUrl, postUrl, readingMinutes, srcsetFor, imageSize, SITE } from '../lib/site';
 
 export async function getStaticPaths() {
   const posts = await allPosts();
@@ -25,6 +25,7 @@ const a = { id: author.id, ...author.data };
 const { Content } = await render(post);
 const posts = await allPosts();
 const more = related(post, posts, 4);
+const latest = posts.filter((p) => p.id !== post.id).slice(0, 6);
 const authors = Object.fromEntries((await Promise.all(more.map((p) => getEntry(p.data.author)))).map((x) => [x!.id, x!.data.name]));
 const touched = lastTouched(post);
 // An "updated" time is shown, and sent to search engines, only for a real later
@@ -126,11 +127,20 @@ const shareText = encodeURIComponent(d.title);
         <div data-pagefind-ignore><AuthorBox {...a} /></div>
       </div>
 
-      <aside class="art-side" aria-label="More from Max Crime" data-pagefind-ignore>
-        <div class="rule-head"><h2>More from Max Crime</h2></div>
-        {more.map((p) => <PostCard post={p} size="side" authorName={authors[p.data.author.id]} />)}
+      <aside class="art-side" aria-label="Latest stories" data-pagefind-ignore>
+        <h2 class="rail-head">Latest</h2>
+        <ol class="hairlines rail-list">
+          {latest.map((p) => (
+            <li><a href={postUrl(p.id)}><time class="rail-time" datetime={lastTouched(p).toISOString()}>{fmtWhen(lastTouched(p))}</time><span class="rail-title">{p.data.title}</span></a></li>
+          ))}
+        </ol>
       </aside>
     </div>
+
+    <section class="more-grid" aria-labelledby="h-more" data-pagefind-ignore>
+      <div class="rule-head"><h2 id="h-more">More from Max Crime</h2></div>
+      <div class="four">{more.map((p) => <PostCard post={p} size="normal" authorName={authors[p.data.author.id]} />)}</div>
+    </section>
   </article>
 </Base>
 
@@ -148,7 +158,7 @@ const shareText = encodeURIComponent(d.title);
   .by a { text-decoration: none; }
   .byline .meta { margin: 0; }
   .hero { margin: 0 0 28px; max-width: 1000px; }
-  .hero img { width: 100%; max-height: min(620px, 70vh); object-fit: contain; background: var(--card); border: 1px solid var(--rule); border-radius: var(--radius); }
+  .hero img { width: 100%; max-height: min(620px, 70vh); object-fit: contain; background: var(--card); border: 1px solid var(--rule); }
   .art-grid { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 56px; }
   .embeds { max-width: var(--measure); display: grid; gap: 28px; margin-top: 28px; }
   .sources { max-width: var(--measure); margin-top: 36px; padding-top: 18px; border-top: 2px solid var(--ink); }
@@ -156,8 +166,17 @@ const shareText = encodeURIComponent(d.title);
   .sources ul { padding-left: 1.1em; margin: 0; font-size: 15px; }
   .sources li { margin: 6px 0; }
   .share { display: flex; gap: 14px; align-items: center; margin: 28px 0 0; font: 700 14px/1 var(--sans); }
-  .share a { text-decoration: none; padding: 8px 12px; border: 1px solid var(--rule); border-radius: 999px; }
-  .art-side { position: sticky; top: 64px; align-self: start; }
-  .art-side .rule-head { margin-top: 0; }
-  @media (max-width: 960px) { .art-grid { grid-template-columns: 1fr; gap: 20px; } .art-side { position: static; } }
+  .share a { text-decoration: none; padding: 8px 12px; border: 1px solid var(--ink); }
+  .art-side { position: sticky; top: 64px; align-self: start; border-left: 1px solid var(--rule); padding-left: 28px; margin-left: -28px; }
+  .rail-head { margin: 0 0 10px; font: 800 13px/1 var(--sans); letter-spacing: .12em; text-transform: uppercase; padding-bottom: 10px; border-bottom: 1px solid var(--ink); }
+  .rail-list li { padding: 11px 0; }
+  .rail-list a { display: grid; gap: 3px; text-decoration: none; }
+  .rail-time { font: 700 11.5px/1 var(--sans); letter-spacing: .04em; color: var(--accent); text-transform: uppercase; }
+  .rail-title { font: 700 15.5px/1.3 var(--serif); }
+  .rail-list a:hover .rail-title { text-decoration: underline; text-decoration-thickness: 1px; }
+  .more-grid { margin-top: 24px; }
+  .four { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0 28px; }
+  .four > :global(.card + .card) { border-left: 1px solid var(--rule); padding-left: 14px; margin-left: -14px; }
+  @media (max-width: 960px) { .art-grid { grid-template-columns: 1fr; gap: 20px; } .art-side { position: static; border-left: 0; padding-left: 0; margin-left: 0; border-top: 1px solid var(--ink); padding-top: 18px; } .four { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 28px; } .four > :global(.card + .card) { border-left: 0; padding-left: 0; margin-left: 0; } }
+  @media (max-width: 560px) { .four { grid-template-columns: 1fr; } }
 </style>
