@@ -35,6 +35,10 @@ const ogImage = image ? new URL(image, SITE.url).href : new URL('/og-default.png
     {noindex && <meta name="robots" content="noindex" />}
     {!noindex && <meta name="robots" content="index, follow, max-image-preview:large" />}
     <meta name="theme-color" content="#111317" />
+    <!-- GitHub Pages sets no security headers; these two work as <meta>. The CSP allows exactly
+         what the site uses: self, inline scripts/styles Astro emits, X and YouTube embeds, YouTube thumbnails. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://platform.twitter.com https://cdn.syndication.twimg.com; style-src 'self' 'unsafe-inline' https://platform.twitter.com; img-src 'self' data: https://i.ytimg.com https://pbs.twimg.com https://abs.twimg.com https://ton.twimg.com; font-src 'self'; frame-src https://www.youtube-nocookie.com https://platform.twitter.com https://syndication.twitter.com; connect-src 'self' https://syndication.twitter.com https://cdn.syndication.twimg.com; object-src 'none'; base-uri 'self'; form-action 'self' https://x.com https://www.facebook.com; upgrade-insecure-requests" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
     <link rel="preload" href="/fonts/source-serif-4-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
