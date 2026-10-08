@@ -8,7 +8,7 @@ const Mark = home ? 'h1' : 'div';
 <header class="site-header">
   <div class="topbar">
     <div class="wrap topbar-in">
-      <span class="today" data-today>{new Date().toLocaleDateString('en-US', { timeZone: 'America/New_York', weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' })}</span>
+      <span class="today" data-today data-build>{new Date().toLocaleDateString('en-US', { timeZone: 'America/New_York', weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' })}</span>
       <div class="top-actions">
         <a href="/about/" class="toplink">About</a>
         <a href="/editorial-standards/" class="toplink">Standards</a>
@@ -22,10 +22,10 @@ const Mark = home ? 'h1' : 'div';
   <div class="wrap masthead">
     <p class="edition meta" aria-hidden="true">US crime and courts</p>
     <Mark class="wordmark-wrap">
-      <a href="/" class="wordmark" aria-label={`${SITE.name}, home`}>
+      <a href="/" class="wordmark" aria-label={SITE.name}>
         <span class="w1">MAX</span><span class="w2">CRIME</span>
       </a>
-      {home && <span class="sr-only">: crime and court news, sourced and attributed</span>}
+      {home && <span class="sr-only">, crime and court news, sourced and attributed</span>}
     </Mark>
     <p class="tagline">{SITE.tagline}</p>
   </div>
@@ -51,7 +51,7 @@ const Mark = home ? 'h1' : 'div';
 <script>
   // The date is the reader's today in the newsroom's time zone, not the day the site was built.
   const t = document.querySelector('[data-today]');
-  if (t) t.textContent = new Date().toLocaleDateString('en-US', { timeZone: 'America/New_York', weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
+  if (t) { t.textContent = new Date().toLocaleDateString('en-US', { timeZone: 'America/New_York', weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' }); t.removeAttribute('data-build'); }
 
   const root = document.documentElement;
   const toggle = document.querySelector<HTMLButtonElement>('[data-theme-toggle]');
@@ -84,6 +84,7 @@ const Mark = home ? 'h1' : 'div';
   .topbar { background: #111317; color: #d9d7d2; }
   .topbar-in { display: flex; justify-content: space-between; align-items: center; height: 38px; gap: 12px; }
   .today { font: 500 12.5px/1 var(--sans); letter-spacing: .02em; }
+  :global(html.js) .today[data-build] { visibility: hidden; }
   .top-actions { display: flex; align-items: center; gap: 6px; }
   .toplink { font: 600 12.5px/1 var(--sans); color: #d9d7d2; text-decoration: none; padding: 6px 8px; }
   .toplink:hover { color: #fff; }

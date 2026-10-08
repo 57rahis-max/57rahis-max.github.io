@@ -23,6 +23,9 @@ function imageFile(src: string): string | undefined {
   return p.startsWith(resolve('public/images') + sep) ? p : undefined;
 }
 
+/** An information card (timeline, summary) is read, not looked at: it is never cropped and never leads a front. */
+export const isInfoCard = (src?: string) => !!src && /(?:^|[-_./])(?:card|timeline|summary)(?=[-_.]|\.\w+$)/i.test(src);
+
 /** The 800px thumbnail made by scripts/thumbs.py, when there is one. */
 export function thumb(src?: string): string | undefined {
   if (!src || !src.startsWith('/images/')) return src;

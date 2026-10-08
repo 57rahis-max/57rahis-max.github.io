@@ -13,6 +13,8 @@
   --accent: #b3121f;
   --accent-ink: #8a0e18;
   --live: #d7263d;
+  --live-bg: #d7263d;   /* white text on it reads at AA in both themes */
+  --accent-bg: #b3121f;
   --focus: #1f6feb;
   --serif: 'Source Serif 4 Variable', Georgia, 'Times New Roman', serif;
   --sans: 'Inter Variable', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
@@ -24,12 +26,12 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme='light']) {
     --ink: #eceae6; --ink-2: #d4d2cd; --muted: #a2a7b0; --paper: #0f1115; --card: #171a20;
-    --rule: #2a2e36; --accent: #ef4452; --accent-ink: #ff6b77; --live: #ff4d61;
+    --rule: #2a2e36; --accent: #ef4452; --accent-ink: #ff6b77; --live: #ff4d61; --live-bg: #c3182b; --accent-bg: #c3182b;
   }
 }
 :root[data-theme='dark'] {
   --ink: #eceae6; --ink-2: #d4d2cd; --muted: #a2a7b0; --paper: #0f1115; --card: #171a20;
-  --rule: #2a2e36; --accent: #ef4452; --accent-ink: #ff6b77; --live: #ff4d61;
+  --rule: #2a2e36; --accent: #ef4452; --accent-ink: #ff6b77; --live: #ff4d61; --live-bg: #c3182b; --accent-bg: #c3182b;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -53,7 +55,7 @@ a:hover { color: var(--accent-ink); }
 .kicker a { display: inline-block; padding: 6px 0; margin: -6px 0; }
 .kicker { font: 700 12px/1 var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--accent); }
 .meta { font: 500 13px/1.4 var(--sans); color: var(--muted); }
-.live-pill { display: inline-flex; align-items: center; gap: 6px; background: var(--live); color: #fff; font: 800 11px/1 var(--sans); letter-spacing: .1em; padding: 5px 8px; border-radius: 3px; text-transform: uppercase; }
+.live-pill { display: inline-flex; align-items: center; gap: 6px; background: var(--live-bg); color: #fff; font: 800 11px/1 var(--sans); letter-spacing: .1em; padding: 5px 8px; border-radius: 3px; text-transform: uppercase; }
 .live-pill::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: #fff; animation: pulse 1.4s infinite; }
 .live-pill.ended { background: var(--muted); }
 .live-pill.ended::before { animation: none; }
@@ -80,6 +82,7 @@ h1, h2, h3, .headline { font-family: var(--serif); color: var(--ink); letter-spa
 
 /* Cards */
 .card-img { aspect-ratio: 3 / 2; object-fit: cover; width: 100%; background: var(--rule); }
+.card-img.fit { object-fit: contain; background: #111317; }
 .card-title { font: 700 1.15rem/1.25 var(--serif); margin: .35em 0 .3em; letter-spacing: -.01em; }
 .card-title a { text-decoration: none; }
 .card-title a:hover { text-decoration: underline; text-decoration-thickness: 1px; }
@@ -91,10 +94,39 @@ h1, h2, h3, .headline { font-family: var(--serif); color: var(--ink); letter-spa
 .rule-head :is(h1, h2)::before { content: ''; display: inline-block; width: 10px; height: 10px; background: var(--accent); margin-right: 10px; vertical-align: 0; }
 .rule-head .all { margin-left: auto; }
 
+/* One label style for every rail, list and footer heading: a hairline above, small caps below */
+.label { margin: 0 0 12px; padding-top: 10px; border-top: 1px solid var(--ink); font: 800 13px/1 var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--ink); }
+
 /* Dense headline lists: hairlines between items, no bullets */
 .hairlines { list-style: none; margin: 0; padding: 0; }
 .hairlines > li { padding: 14px 0; border-top: 1px solid var(--rule); }
 .hairlines > li:first-child { border-top: 0; padding-top: 0; }
+/* The same list flowed into CSS columns: a rule under every item, so every column starts level */
+.hairlines.cols > li { border-top: 0; border-bottom: 1px solid var(--rule); padding: 12px 0; break-inside: avoid; }
+.hairlines.cols > li:first-child { padding-top: 12px; }
+.hairlines.cols > li:last-child { border-bottom: 0; }
+
+/* Headline rails: time in muted small caps, headline in serif */
+.rail-list li { padding: 11px 0; }
+.rail-list a { display: grid; gap: 3px; text-decoration: none; }
+.rail-time { font: 600 12px/1 var(--sans); color: var(--muted); }
+.rail-title { font: 700 15.5px/1.3 var(--serif); }
+.rail-list a:hover .rail-title { text-decoration: underline; text-decoration-thickness: 1px; }
+
+/* Four stories across, divided by hairlines; the same on every page */
+.four { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0 28px; }
+.four > .card { padding-bottom: 20px; }
+.four > .card + .card { border-left: 1px solid var(--rule); padding-left: 14px; margin-left: -14px; }
+@media (max-width: 1100px) {
+  .four { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 28px; }
+  .four > .card + .card { border-left: 0; padding-left: 0; margin-left: 0; }
+  .four > .card:nth-child(even) { border-left: 1px solid var(--rule); padding-left: 14px; margin-left: -14px; }
+}
+@media (max-width: 760px) {
+  .four { grid-template-columns: 1fr; gap: 0; }
+  .four > .card { padding: 16px 0; border-top: 1px solid var(--rule); }
+  .four > .card:nth-child(even) { border-left: 0; padding-left: 0; margin-left: 0; }
+}
 
 /* Content carried over from WordPress */
 .prose table { width: 100%; border-collapse: collapse; margin: 1.6em 0; font: 400 15px/1.5 var(--sans); }
@@ -114,13 +146,14 @@ h1, h2, h3, .headline { font-family: var(--serif); color: var(--ink); letter-spa
 
 /* Print: article only, no chrome */
 @media print {
-  :root, :root[data-theme='dark'] { --ink: #000; --ink-2: #222; --muted: #444; --paper: #fff; --card: #fff; --rule: #bbb; --accent: #000; --accent-ink: #000; --live: #000; }
+  :root, :root[data-theme='dark'], :root:not([data-theme='light']) { --ink: #000; --ink-2: #222; --muted: #444; --paper: #fff; --card: #fff; --rule: #bbb; --accent: #000; --accent-ink: #000; --live: #000; }
   .site-header, .site-footer, .art-side, .share, .skip, .new-updates, .live-notice, .ticker, .live-strip, .crumbs, .author-box, .promise, .yt, .tweet, .more-grid { display: none !important; }
   body { background: #fff; color: #000; font-size: 11.5pt; }
   .prose { max-width: none; font-size: 11.5pt; }
   a { color: #000; text-decoration: none; }
-  .prose a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 9pt; color: #555; }
-  .hero img { max-height: 3.5in; }
+  .prose a[href^="http"]::after, .sources a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 9pt; color: #555; }
+  .hero img { max-height: 3.5in; object-fit: contain; }
+  .art-grid { display: block; }
 }
 
 /* Correction and editor's-note callouts (replaces WordPress's inline-styled boxes) */

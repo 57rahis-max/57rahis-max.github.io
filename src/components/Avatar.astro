@@ -1,8 +1,10 @@
 ---
-interface Props { initials: string; color: string; size?: number; label: string }
+// Initials on a colour: the site uses no photographs of its reporters.
+// Decorative wherever the name is printed beside it; labelled only when it stands alone.
+interface Props { initials: string; color: string; size?: number; label?: string }
 const { initials, color, size = 56, label } = Astro.props;
 ---
-<span class="avatar" role="img" aria-label={label} style={`--c:${color};--s:${size}px`}>{initials}</span>
+<span class="avatar" role={label ? 'img' : undefined} aria-label={label} aria-hidden={label ? undefined : 'true'} style={`--c:${color};--s:${size}px`}>{initials}</span>
 <style>
   .avatar { width: var(--s); height: var(--s); flex: none; border-radius: 50%; background: var(--c); color: #fff; display: inline-grid; place-items: center;
     font: 800 calc(var(--s) * .38)/1 var(--serif); letter-spacing: .02em; box-shadow: inset 0 0 0 3px color-mix(in srgb, #fff 18%, transparent); }

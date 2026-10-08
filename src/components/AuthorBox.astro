@@ -5,18 +5,16 @@ interface Props { id: string; name: string; role: string; bio: string; initials:
 const a = Astro.props;
 ---
 <aside class="author-box" aria-label="About the author">
-  <Avatar initials={a.initials} color={a.color} size={64} label={a.name} />
+  <Avatar initials={a.initials} color={a.color} size={40} />
   <div>
-    <p class="kicker">About the author</p>
     <p class="name"><a href={authorUrl(a.id)} rel="author">{a.name}</a> <span class="meta">· {a.role}</span></p>
-    <p class="bio">{a.bio}</p>
-    <a class="more" href={authorUrl(a.id)}>More stories by {a.name} →</a>
+    <p class="bio">{a.bio} <a href={authorUrl(a.id)} class="more">More stories by {a.name}</a></p>
   </div>
 </aside>
 <style>
-  .author-box { display: flex; gap: 18px; padding: 22px; margin: 40px 0 8px; background: var(--card); border: 1px solid var(--rule); border-top: 3px solid var(--accent); border-radius: var(--radius); max-width: var(--measure); }
-  .name { margin: 6px 0 4px; font: 700 18px/1.3 var(--serif); }
+  .author-box { display: flex; gap: 14px; align-items: flex-start; max-width: var(--measure); margin-top: 32px; padding-top: 18px; border-top: 1px solid var(--rule); }
+  .name { margin: 0 0 4px; font: 700 15px/1.3 var(--sans); }
   .name a { text-decoration: none; }
-  .bio { margin: 0 0 8px; font-size: 15px; color: var(--ink-2); }
-  .more { font: 700 13px/1 var(--sans); text-decoration: none; color: var(--accent); }
+  .bio { margin: 0; font: italic 400 15px/1.5 var(--serif); color: var(--ink-2); }
+  .more { font: 600 13px/1 var(--sans); white-space: nowrap; }
 </style>

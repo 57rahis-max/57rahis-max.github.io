@@ -1,27 +1,24 @@
 ---
-import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import PostCard from '../components/PostCard.astro';
 import { allPosts } from '../lib/posts';
 const posts = (await allPosts()).filter((p) => p.data.updates.length > 0);
-const names = Object.fromEntries((await getCollection('authors')).map((a) => [a.id, a.data.name]));
 const now = posts.filter((p) => p.data.live === 'live');
 const past = posts.filter((p) => p.data.live !== 'live');
 ---
 <Base title="Live coverage" description="Developing crime and court stories, updated as they happen.">
   <div class="wrap">
-    <div class="rule-head"><h1 class="h">Live now</h1></div>
-    {now.length === 0 ? <p class="meta">No live coverage right now.</p> : <div class="grid">{now.map((p) => <PostCard post={p} authorName={names[p.data.author.id]} />)}</div>}
+    <header class="section-head"><h1>Live coverage</h1><p class="meta">Developing stories, updated as they happen</p></header>
+    <h2 class="label">Live now</h2>
+    {now.length === 0 ? <p class="meta">No live coverage right now.</p> : <div class="four">{now.map((p) => <PostCard post={p} as="h3" />)}</div>}
     {past.length > 0 && (<>
       <div class="rule-head"><h2>Past live coverage</h2></div>
-      <div class="grid">{past.map((p) => <PostCard post={p} authorName={names[p.data.author.id]} />)}</div>
+      <div class="four">{past.map((p) => <PostCard post={p} as="h3" />)}</div>
     </>)}
   </div>
 </Base>
 <style>
-  .h { font: 800 14px/1 var(--sans); letter-spacing: .12em; text-transform: uppercase; margin: 0; }
-  .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px 28px; }
-  .grid > :global(.card) { padding-bottom: 8px; }
-  @media (max-width: 900px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-  @media (max-width: 600px) { .grid { grid-template-columns: 1fr; } }
+  .section-head { display: flex; align-items: baseline; gap: 16px; padding: 30px 0 14px; border-bottom: 1px solid var(--ink); margin-bottom: 24px; }
+  .section-head h1 { margin: 0; font-size: clamp(2rem, 4vw, 2.8rem); line-height: 1.05; }
+  .section-head .meta { margin: 0; }
 </style>

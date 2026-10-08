@@ -1,7 +1,7 @@
 ---
 import type { Post } from '../lib/posts';
 import { lastTouched } from '../lib/posts';
-import { postUrl, fmtWhen, categoryUrl, thumb, imageSize } from '../lib/site';
+import { postUrl, fmtWhen, categoryUrl, thumb, imageSize, isInfoCard } from '../lib/site';
 /**
  * One story in a list. Variants follow newspaper conventions:
  *  lead    – big headline, dek, image below the headline (the front's top story)
@@ -9,35 +9,45 @@ import { postUrl, fmtWhen, categoryUrl, thumb, imageSize } from '../lib/site';
  *  side    – small thumbnail at right, headline (rails and dense lists)
  *  text    – headline and time only (headline columns)
  */
-interface Props { post: Post; size?: 'lead' | 'normal' | 'side' | 'text'; authorName?: string; eager?: boolean }
-const { post, size = 'normal', authorName, eager = false } = Astro.props;
+interface Props {
+  post: Post;
+  size?: 'lead' | 'normal' | 'side' | 'text';
+  /** Heading level: h2 for the stories that lead a page, h3 inside a titled section. */
+  as?: 'h2' | 'h3';
+  /** Hide the section label inside a section that already names it. */
+  kicker?: boolean;
+  eager?: boolean;
+}
+const { post, size = 'normal', as: H = 'h3', kicker = true, eager = false } = Astro.props;
 const d = post.data;
 const live = d.live === 'live';
 const when = live ? lastTouched(post) : d.date;
 const img = thumb(d.image?.src);
 const dim = imageSize(img) ?? { width: 800, height: 450 };
-const showImg = size !== 'text' && !!d.image;
+// A side thumbnail is too small to read an information card, so those stories list without one.
+const showImg = size !== 'text' && !!d.image && !(size === 'side' && isInfoCard(d.image.src));
+const fit = isInfoCard(d.image?.src) ? ' fit' : ''; // an information card is shown whole, never cropped
 ---
 <article class={`card ${size}${showImg ? '' : ' noimg'}`}>
   {showImg && size !== 'lead' && (
     <a href={postUrl(post.id)} class="img-link" tabindex="-1" aria-hidden="true">
-      <img class="card-img" src={img} alt="" loading={eager ? 'eager' : 'lazy'} decoding="async" width={dim.width} height={dim.height} />
+      <img class={`card-img${fit}`} src={img} alt="" loading={eager ? 'eager' : 'lazy'} decoding="async" width={dim.width} height={dim.height} />
     </a>
   )}
   <div class="card-body">
-    <p class="kicker">
-      {live ? <span class="live-pill">Live</span> : <a href={categoryUrl(d.category)} class="cat">{d.category}</a>}
-    </p>
-    <h3 class="card-title"><a href={postUrl(post.id)}>{d.title}</a></h3>
+    {(kicker || live) && (
+      <p class="kicker">
+        {live ? <span class="live-pill">Live</span> : <a href={categoryUrl(d.category)} class="cat">{d.category}</a>}
+      </p>
+    )}
+    <H class="card-title"><a href={postUrl(post.id)}>{d.title}</a></H>
     {(size === 'lead' || size === 'normal') && <p class="card-dek">{d.description}</p>}
     {showImg && size === 'lead' && (
       <a href={postUrl(post.id)} class="img-link" tabindex="-1" aria-hidden="true">
-        <img class="card-img" src={img} alt="" loading={eager ? 'eager' : 'lazy'} decoding="async" width={dim.width} height={dim.height} />
+        <img class={`card-img${fit}`} src={img} alt="" loading={eager ? 'eager' : 'lazy'} decoding="async" width={dim.width} height={dim.height} />
       </a>
     )}
-    <p class="meta">
-      <time datetime={when.toISOString()}>{live ? `Updated ${fmtWhen(when)}` : fmtWhen(when)}</time>{authorName && <> · {authorName}</>}
-    </p>
+    {live && <p class="meta"><time datetime={when.toISOString()}>Updated {fmtWhen(when)}</time></p>}
   </div>
 </article>
 <style>
@@ -49,7 +59,7 @@ const showImg = size !== 'text' && !!d.image;
   .card-dek { margin: 0; }
   .meta { margin: 0; }
 
-  .lead .card-title { font-size: clamp(1.9rem, 3.2vw, 2.6rem); line-height: 1.08; font-weight: 700; letter-spacing: -.015em; }
+  .lead .card-title { font-size: clamp(1.7rem, 2.6vw, 2.3rem); line-height: 1.1; font-weight: 700; letter-spacing: -.015em; }
   .lead .card-dek { font: 400 17px/1.5 var(--serif); color: var(--ink-2); }
   .lead .img-link { margin-top: 8px; }
 

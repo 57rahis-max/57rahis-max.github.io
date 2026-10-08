@@ -1,7 +1,6 @@
 ---
 import { getEntry, render } from 'astro:content';
 import Base from '../layouts/Base.astro';
-import Avatar from '../components/Avatar.astro';
 import AuthorBox from '../components/AuthorBox.astro';
 import PostCard from '../components/PostCard.astro';
 import LiveUpdates from '../components/LiveUpdates.astro';
@@ -26,7 +25,6 @@ const { Content } = await render(post);
 const posts = await allPosts();
 const more = related(post, posts, 4);
 const latest = posts.filter((p) => p.id !== post.id).slice(0, 6);
-const authors = Object.fromEntries((await Promise.all(more.map((p) => getEntry(p.data.author)))).map((x) => [x!.id, x!.data.name]));
 const touched = lastTouched(post);
 // An "updated" time is shown, and sent to search engines, only for a real later
 // edit or a live update, not the save WordPress made moments after publishing.
@@ -51,7 +49,9 @@ const shareText = encodeURIComponent(d.title);
   modified={wasUpdated ? modified : undefined}
   schema={[articleSchema(post, a, bodyText, modified), crumbsFor(post)]}
 >
-  <article class="wrap article" data-pagefind-body>
+  <div class="wrap article">
+  <div class="art-grid">
+  <article class="art-main" data-pagefind-body>
     <nav class="crumbs meta" aria-label="Breadcrumb" data-pagefind-ignore>
       <ol>
         <li><a href="/">Home</a></li>
@@ -62,14 +62,13 @@ const shareText = encodeURIComponent(d.title);
 
     <header class="art-head">
       <p class="kicker">
-        {d.live === 'live' ? <span class="live-pill">Live</span> : d.live === 'ended' ? <span class="live-pill ended">Live coverage ended</span> : d.category}
+        {d.live === 'live' ? <span class="live-pill">Live</span> : d.live === 'ended' ? <span class="live-pill ended">Live coverage ended</span> : <a href={categoryUrl(d.category)}>{d.category}</a>}
       </p>
       <h1 class="headline">{d.title}</h1>
       <p class="dek">{d.description}</p>
       <div class="byline">
-        <Avatar initials={a.initials} color={a.color} size={44} label={a.name} />
         <div>
-          <p class="by">By <a href={authorUrl(a.id)} rel="author">{a.name}</a></p>
+          <p class="by">By <a href={authorUrl(a.id)} rel="author">{a.name}</a><span class="meta">, {a.role}</span></p>
           <p class="meta">
             Published <time datetime={d.date.toISOString()}>{fmtDateTime(d.date)}</time>
             {wasUpdated && <> · Updated <time datetime={modified.toISOString()}>{fmtDateTime(modified)}</time></>}
@@ -88,8 +87,6 @@ const shareText = encodeURIComponent(d.title);
       </figure>
     )}
 
-    <div class="art-grid">
-      <div class="art-main">
         {d.updates.length > 0 && <LiveUpdates updates={sortedUpdates(post)} status={d.live} stamp={touched.toISOString()} />}
         <div class="prose">
           <Content />
@@ -117,7 +114,7 @@ const shareText = encodeURIComponent(d.title);
           </section>
         )}
 
-        <div class="share" role="group" aria-label="Share this story">
+        <div class="share" role="group" aria-label="Share this story" data-pagefind-ignore>
           <span class="meta">Share</span>
           <a href={`https://x.com/intent/post?url=${shareUrl}&text=${shareText}`} target="_blank" rel="noopener">X</a>
           <a href={`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`} target="_blank" rel="noopener">Facebook</a>
@@ -125,23 +122,23 @@ const shareText = encodeURIComponent(d.title);
         </div>
 
         <div data-pagefind-ignore><AuthorBox {...a} /></div>
-      </div>
-
-      <aside class="art-side" aria-label="Latest stories" data-pagefind-ignore>
-        <h2 class="rail-head">Latest</h2>
-        <ol class="hairlines rail-list">
-          {latest.map((p) => (
-            <li><a href={postUrl(p.id)}><time class="rail-time" datetime={lastTouched(p).toISOString()}>{fmtWhen(lastTouched(p))}</time><span class="rail-title">{p.data.title}</span></a></li>
-          ))}
-        </ol>
-      </aside>
-    </div>
-
-    <section class="more-grid" aria-labelledby="h-more" data-pagefind-ignore>
-      <div class="rule-head"><h2 id="h-more">More from Max Crime</h2></div>
-      <div class="four">{more.map((p) => <PostCard post={p} size="normal" authorName={authors[p.data.author.id]} />)}</div>
-    </section>
   </article>
+
+  <aside class="art-side" aria-labelledby="h-latest">
+    <h2 id="h-latest" class="label">Latest</h2>
+    <ol class="hairlines rail-list">
+      {latest.map((p) => (
+        <li><a href={postUrl(p.id)}><time class="rail-time" datetime={lastTouched(p).toISOString()}>{fmtWhen(lastTouched(p))}</time><span class="rail-title">{p.data.title}</span></a></li>
+      ))}
+    </ol>
+  </aside>
+  </div>
+
+  <section class="more-grid" aria-labelledby="h-more">
+    <div class="rule-head"><h2 id="h-more">More from Max Crime</h2></div>
+    <div class="four">{more.map((p) => <PostCard post={p} size="normal" />)}</div>
+  </section>
+  </div>
 </Base>
 
 <style>
@@ -150,33 +147,26 @@ const shareText = encodeURIComponent(d.title);
   .crumbs li + li::before { content: '›'; margin-right: 6px; color: var(--muted); }
   .crumbs li[aria-current] { color: var(--muted); max-width: 48ch; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .crumbs a { text-decoration: none; }
-  .art-head { max-width: 860px; margin: 14px 0 22px; }
+  .art-head { max-width: 900px; margin: 14px 0 22px; }
   .headline { font-size: clamp(2rem, 4.4vw, 3.1rem); line-height: 1.08; margin: 10px 0 12px; font-weight: 800; }
   .dek { font: 400 1.25rem/1.45 var(--serif); color: var(--muted); margin: 0 0 18px; }
   .byline { display: flex; gap: 12px; align-items: center; padding-top: 14px; border-top: 1px solid var(--rule); }
+  .by .meta { font-weight: 500; }
   .by { margin: 0 0 2px; font: 700 15px/1.2 var(--sans); }
   .by a { text-decoration: none; }
   .byline .meta { margin: 0; }
-  .hero { margin: 0 0 28px; max-width: 1000px; }
-  .hero img { width: 100%; max-height: min(620px, 70vh); object-fit: contain; background: var(--card); border: 1px solid var(--rule); }
+  .hero { margin: 0 0 28px; max-width: 900px; }
+  .hero img { width: 100%; height: auto; }
   .art-grid { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 56px; }
   .embeds { max-width: var(--measure); display: grid; gap: 28px; margin-top: 28px; }
   .sources { max-width: var(--measure); margin-top: 36px; padding-top: 18px; border-top: 2px solid var(--ink); }
-  .sources h2 { font: 800 14px/1 var(--sans); letter-spacing: .12em; text-transform: uppercase; margin: 0 0 12px; }
+  .sources h2 { font: 800 13px/1 var(--sans); letter-spacing: .12em; text-transform: uppercase; margin: 0 0 12px; }
   .sources ul { padding-left: 1.1em; margin: 0; font-size: 15px; }
   .sources li { margin: 6px 0; }
   .share { display: flex; gap: 14px; align-items: center; margin: 28px 0 0; font: 700 14px/1 var(--sans); }
   .share a { text-decoration: none; padding: 8px 12px; border: 1px solid var(--ink); }
   .art-side { position: sticky; top: 64px; align-self: start; border-left: 1px solid var(--rule); padding-left: 28px; margin-left: -28px; }
-  .rail-head { margin: 0 0 10px; font: 800 13px/1 var(--sans); letter-spacing: .12em; text-transform: uppercase; padding-bottom: 10px; border-bottom: 1px solid var(--ink); }
-  .rail-list li { padding: 11px 0; }
-  .rail-list a { display: grid; gap: 3px; text-decoration: none; }
-  .rail-time { font: 700 11.5px/1 var(--sans); letter-spacing: .04em; color: var(--accent); text-transform: uppercase; }
-  .rail-title { font: 700 15.5px/1.3 var(--serif); }
-  .rail-list a:hover .rail-title { text-decoration: underline; text-decoration-thickness: 1px; }
+  .art-side .label { border-top: 0; padding-top: 0; }
   .more-grid { margin-top: 24px; }
-  .four { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0 28px; }
-  .four > :global(.card + .card) { border-left: 1px solid var(--rule); padding-left: 14px; margin-left: -14px; }
-  @media (max-width: 960px) { .art-grid { grid-template-columns: 1fr; gap: 20px; } .art-side { position: static; border-left: 0; padding-left: 0; margin-left: 0; border-top: 1px solid var(--ink); padding-top: 18px; } .four { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 28px; } .four > :global(.card + .card) { border-left: 0; padding-left: 0; margin-left: 0; } }
-  @media (max-width: 560px) { .four { grid-template-columns: 1fr; } }
+  @media (max-width: 960px) { .art-grid { grid-template-columns: 1fr; gap: 20px; } .art-side { position: static; border-left: 0; padding-left: 0; margin-left: 0; } .art-side .label { border-top: 1px solid var(--ink); padding-top: 10px; } }
 </style>

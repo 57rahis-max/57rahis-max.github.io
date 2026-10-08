@@ -9,7 +9,7 @@ const { updates, status, stamp } = Astro.props;
 ---
 <section class="live" aria-label="Live updates">
   <header class="live-head">
-    <span class={`live-pill ${status === 'ended' ? 'ended' : ''}`}>{status === 'ended' ? 'Coverage ended' : 'Live updates'}</span>
+    <h2 class={`live-pill ${status === 'ended' ? 'ended' : ''}`}>{status === 'ended' ? 'Coverage ended' : 'Live updates'}</h2>
     <span class="meta">{updates.length} update{updates.length === 1 ? '' : 's'} · newest first</span>
   </header>
   <div class="live-notice" aria-live="polite"></div>
@@ -23,7 +23,7 @@ const { updates, status, stamp } = Astro.props;
         <div class="entry">
           {u.title && <h3>{u.title}</h3>}
           <div class="prose" set:html={sanitizeUpdate(u.body)} />
-          <a class="perma meta" href={`#update-${u.n}`}>Link to this update</a>
+          <a class="perma meta" href={`#update-${u.n}`} aria-label={`Link to update ${u.n}, ${fmtTime(u.time)}`}>Link to this update</a>
         </div>
       </li>
     ))}
@@ -60,9 +60,10 @@ const { updates, status, stamp } = Astro.props;
 <style>
   .live { max-width: var(--measure); margin: 28px 0 36px; border: 1px solid var(--rule); border-top: 4px solid var(--live); border-radius: var(--radius); padding: 18px 22px 8px; background: var(--card); }
   .live-head { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+  .live-head h2 { margin: 0; font-family: var(--sans); letter-spacing: .1em; }
   .live-notice:empty { display: none; }
   .live-notice { margin: 6px 0 10px; }
-  :global(.new-updates) { display: block; width: 100%; padding: 10px 14px; background: var(--accent); color: #fff; border: 0; border-radius: var(--radius); font: 700 14px/1 var(--sans); cursor: pointer; }
+  :global(.new-updates) { display: block; width: 100%; padding: 10px 14px; background: var(--accent-bg); color: #fff; border: 0; border-radius: var(--radius); font: 700 14px/1 var(--sans); cursor: pointer; }
   .timeline { list-style: none; margin: 0; padding: 0; }
   .timeline li { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 16px; padding: 16px 0; border-top: 1px solid var(--rule); }
   .when { display: grid; align-content: start; gap: 2px; }
