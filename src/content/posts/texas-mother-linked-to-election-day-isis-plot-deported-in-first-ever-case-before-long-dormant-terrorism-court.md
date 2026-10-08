@@ -7,8 +7,9 @@ updated: 2026-09-12T23:21:53Z
 author: henry
 category: "News"
 image:
-  src: "/images/2026/09/Texas-Mother-Linked-to-Election-Day-ISIS-Plot-Deported-in-First-Ever-Case-Before-Long-Dormant-Terrorism-Court.jpg"
-  alt: "Texas Mother Linked to Election Day ISIS Plot Deported in First-Ever Case Before Long-Dormant Terrorism Court"
+  src: "/images/2026/09/alien-terrorist-removal-court-case-card.jpg"
+  alt: "Alien Terrorist Removal Court case card: The court's first case ends in deportation. July 15, 2026: The Justice Department asks the court to deport Nazira Haji Zada. Aug. 20, 2026: She agrees to be…"
+  credit: "Graphic: Max Crime"
 wpId: 63
 ---
 
@@ -16,7 +17,7 @@ wpId: 63
 
 <p>A 47-year-old Afghan woman who lived in Fort Worth, Texas, as a lawful permanent resident has been deported to Afghanistan. Hers is the first case ever heard by the Alien Terrorist Removal Court (ATRC), a special federal court that Congress created in 1996. No administration had used it until this summer.</p>
 
-<p>The Justice Department announced on Friday, Sept. 11, that Nazira Haji Zada had been removed from the country. With her attorneys, she admitted that she counts as an “alien terrorist” under the law and gave up her right to appeal. That ended her permanent resident status, and she is now permanently barred from returning to the United States.</p>
+<p>The Justice Department announced on Friday, Sept. 11, 2026, that Nazira Haji Zada had been removed from the country. With her attorneys, she admitted that she counts as an “alien terrorist” under the law and gave up her right to appeal. That ended her permanent resident status, and she is now permanently barred from returning to the United States.</p>
 
 <p>Haji Zada came to the U.S. as a permanent resident in 2018 and was never charged with a crime. Her case was a civil deportation proceeding, not a criminal prosecution. According to court records reported by NPR, her admission cannot be used against her in a criminal case.</p>
 
@@ -24,15 +25,15 @@ wpId: 63
 <h2>Timeline of the case</h2>
 
 <ul>
-<li><strong>July 15:</strong> The Justice Department filed its request to deport her. Todd Blanche, then acting attorney general, had signed off on it. The Senate confirmed him as attorney general on Aug. 8.</li>
+<li><strong>July 15, 2026:</strong> The Justice Department filed its request to deport her. Todd Blanche, then acting attorney general, had signed off on it. The Senate confirmed him as attorney general on Aug. 8, 2026.</li>
 
 <li><strong>Late July:</strong> She was arrested at her Fort Worth home.</li>
 
-<li><strong>July 30:</strong> The court held its first-ever public hearing, in Washington, D.C., before Chief Judge Joan N. Ericksen, who normally sits as a federal judge in Minnesota. Ericksen turned down the defense’s request to free her, and she stayed in custody.</li>
+<li><strong>July 30, 2026:</strong> The court held its first-ever public hearing, in Washington, D.C., before Chief Judge Joan N. Ericksen, who normally sits as a federal judge in Minnesota. Ericksen turned down the defense’s request to free her, and she stayed in custody.</li>
 
-<li><strong>Aug. 20:</strong> Haji Zada agreed to be deported and gave up her right to challenge her detention. Judge Ericksen signed the removal order the same day.</li>
+<li><strong>Aug. 20, 2026:</strong> Haji Zada agreed to be deported and gave up her right to challenge her detention. Judge Ericksen signed the removal order the same day.</li>
 
-<li><strong>Sept. 11:</strong> The order and related court filings were made public. They had stayed sealed until she arrived in Afghanistan.</li>
+<li><strong>Sept. 11, 2026:</strong> The order and related court filings were made public. They had stayed sealed until she arrived in Afghanistan.</li>
 </ul>
 
 <h2>How the court works</h2>
@@ -79,6 +80,6 @@ wpId: 63
 
 <p>Haji Zada’s court-appointed lawyers, federal public defenders Matthew Farley and Mary Manning Petras, issued a statement Friday. They said her agreement to leave “should not be seen as an endorsement of this court’s legitimacy.”</p>
 
-<p>They argued that hauling permanent residents into court while refusing to show them or their lawyers the evidence against them violates the Constitution’s due process guarantee. They predicted the ATRC will be struck down as unconstitutional once a judge rules on the question. At the July 30 hearing, Farley argued that the proceeding violated several of her constitutional rights and asked the judge to throw out the case. Right up to her deportation, the defense was pressing the court to make the Justice Department share its evidence.</p>
+<p>They argued that hauling permanent residents into court while refusing to show them or their lawyers the evidence against them violates the Constitution’s due process guarantee. They predicted the ATRC will be struck down as unconstitutional once a judge rules on the question. At the July 30, 2026, hearing, Farley argued that the proceeding violated several of her constitutional rights and asked the judge to throw out the case. Right up to her deportation, the defense was pressing the court to make the Justice Department share its evidence.</p>
 
 <p>Because Haji Zada agreed to removal and gave up her appeal, her case ended before any court ruled on whether the ATRC is constitutional. That question remains open for the next person brought before it.</p>

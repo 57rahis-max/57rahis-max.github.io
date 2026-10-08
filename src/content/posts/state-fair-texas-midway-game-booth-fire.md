@@ -8,7 +8,8 @@ category: "Crime News"
 image:
   src: "/images/2026/10/state-fair-of-texas-midway-2026.jpg"
   alt: "An aerial view of the State Fair of Texas Midway at Fair Park with the Texas Star Ferris wheel and blue booth canopies"
-  caption: "File photo: The Midway at Fair Park during the 2026 State Fair of Texas. Photo: IcedCowboyCoffee / Wikimedia Commons (CC0)"
+  credit: "Photo: IcedCowboyCoffee / Wikimedia Commons (CC0)"
+  caption: "File photo: The Midway at Fair Park during the 2026 State Fair of Texas."
 wpId: 148
 ---
 
@@ -38,6 +39,6 @@ wpId: 148
 
 <p>“The safety of our fairgoers, vendors, volunteers, and team members remains our top priority,” fair officials said in a statement to CBS Texas.</p>
 
-<p>The 2026 State Fair of Texas runs from September 25 to October 18 at Fair Park, according to the <a href="https://bigtex.com/plan-your-visit/getting-here/" rel="nofollow noopener" target="_blank">fair’s official website</a>.</p>
+<p>The 2026 State Fair of Texas runs from September 25, 2026, to October 18, 2026, at Fair Park, according to the <a href="https://bigtex.com/plan-your-visit/getting-here/" rel="nofollow noopener" target="_blank">fair’s official website</a>.</p>
 
 <p><em>Featured image: File photo of the Midway at Fair Park during the 2026 State Fair of Texas. Photo: IcedCowboyCoffee / Wikimedia Commons (CC0)</em></p>

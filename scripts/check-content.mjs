@@ -10,9 +10,11 @@
 //   2. Integrity — every post, imported or new: the frontmatter parses, the
 //      author exists, every referenced image file exists, dates are sane.
 //      A missing image built cleanly and shipped a dead og:image (2026-10-08).
-//   3. Newsroom rules — new posts only (WordPress imports were edited under
-//      the old process): dates carry years, charges carry the presumption
-//      notice, no relative-time wording, at least two sources.
+//   3. Newsroom rules — every post, imported or new: dates carry years,
+//      charges carry the presumption notice, no present-tense status words,
+//      every image is credited and described, descriptions are whole
+//      sentences. New posts also need two sources. (The WordPress imports
+//      were brought up to these rules on 2026-10-09.)
 import { readdirSync, readFileSync, existsSync, statSync } from 'node:fs';
 import { resolve, sep } from 'node:path';
 import { load as yaml } from 'js-yaml';
@@ -23,11 +25,12 @@ const authors = new Set(JSON.parse(readFileSync('src/content/authors/authors.jso
 const CATEGORIES = ['Crime News', 'Courts', 'News'];
 const DESCRIPTION_MAX = 160;
 const IMPORT_CUTOFF = new Date('2026-10-09T00:00:00Z'); // the WordPress import; nothing newer may claim wpId
-const MONTH_DAY = /\b(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)[a-z]*\.? (\d{1,2})(?:st|nd|rd|th)?\b(?!,? ?\d{4})(?!\d)(?! [A-Z][a-z]+ \d{4})/g;
+const MONTH_DAY = /\b(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)[a-z]*\.? (\d{1,2})(?:st|nd|rd|th)?\b(?!,? ?\d{4})(?!\d)(?![–-]\d)(?! [A-Z][a-z]+ \d{4})/g;
 const CHARGED = /\b(?:charged with|faces? (?:\w+ ){0,3}charges?|facing (?:\w+ ){0,3}charges?|was charged|been charged|accused of|indicted)\b/i;
 const PRESUMPTION = /not been proven in court|presumed innocent/i;
 const RESOLVED = /\b(?:convicted|pleaded guilty|found guilty|sentenced|acquitted)\b/i;
-const RELATIVE = /\b(latest|so far|to date|currently|right now|yesterday|today|tonight|last night|this (?:morning|afternoon|evening|week|month)|recently|ongoing)\b/i;
+// "ongoing" is a status claim only in the present tense ("remains ongoing"); "USA TODAY" is a newspaper.
+const RELATIVE = /\b(latest|so far|to date|currently|right now|yesterday|(?<!USA )today|tonight|last night|this (?:morning|afternoon|evening|week|month)|recently|(?:is|are|remains?) (?:still )?ongoing)\b/i;
 // Anything executable or able to load a document. The build strips these too; here they fail the check.
 const EXECUTABLE = /<\s*\/?\s*(?:script|iframe|object|embed|svg|style|link|meta|base|form|math|template)\b|\bon[a-z]+\s*=|javascript\s*:|data\s*:\s*text\/html|srcdoc\s*=|vbscript\s*:/i;
 const now = Date.now();
@@ -100,7 +103,11 @@ for (const f of readdirSync(dir).filter((f) => f.endsWith('.md'))) {
     if (!fm.image.src) problems.push(`${f}: image has no src`);
     else imgs.push(fm.image.src);
     if (!fm.image.alt || !String(fm.image.alt).trim()) problems.push(`${f}: image without alt text`);
+    else if (String(fm.image.alt).trim().toLowerCase() === String(fm.title).trim().toLowerCase()) problems.push(`${f}: image alt text is the headline; describe the image`);
+    if (!fm.image.credit) problems.push(`${f}: image has no credit; use only images we may publish, credited (or a card made with scripts/card.py)`);
   }
+  const desc = String(fm.description ?? '').trim();
+  if (desc && (!/[.?!”"’)]$/.test(desc) || /\[…\]|\.\.\.$/.test(desc))) problems.push(`${f}: description is not a whole sentence ("…${desc.slice(-40)}")`);
   for (const s of body.matchAll(/(?:src|href)="(\/images\/[^"]+)"/g)) imgs.push(s[1]);
   for (const s of body.matchAll(/!\[[^\]]*\]\((\/images\/[^)]+)\)/g)) imgs.push(s[1]);
   for (const i of new Set(imgs)) {
@@ -124,15 +131,15 @@ for (const f of readdirSync(dir).filter((f) => f.endsWith('.md'))) {
     if (!['youtube', 'x', 'quote'].includes(e.type)) problems.push(`${f}: unknown embed type "${e.type}"`);
   }
 
-  // --- 3. Newsroom rules: new posts only ---
-  if (fm.wpId) continue;
+  // --- 3. Newsroom rules: every post ---
+  const factCheck = /FACT CHECK/.test(body) || /^False:/.test(desc);
   // Tags out, then quoted speech out (a quote may legitimately say "yesterday"). Quotes do not span lines.
   const text = body.replace(/<[^>]+>/g, ' ').replace(/"[^"\n]{1,400}"|“[^”\n]{1,400}”/g, ' ');
   for (const md of text.matchAll(MONTH_DAY)) if (/^[A-Z]/.test(md[0])) { problems.push(`${f}: date without a year: "${md[0]}"`); break; }
-  if (CHARGED.test(text) && !RESOLVED.test(text) && !PRESUMPTION.test(body)) problems.push(`${f}: charges reported without "The allegations have not been proven in court."`);
+  if (!factCheck && CHARGED.test(text) && !RESOLVED.test(text) && !PRESUMPTION.test(body)) problems.push(`${f}: charges reported without "The allegations have not been proven in court."`);
   const rel = RELATIVE.exec(text);
   if (rel) problems.push(`${f}: relative-time wording ("${rel[1]}")`);
-  if ((fm.sources ?? []).length < 2) problems.push(`${f}: a new story needs at least two sources (two independent reports, or one primary record plus a report)`);
+  if (!fm.wpId && (fm.sources ?? []).length < 2) problems.push(`${f}: a new story needs at least two sources (two independent reports, or one primary record plus a report)`);
 }
 
 if (problems.length) {

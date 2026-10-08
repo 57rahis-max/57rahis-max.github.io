@@ -31,17 +31,17 @@ wpId: 134
 
 <p>An IMPD spokesperson told WTHR that as officers responded, they learned a juvenile female had reportedly been shot. When officers arrived, they found a juvenile male who had been shot, the spokesperson said.</p>
 
-<p>Police said the female was taken to a hospital in stable condition and the male in serious condition. Around 6:30 a.m. Saturday, Oct. 3, IMPD said both victims were in stable condition, WTHR reported.</p>
+<p>Police said the female was taken to a hospital in stable condition and the male in serious condition. Around 6:30 a.m. Saturday, Oct. 3, 2026, IMPD said both victims were in stable condition, WTHR reported.</p>
 
 <h2>The investigation</h2>
 
-<p>Police said there was no information about a possible suspect or what may have led to the shooting, according to WTHR’s report updated Oct. 3.</p>
+<p>Police said there was no information about a possible suspect or what may have led to the shooting, according to WTHR’s report updated Oct. 3, 2026.</p>
 
-<p>As of FOX59’s report containing the school district’s Oct. 3 statement, no persons of interest had been taken into custody, and IMPD said its detectives believed there was no longer a threat to the community. In the same report, FOX59 said it was unclear whether police had identified any potential suspects.</p>
+<p>As of FOX59’s report containing the school district’s Oct. 3, 2026, statement, no persons of interest had been taken into custody, and IMPD said its detectives believed there was no longer a threat to the community. In the same report, FOX59 said it was unclear whether police had identified any potential suspects.</p>
 
 <h2>What the schools said</h2>
 
-<p>In a statement to families and staff on Saturday, Oct. 3, the Metropolitan School District of Warren Township said it was aware of “a reported drive-by shooting” following the game and that “at least two individuals were injured,” WTHR reported. The district said it had been in contact with the families of those injured. It did not say whether they were students, FOX59 reported.</p>
+<p>In a statement to families and staff on Saturday, Oct. 3, 2026, the Metropolitan School District of Warren Township said it was aware of “a reported drive-by shooting” following the game and that “at least two individuals were injured,” WTHR reported. The district said it had been in contact with the families of those injured. It did not say whether they were students, FOX59 reported.</p>
 
 <p>“Because this is an active police investigation, we cannot share additional details at this time,” the district wrote.</p>
 

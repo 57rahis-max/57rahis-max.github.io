@@ -6,9 +6,9 @@ updated: 2026-09-19T17:30:50Z
 author: alex
 category: "Crime News"
 image:
-  src: "/images/2026/09/guns-recovered-from-schools-in-queens-and-staten-island.jpg"
-  alt: "Handguns and firearms recovered in school weapons security operations"
-  caption: "Loaded firearms recovered during school incidents in Queens and Staten Island."
+  src: "/images/2026/09/nyc-school-guns-card.jpg"
+  alt: "New York City schools case card: Loaded guns found at schools in Staten Island and Queens. Sept. 14, 2026, Staten Island: School safety agents found a loaded gun in an 18-year-old student's bag at…"
+  credit: "Graphic: Max Crime"
 wpId: 75
 ---
 
@@ -20,6 +20,7 @@ wpId: 75
 <p>The statement released by the Department of Education read, “Weapons have no place in our schools or our city. The incident was quickly and safely addressed by our School Safety Agents, and no students or staff were injured. The gun was safely recovered after a search was conducted of the student’s bookbag. NYPD was called immediately upon discovery of the firearm.”</p>
 
 <p>The authorities revealed that the teen did not pull out the gun and no one was harmed during the incident. However, Owusu was charged with multiple gun possession charges and unlawful possession of cannabis. (More details on this incident can be found on <a href="https://www.univision.com/local/nueva-york-wxtv/estudiantes-enfrentan-cargos-armas-cargadas-escuelas-nueva-york?utm_source=gemini" target="_blank" rel="noopener">Univision</a>).</p>
+<p>The allegations have not been proven in court.</p>
 
 <h2>Second Firearm Detected at Queens High School</h2>
 

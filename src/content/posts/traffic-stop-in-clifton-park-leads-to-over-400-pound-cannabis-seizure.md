@@ -16,7 +16,7 @@ wpId: 85
 
 <p>Deputies pulled a car over on Interstate 87 in Clifton Park for tailgating and a faulty tail lamp. They left the stop with 489 pounds of cannabis.</p>
 
-<p>Kevin C. Wilbur, 46, of Brushton, and Quinton L. Carle, 23, of Bombay — <a href="https://www.dailygazette.com/news/crime/clifton-park-traffic-stop-cannabis/article_f267f700-a910-4c47-8d37-ab13ff7fb666.html">both Franklin County men</a> — were arrested on felony charges, the Saratoga County Sheriff’s Office said. The stop happened at around 2:28 p.m. on <a href="https://dailyvoice.com/article/kevin-wilbur-quinton-carle-arrested-with-weed-in-ny-cops/">Tuesday, September 8, 2026</a>. The Sheriff’s Office announced the arrests the following Monday, September 14.</p>
+<p>Kevin C. Wilbur, 46, of Brushton, and Quinton L. Carle, 23, of Bombay — <a href="https://www.dailygazette.com/news/crime/clifton-park-traffic-stop-cannabis/article_f267f700-a910-4c47-8d37-ab13ff7fb666.html">both Franklin County men</a> — were arrested on felony charges, the Saratoga County Sheriff’s Office said. The stop happened at around 2:28 p.m. on <a href="https://dailyvoice.com/article/kevin-wilbur-quinton-carle-arrested-with-weed-in-ny-cops/">Tuesday, September 8, 2026</a>. The Sheriff’s Office announced the arrests the following Monday, September 14, 2026.</p>
 
 <h2>What Deputies Found</h2>
 
@@ -27,6 +27,7 @@ wpId: 85
 <h2>The Charge, And What It Carries</h2>
 
 <p>Wilbur and Carle are accused of knowingly and unlawfully possessing 489 pounds of cannabis. Both were charged with criminal possession of cannabis in the first degree. Wilbur was also cited for following too closely and having insufficient tail lamps.</p>
+<p>The allegations have not been proven in court.</p>
 
 <p>The charge applies to anyone knowingly and unlawfully holding more than 10 pounds of cannabis under <a href="https://www.nysenate.gov/legislation/laws/PEN/222.40">New York Penal Law § 222.40</a>. It is a class D felony, carrying a maximum term of seven years. The 489 pounds deputies reported seizing is roughly 49 times the threshold.</p>
 

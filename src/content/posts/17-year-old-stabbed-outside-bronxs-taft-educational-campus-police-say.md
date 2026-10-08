@@ -11,7 +11,7 @@ wpId: 79
 
 <p>A 17-year-old boy was stabbed outside a Bronx school campus on Monday morning, police said. A school safety agent told <a href="https://bronx.news12.com/17-year-old-stabbed-outside-bronx-school-campus-2-men-sought">News 12</a> that he had come to the campus with his mother to register for classes.</p>
 
-<p>The attack happened around 9:30 a.m. on September 14 outside 240 East 172nd Street, the Taft Educational Campus, a building that houses several schools. New York City’s public schools had opened the previous Thursday, September 10.</p>
+<p>The attack happened around 9:30 a.m. on September 14, 2026, outside 240 East 172nd Street, the Taft Educational Campus, a building that houses several schools. New York City’s public schools had opened the previous Thursday, September 10, 2026.</p>
 
 <p>The teenager told police he was walking to school when two people approached him, <a href="https://gothamist.com/news/student-stabbed-in-front-of-bronx-high-school-police-say">an NYPD spokesperson said</a>. One punched him in the face, and the other stabbed him in the buttocks. Police described the pair only as male, and said they <a href="https://www.fox5ny.com/news/stabbing-outside-school-claremont-village-bronx">wore black and were last seen heading north on Sheridan Avenue</a>. The safety agent told News 12 the two men attacked the boy near the school steps.</p>
 

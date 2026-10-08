@@ -1,12 +1,13 @@
 ---
 title: "Bushwick Man Dies After Early-Morning Grattan Street Assault"
-description: "A 42-year-old Bushwick man died after an early-morning confrontation outside his building on Grattan Street, and the suspected attacker remains […]"
+description: "Florencio Ramos Martinez, 42, died after an early-morning assault outside his Grattan Street building in Bushwick on Sept. 4, 2026. No arrest was announced."
 date: 2026-09-04T22:35:53Z
 author: henry
 category: "Crime News"
 image:
-  src: "/images/2026/09/Bushwick-Man-Dies-After-Early-Morning-Grattan-Street-Assault.jpg"
-  alt: "Bushwick Man Dies After Early-Morning Grattan Street Assault"
+  src: "/images/2026/09/bushwick-grattan-street-assault-card.jpg"
+  alt: "Bushwick, Brooklyn case card: Man, 42, dies after an assault outside his Grattan Street building. Sept. 4, 2026, about 3:40 a.m.: Florencio Ramos Martinez argued with another man outside 152…"
+  credit: "Graphic: Max Crime"
 wpId: 17
 ---
 
@@ -24,12 +25,9 @@ wpId: 17
 
 <h2>Search for the Attacker</h2>
 
-<p>The suspected attacker fled on foot and had not been identified as of the reports available on Sept. 4, 2026. No arrest has been announced. Police have not released a suspect description. The available reports do not say whether investigators recovered surveillance footage.</p>
+<p>The suspected attacker fled on foot and had not been identified as of the reports available on Sept. 4, 2026. Those reports said no arrest had been announced and police had not released a suspect description. The available reports do not say whether investigators recovered surveillance footage.</p>
 
 <p>The NYPD Crime Stoppers program generally offers rewards of up to $3,500 for anonymous information leading to the arrest and indictment of a violent felon. Anyone with information can call 1-800-577-TIPS.</p>
 
-<h2>Developing Investigation</h2>
-
-<p>The investigation remains ongoing.</p>
 
 <p><em>Note: ABC7 New York spells the victim’s surname “Martiniz,” while amNewYork and the New York Daily News use “Martinez.” News 12 Brooklyn and Hoodline do not provide his name. This article uses “Martinez,” the spelling corroborated by multiple other reports.</em></p>

@@ -7,9 +7,9 @@ updated: 2026-09-06T22:11:00Z
 author: henry
 category: "Crime News"
 image:
-  src: "/images/2026/09/taunton-weir-street-house-party-shooting-scene.jpg"
-  alt: "Taunton police vehicles with flashing emergency lights line Weir Street near a railroad crossing following a house party shooting"
-  caption: "Emergency vehicles and police tape on Weir Street in Taunton after multiple people were wounded at an overnight house party."
+  src: "/images/2026/09/taunton-weir-street-shooting-card.jpg"
+  alt: "Taunton, Massachusetts case card: One dead, seven injured in a shooting at a house party. Sept. 6, 2026, about 12:30 a.m.: Several 911 calls reported shots fired near Weir and Sumner streets…"
+  credit: "Graphic: Max Crime"
 wpId: 57
 ---
 
@@ -17,9 +17,8 @@ wpId: 57
 
 <h2>Officers Respond to Weir Street Home</h2>
 
-<p>Taunton Police received several 911 calls around 12:30 a.m. Sunday, Sept. 6, reporting shots fired and multiple people shot in the area of Weir and Sumner streets, according to <a href="https://news.jgpr.net/2026/09/06/taunton-police-investigating-shooting-at-weir-street-house-party/" target="_blank" rel="noopener noreferrer">a police release issued through John Guilfoil Public Relations</a>. Responding officers determined the shooting occurred at a home on Weir Street near its intersection with Sumner Street, where they located multiple gunshot victims.</p>
+<p>Taunton Police received several 911 calls around 12:30 a.m. Sunday, Sept. 6, 2026, reporting shots fired and multiple people shot in the area of Weir and Sumner streets, according to <a href="https://news.jgpr.net/2026/09/06/taunton-police-investigating-shooting-at-weir-street-house-party/" target="_blank" rel="noopener noreferrer">a police release issued through John Guilfoil Public Relations</a>. Responding officers determined the shooting occurred at a home on Weir Street near its intersection with Sumner Street, where they located multiple gunshot victims.</p>
 
-<figure><img loading="lazy" decoding="async" width="1200" height="675" src="/images/2026/09/taunton-house-party-shooting-map.jpg" alt="Map showing the location of a house party shooting in Taunton near Weir and Sumner streets" srcset="/images/2026/09/taunton-house-party-shooting-map.jpg 1200w, /images/2026/09/taunton-house-party-shooting-map.jpg 300w, /images/2026/09/taunton-house-party-shooting-map.jpg 1024w, /images/2026/09/taunton-house-party-shooting-map.jpg 768w" sizes="auto, (max-width: 1200px) 100vw, 1200px" /><figcaption>Map indicating the area of Weir and Sumner streets in Taunton where police responded to multiple gunshot victims early Sunday.</figcaption></figure>
 
 <h2>Eight Shot, One Fatally</h2>
 

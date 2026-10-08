@@ -7,8 +7,9 @@ updated: 2026-09-05T16:33:57Z
 author: alex
 category: "Crime News"
 image:
-  src: "/images/2026/09/dover-cava-shooting-foster-trader.jpg"
-  alt: "dover-cava-shooting-foster-trader"
+  src: "/images/2026/09/dover-cava-shooting-card.jpg"
+  alt: "Dover, Delaware case card: Foster Trader, 18, killed in a shooting outside a CAVA restaurant. About 9:47 p.m., Friday: Officers were called to reports of gunfire at CAVA, 1037 North DuPont Highway…"
+  credit: "Graphic: Max Crime"
 wpId: 21
 ---
 
@@ -17,7 +18,7 @@ wpId: 21
 <p>According to the <a href="https://doverpolice.org/2026/09/05/dover-police-investigating-homicide-9-5-2026/" target="_blank" rel="noopener noreferrer">Dover Police Department</a>, officers received multiple reports of gunfire in the area of CAVA, located at 1037 North DuPont Highway, at approximately 9:47 p.m. Friday night, according to police and an <a href="https://firststateupdate.com/2026/09/police-id-teen-gunned-down-in-dover-restaurant-parking-lot/" target="_blank" rel="noopener noreferrer">earlier report from First State Update</a>. Responding officers found Trader on the sidewalk outside the restaurant suffering from multiple gunshot wounds.</p>
 <p>Officers provided emergency assistance at the scene, and Trader was pronounced dead at approximately 10:04 p.m., police said.</p>
 <h2>Investigation Remains Open</h2>
-<p>Investigators recovered spent shell casings from the scene, according to police. As of the department’s September 5 release, no arrests had been announced, and no description of a suspect or a suspect vehicle had been released. Police have not publicly stated what led to the shooting, and no motive has been released.</p>
+<p>Investigators recovered spent shell casings from the scene, according to police. As of the department’s September 5, 2026, release, no arrests had been announced, and no description of a suspect or a suspect vehicle had been released. Police have not publicly stated what led to the shooting, and no motive has been released.</p>
 <h2>Dover Police Ask Witnesses to Come Forward</h2>
 <p>Investigators are asking anyone who witnessed the shooting, or who has relevant surveillance footage or other information, to contact Detective Goad at 302-736-7143. Tips can also be <a href="https://doverpolice.org/contact-us/" target="_blank" rel="noopener noreferrer">submitted online</a> directly to Dover police, or anonymously to <a href="https://delaware.crimestoppersweb.com/" target="_blank" rel="noopener noreferrer">Delaware Crime Stoppers</a> at 1-800-TIP-3333.</p>
 <p>This is a developing story. MaxCrime will update this report as the Dover Police Department releases additional information. For more coverage, visit MaxCrime’s <a href="/category/crime-news/">Crime News</a> section.</p>

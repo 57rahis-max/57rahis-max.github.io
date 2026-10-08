@@ -7,8 +7,9 @@ updated: 2026-09-23T00:37:55Z
 author: staff
 category: "Crime News"
 image:
-  src: "/images/2020/11/new-york-rabbi-arrested-for-selling-thousands-of-foreskins-on-craigslist.jpg"
-  alt: "new-york-rabbi-arrested-for-selling-thousands-of-foreskins-on-craigslist"
+  src: "/images/2026/09/rabbi-craigslist-claim-fact-check-card.jpg"
+  alt: "Fact check case card: False: the “rabbi sold foreskins on Craigslist” story is satire. Where it began: World News Daily Report, whose disclaimer says its articles are satire and its characters…"
+  credit: "Graphic: Max Crime"
 wpId: 95
 ---
 

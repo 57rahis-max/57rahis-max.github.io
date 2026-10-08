@@ -41,7 +41,7 @@ wpId: 154
 
 <p>A day later, on Wednesday, Oct. 7, 2026, a judge in Nashville ordered the state to preserve evidence from the failed execution, including the drugs, IV lines, needles and medical supplies used that night, according to <a href="https://www.cbsnews.com/news/christa-pike-botched-execution/" target="_blank" rel="noopener">CBS News</a> and NBC News.</p>
 
-<h2>What happened on Sept. 30</h2>
+<h2>What happened on Sept. 30, 2026</h2>
 
 <p>Tennessee tried to execute Pike, 50, by lethal injection on Wednesday, Sept. 30, 2026, for the 1995 murder of her classmate Colleen Slemmer, 19. Pike was 18 at the time of the killing, CBS News and NBC News reported. She had been set to become the first woman executed in Tennessee in more than 200 years, as <a href="/tennessee-christa-pike-execution/">Max Crime reported before the execution date</a>.</p>
 

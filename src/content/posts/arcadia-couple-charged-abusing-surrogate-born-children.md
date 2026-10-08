@@ -8,6 +8,7 @@ category: "Courts"
 image:
   src: "/images/2026/10/arcadia-surrogacy-case-summary.jpg"
   alt: "Summary card: two adults charged in Arcadia, California, with abusing at least 14 surrogate-born children; bail set at $20 million each; both pleaded not guilty"
+  credit: "Graphic: Max Crime"
 sources:
   - name: "Los Angeles County District Attorney’s Office"
     url: "https://da.lacounty.gov/media/news/pair-charged-conspiracy-abusing-surrogate-born-children-arcadia-mansion"

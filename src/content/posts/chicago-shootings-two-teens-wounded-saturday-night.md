@@ -6,17 +6,17 @@ updated: 2026-09-06T14:36:40Z
 author: henry
 category: "Crime News"
 image:
-  src: "/images/2026/09/chicago-police-investigation-shootings.jpg"
-  alt: "Police officers set up crime scene tape near a police vehicle during a shooting investigation in Chicago"
-  caption: "Police officers secure an investigation area with crime scene tape following a shooting in Chicago."
+  src: "/images/2026/09/chicago-two-teens-shot-card.jpg"
+  alt: "Chicago case card: Two teenage boys wounded in separate shootings. Sept. 5, 2026, about 8:07 p.m.: A 15-year-old was shot in the 6800 block of South Dorchester Avenue, police said. About 11:09…"
+  credit: "Graphic: Max Crime"
 wpId: 50
 ---
 
-<p>Two teenage boys were wounded in separate shootings in Chicago on Saturday, Sept. 5, according to local reports citing police. Both were taken to hospitals and initially reported in good condition.</p>
+<p>Two teenage boys were wounded in separate shootings in Chicago on Saturday, Sept. 5, 2026, according to local reports citing police. Both were taken to hospitals and initially reported in good condition.</p>
 
 <h2>15-Year-Old Wounded on South Dorchester Avenue</h2>
 
-<p>Officers responded to the 6800 block of South Dorchester Avenue around 8:07 p.m. Saturday, Sept. 5, and found a 15-year-old boy who had been shot in the leg and buttocks, <a href="https://www.fox32chicago.com/news/chicago-labor-day-shootings-sunday-26" target="_blank" rel="noopener noreferrer">FOX 32 Chicago reported</a>, citing police. He was taken to Comer Children’s Hospital, where he was initially listed in good condition. The available reporting does not establish what preceded the shooting.</p>
+<p>Officers responded to the 6800 block of South Dorchester Avenue around 8:07 p.m. Saturday, Sept. 5, 2026, and found a 15-year-old boy who had been shot in the leg and buttocks, <a href="https://www.fox32chicago.com/news/chicago-labor-day-shootings-sunday-26" target="_blank" rel="noopener noreferrer">FOX 32 Chicago reported</a>, citing police. He was taken to Comer Children’s Hospital, where he was initially listed in good condition. The available reporting does not establish what preceded the shooting.</p>
 
 
 <h2>16-Year-Old Shot on South Claremont Avenue</h2>
@@ -25,7 +25,7 @@ wpId: 50
 
 <h2>Police Investigate Both Shootings</h2>
 
-<p>Neither shooting had anyone in custody as of Sunday morning, Sept. 6, <a href="https://www.cbsnews.com/chicago/news/teens-shot-separate-incidents-chicago-south-southwest-sides/" target="_blank" rel="noopener noreferrer">CBS Chicago reported</a>. The available reports do not establish a connection between the incidents.</p>
+<p>Neither shooting had anyone in custody as of Sunday morning, Sept. 6, 2026, <a href="https://www.cbsnews.com/chicago/news/teens-shot-separate-incidents-chicago-south-southwest-sides/" target="_blank" rel="noopener noreferrer">CBS Chicago reported</a>. The available reports do not establish a connection between the incidents.</p>
 
 <p>This report is based on coverage from <a href="https://www.fox32chicago.com/news/chicago-labor-day-shootings-sunday-26" target="_blank" rel="noopener noreferrer">FOX 32 Chicago</a>, the <a href="https://chicago.suntimes.com/crime/2026/09/06/teenager-shot-chicago-lawn-drive-by-shooting" target="_blank" rel="noopener noreferrer">Chicago Sun-Times</a>, and <a href="https://www.cbsnews.com/chicago/news/teens-shot-separate-incidents-chicago-south-southwest-sides/" target="_blank" rel="noopener noreferrer">CBS Chicago</a>.</p>
 

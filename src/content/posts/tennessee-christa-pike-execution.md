@@ -6,19 +6,20 @@ date: 2026-09-29T22:29:03Z
 author: henry
 category: "Courts"
 image:
-  src: "/images/2026/09/christa-pike-tennessee-execution-courtroom.jpg"
-  alt: "Christa Pike seated at a courtroom table in an archival photo"
+  src: "/images/2026/09/christa-pike-execution-date-card.jpg"
+  alt: "Tennessee case card: Christa Pike's execution is set for Sept. 30, 2026. Sept. 23, 2026: Tennessee Supreme Court decision that Pike's lawyers asked the U.S. Supreme Court to review. Sept. 28, 2026…"
+  credit: "Graphic: Max Crime"
 wpId: 121
 ---
 
-<p>Tennessee plans to execute Christa Pike on September 30, 2026, for the 1995 killing of Colleen Slemmer, after the U.S. Supreme Court refused on September 29 to halt it. If it goes ahead, Pike, 50, would be the first woman executed by the state in more than 200 years. Gov. Bill Lee denied her request for clemency on September 28.</p>
+<p>Tennessee plans to execute Christa Pike on September 30, 2026, for the 1995 killing of Colleen Slemmer, after the U.S. Supreme Court refused on September 29, 2026, to halt it. If it goes ahead, Pike, 50, would be the first woman executed by the state in more than 200 years. Gov. Bill Lee denied her request for clemency on September 28, 2026.</p>
 
 <ul>
 <li><strong>Scheduled:</strong> 10 a.m. CDT, September 30, 2026, at Riverbend Maximum Security Institution in Nashville</li>
 
-<li><strong>Clemency:</strong> denied by Gov. Bill Lee on September 28</li>
+<li><strong>Clemency:</strong> denied by Gov. Bill Lee on September 28, 2026</li>
 
-<li><strong>U.S. Supreme Court:</strong> stay request and petition denied on September 29, with no dissents noted in the order</li>
+<li><strong>U.S. Supreme Court:</strong> stay request and petition denied on September 29, 2026, with no dissents noted in the order</li>
 
 <li><strong>Victim:</strong> Colleen Slemmer, 19, killed in 1995</li>
 </ul>
@@ -27,15 +28,14 @@ wpId: 121
 
 <p>The Tennessee Department of Correction has <a href="https://www.tn.gov/correction/news/2026/8/31/media-advisory--execution-witness-applications---christa-pike--261368.html" rel="nofollow noopener" target="_blank">scheduled the execution</a> for 10 a.m. CDT at Riverbend Maximum Security Institution. The Tennessee Supreme Court set the date in an order issued a year earlier, on September 30, 2025.</p>
 
-<p>Lee announced on September 28 that he would not intervene. According to the <a href="https://deathpenaltyinfo.org/governor-bill-lee-denies-clemency-for-christa-pike-refusing-to-stop-tennessees-first-execution-of-a-woman-in-more-than-200-years" rel="nofollow noopener" target="_blank">Death Penalty Information Center</a>, he said that after “a thorough review of the case” he would uphold “the sentence of the State of Tennessee.”</p>
+<p>Lee announced on September 28, 2026, that he would not intervene. According to the <a href="https://deathpenaltyinfo.org/governor-bill-lee-denies-clemency-for-christa-pike-refusing-to-stop-tennessees-first-execution-of-a-woman-in-more-than-200-years" rel="nofollow noopener" target="_blank">Death Penalty Information Center</a>, he said that after “a thorough review of the case” he would uphold “the sentence of the State of Tennessee.”</p>
 
-<p>Separately, Pike’s lawyers asked the U.S. Supreme Court for a judicial stay of execution. On September 25, they filed an <a href="https://www.supremecourt.gov/docket/docketfiles/html/public/26A414.html" rel="nofollow noopener" target="_blank">application for a stay of execution</a>, submitted to Justice Brett Kavanaugh, along with a <a href="https://www.supremecourt.gov/docket/docketfiles/html/public/26-5696.html" rel="nofollow noopener" target="_blank">petition</a> asking the justices to review a September 23 decision of the Tennessee Supreme Court. Tennessee filed its opposition on September 28, and Pike’s lawyers replied the same day.</p>
+<p>Separately, Pike’s lawyers asked the U.S. Supreme Court for a judicial stay of execution. On September 25, 2026, they filed an <a href="https://www.supremecourt.gov/docket/docketfiles/html/public/26A414.html" rel="nofollow noopener" target="_blank">application for a stay of execution</a>, submitted to Justice Brett Kavanaugh, along with a <a href="https://www.supremecourt.gov/docket/docketfiles/html/public/26-5696.html" rel="nofollow noopener" target="_blank">petition</a> asking the justices to review a September 23, 2026, decision of the Tennessee Supreme Court. Tennessee filed its opposition on September 28, 2026, and Pike’s lawyers replied the same day.</p>
 
 <p>That request challenged how the execution would be carried out, not her conviction. Her lawyers argued that Pike, who they say has post-traumatic stress disorder linked to childhood sexual abuse, would suffer severe mental suffering under Tennessee’s lethal injection protocol, in violation of the Eighth Amendment. They also argued that a Tennessee Supreme Court rule unlawfully limits prisoners’ ability to challenge execution methods.</p>
 
-<p>On September 29, the Supreme Court denied the stay application, which Kavanaugh had referred to the full court, and declined to hear the case. The <a href="https://www.supremecourt.gov/orders/courtorders/092926zr4_2dp3.pdf" rel="nofollow noopener" target="_blank">one-paragraph order</a> gave no reasons and noted no dissents.</p>
+<p>On September 29, 2026, the Supreme Court denied the stay application, which Kavanaugh had referred to the full court, and declined to hear the case. The <a href="https://www.supremecourt.gov/orders/courtorders/092926zr4_2dp3.pdf" rel="nofollow noopener" target="_blank">one-paragraph order</a> gave no reasons and noted no dissents.</p>
 
-<figure><img loading="lazy" decoding="async" width="1024" height="576" src="/images/2026/09/tennessee-capitol-death-penalty-protest-christa-pike.jpg" alt="Protesters holding anti-death penalty signs outside the Tennessee State Capitol in Nashville" srcset="/images/2026/09/tennessee-capitol-death-penalty-protest-christa-pike.jpg 1024w, /images/2026/09/tennessee-capitol-death-penalty-protest-christa-pike.jpg 300w, /images/2026/09/tennessee-capitol-death-penalty-protest-christa-pike.jpg 768w, /images/2026/09/tennessee-capitol-death-penalty-protest-christa-pike.jpg 1200w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><figcaption>Death penalty opponents gather outside the Tennessee State Capitol in Nashville.</figcaption></figure>
 
 <h2>The killing of Colleen Slemmer</h2>
 
@@ -49,7 +49,7 @@ wpId: 121
 
 <p>Their argument rested on her history and her age. The petition described a childhood of repeated sexual abuse and neglect that, her lawyers said, the adults and state systems around her failed to address. AP reported that Pike has been diagnosed with bipolar disorder and PTSD, and that her lawyers said her untreated mental illness and background left her unable to “put the brakes on.” They also pointed out that she was 18 at the time. She was legally an adult, but her lawyers argued that her age should still weigh against a death sentence.</p>
 
-<p>According to <a href="https://deathpenaltyinfo.org/christa-pike-requests-clemency-ahead-of-september-30-execution-date-experts-amicus-brief-points-to-substantial-risk-of-re-traumatization" rel="nofollow noopener" target="_blank">the center</a>, the Tennessee Attorney General’s Office told a court during an August 13 hearing that the state does not contest the abuse Pike suffered.</p>
+<p>According to <a href="https://deathpenaltyinfo.org/christa-pike-requests-clemency-ahead-of-september-30-execution-date-experts-amicus-brief-points-to-substantial-risk-of-re-traumatization" rel="nofollow noopener" target="_blank">the center</a>, the Tennessee Attorney General’s Office told a court during an August 13, 2026, hearing that the state does not contest the abuse Pike suffered.</p>
 
 <h2>Why the execution would be historic</h2>
 
@@ -57,4 +57,4 @@ wpId: 121
 
 <p>Tennessee has executed men since then. What would be new is the execution of a woman. The center also says Pike would be the first person executed in Tennessee in the modern death penalty era for a crime committed at age 18, 19 or 20.</p>
 
-<p>As of 5:28 p.m. CDT on September 29, the execution remained scheduled for 10 a.m. CDT on September 30. This report will be updated.</p>
+<p>As of 5:28 p.m. CDT on September 29, 2026, the execution remained scheduled for 10 a.m. CDT on September 30, 2026. This report will be updated.</p>

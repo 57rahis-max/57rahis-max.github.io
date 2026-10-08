@@ -1,13 +1,14 @@
 ---
 title: "Morgue Worker ‘Dead Man’s Baby’ Arrest Story Was Fiction"
-description: "The claim has been debunked since 2010. Snopes, Lead Stories, Truth or Fiction, Check Your Fact and Africa Check all trace it to satirical websites that."
+description: "False: no morgue worker was arrested after giving birth to a dead man's baby. Fact-checkers have traced the story to satire sites since 2010."
 date: 2026-09-23T01:25:27Z
 updated: 2026-09-23T01:25:28Z
 author: staff
 category: "Crime News"
 image:
-  src: "/images/2026/09/morgue-worker-arrested-after-giving-birth-to-a-dead-mans-baby-2tPEROPERO.jpg"
-  alt: "morgue-worker-arrested-after-giving-birth-to-a-dead-mans-baby-2/?t=PEROPERO"
+  src: "/images/2026/09/morgue-worker-claim-fact-check-card.jpg"
+  alt: "Fact check case card: False: the morgue worker “dead man’s baby” story is fiction. Nov. 11, 2010: The first version runs on Dead Serious News, a satire site. Dec. 2, 2010: Snopes rates it “Labeled…"
+  credit: "Graphic: Max Crime"
 wpId: 109
 ---
 

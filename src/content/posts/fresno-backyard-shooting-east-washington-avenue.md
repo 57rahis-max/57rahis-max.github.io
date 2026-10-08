@@ -7,9 +7,9 @@ updated: 2026-09-06T14:57:44Z
 author: alex
 category: "Crime News"
 image:
-  src: "/images/2026/09/fresno-police-backyard-shooting.jpg"
-  alt: "Fresno Police vehicle with flashing emergency lights at the scene of a backyard shooting on East Washington Avenue"
-  caption: "Fresno police vehicle at the scene of a shooting investigation on East Washington Avenue."
+  src: "/images/2026/09/fresno-backyard-shooting-card.jpg"
+  alt: "Fresno, California case card: Three shot at a backyard celebration, including a 2-year-old. Sept. 5, 2026, about 10:15 p.m.: Officers responded to a ShotSpotter alert in the 3100 block of East…"
+  credit: "Graphic: Max Crime"
 wpId: 47
 ---
 
@@ -17,7 +17,7 @@ wpId: 47
 
 <h2>Police Respond to East Washington Avenue</h2>
 
-<p>Fresno police officers responded around 10:15 p.m. Saturday, Sept. 5, after a ShotSpotter activation in the 3100 block of East Washington Avenue, near First Street, Fresno Police Lt. Justin Hoagland told the Fresno Bee.</p>
+<p>Fresno police officers responded around 10:15 p.m. Saturday, Sept. 5, 2026, after a ShotSpotter activation in the 3100 block of East Washington Avenue, near First Street, Fresno Police Lt. Justin Hoagland told the Fresno Bee.</p>
 
 <p>A police helicopter spotted a black vehicle leaving the area at a high rate of speed, heading toward downtown. The 2-year-old boy, who had been shot in the leg, was inside that vehicle.</p>
 
