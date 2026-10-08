@@ -21,7 +21,6 @@ wpId: 47
 
 <p>A police helicopter spotted a black vehicle leaving the area at a high rate of speed, heading toward downtown. The 2-year-old boy, who had been shot in the leg, was inside that vehicle.</p>
 
-<figure><img loading="lazy" decoding="async" width="1024" height="576" src="/images/2026/09/fresno-police-backyard-shooting.jpg" alt="Fresno Police vehicle with flashing emergency lights at the scene of a backyard shooting on East Washington Avenue" srcset="/images/2026/09/fresno-police-backyard-shooting.jpg 1024w, /images/2026/09/fresno-police-backyard-shooting.jpg 300w, /images/2026/09/fresno-police-backyard-shooting.jpg 768w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><figcaption>Fresno police responded to a backyard celebration shooting on East Washington Avenue that left three injured, including a toddler.</figcaption></figure>
 
 <h2>Victim Conditions and Investigation</h2>
 

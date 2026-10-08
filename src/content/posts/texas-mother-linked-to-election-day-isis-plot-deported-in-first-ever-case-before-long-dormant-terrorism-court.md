@@ -20,7 +20,6 @@ wpId: 63
 
 <p>Haji Zada came to the U.S. as a permanent resident in 2018 and was never charged with a crime. Her case was a civil deportation proceeding, not a criminal prosecution. According to court records reported by NPR, her admission cannot be used against her in a criminal case.</p>
 
-<figure><img loading="lazy" decoding="async" width="1024" height="614" src="/images/2026/09/Texas-Mother-Linked-to-Election-Day-ISIS-Plot-Deported-in-First-Ever-Case-Before-Long-Dormant-Terrorism-Court.jpg" alt="Texas Mother Linked to Election Day ISIS Plot Deported in First-Ever Case Before Long-Dormant Terrorism Court" srcset="/images/2026/09/Texas-Mother-Linked-to-Election-Day-ISIS-Plot-Deported-in-First-Ever-Case-Before-Long-Dormant-Terrorism-Court.jpg 1024w, /images/2026/09/Texas-Mother-Linked-to-Election-Day-ISIS-Plot-Deported-in-First-Ever-Case-Before-Long-Dormant-Terrorism-Court.jpg 300w, /images/2026/09/Texas-Mother-Linked-to-Election-Day-ISIS-Plot-Deported-in-First-Ever-Case-Before-Long-Dormant-Terrorism-Court.jpg 768w, /images/2026/09/Texas-Mother-Linked-to-Election-Day-ISIS-Plot-Deported-in-First-Ever-Case-Before-Long-Dormant-Terrorism-Court.jpg 1200w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /></figure>
 
 <h2>Timeline of the case</h2>
 

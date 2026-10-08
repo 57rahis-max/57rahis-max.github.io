@@ -76,6 +76,11 @@ for (const f of readdirSync(dir).filter((f) => f.endsWith('.md'))) {
     if (srcm && !/^\/images\/\d{4}\/\d{2}\/[A-Za-z0-9._-]+\.(?:jpe?g|png|webp)$/.test(srcm[1])) problems.push(`${f}: body image src must be /images/YYYY/MM/name.jpg (got "${srcm[1]}")`);
   }
   for (const s of body.matchAll(/!\[([^\]]*)\]\(([^)]+)\)/g)) if (!s[1].trim()) problems.push(`${f}: a Markdown image has no alt text`);
+  if (fm.image?.src && body.includes(fm.image.src)) problems.push(`${f}: the body repeats the featured image; it already shows at the top`);
+  if (fm.image?.caption) {
+    const stem = fm.image.src.split('/').pop().replace(/\.\w+$/, '').toLowerCase();
+    if (stem.startsWith(String(fm.image.caption).trim().toLowerCase().slice(0, 30))) problems.push(`${f}: the image caption is the file name, not a caption`);
+  }
 
   // --- 2. Integrity ---
   if (!fm.title || typeof fm.title !== 'string') problems.push(`${f}: no title`);
