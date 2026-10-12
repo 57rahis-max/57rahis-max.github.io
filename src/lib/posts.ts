@@ -2,8 +2,15 @@ import { getCollection, type CollectionEntry } from 'astro:content';
 
 export type Post = CollectionEntry<'posts'>;
 
+/**
+ * Every published story. A story dated in the future is scheduled: it is left
+ * out of every page, list, feed and sitemap until a build runs after its time.
+ * The deploy workflow rebuilds every 15 minutes, so a scheduled story goes live
+ * within about 15 minutes of its date (GitHub may delay scheduled runs a little).
+ */
 export async function allPosts(): Promise<Post[]> {
-  const posts = await getCollection('posts', ({ data }) => !data.draft);
+  const now = Date.now();
+  const posts = await getCollection('posts', ({ data }) => !data.draft && data.date.getTime() <= now);
   return posts.sort((a, b) => sortTime(b) - sortTime(a));
 }
 

@@ -95,7 +95,7 @@ for (const f of readdirSync(dir).filter((f) => f.endsWith('.md'))) {
   if (fm.category !== undefined && !CATEGORIES.includes(fm.category)) problems.push(`${f}: category "${fm.category}" is not one of ${CATEGORIES.join(', ')}`);
   const date = new Date(fm.date);
   if (isNaN(date)) problems.push(`${f}: date "${fm.date}" is not a valid date`);
-  else if (date.getTime() > now + 24 * 3600 * 1000) problems.push(`${f}: date is in the future (${fm.date})`);
+  else if (date.getTime() > now + 7 * 24 * 3600 * 1000) problems.push(`${f}: date is more than 7 days ahead (${fm.date}); schedule stories at most a week out`);
   if (fm.updated && new Date(fm.updated) < date) problems.push(`${f}: updated is before date`);
   if (fm.wpId && date > IMPORT_CUTOFF) problems.push(`${f}: wpId is only for stories imported from WordPress; a new story must pass the newsroom rules`);
   const imgs = [];

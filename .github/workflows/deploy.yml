@@ -4,6 +4,9 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  # Rebuild every 15 minutes so stories scheduled for a later time go live on their own.
+  schedule:
+    - cron: '*/15 * * * *'
 
 # The build job renders content an automated pipeline wrote, so it runs with
 # read-only permissions and no persisted token. Only the deploy job may write.

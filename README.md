@@ -64,6 +64,8 @@ Story text…
 
 Put images in `public/images/<year>/<month>/`.
 
+**Scheduling:** give a story a future `date` (up to 7 days ahead) and push it. It stays off the site, the feed and the sitemap until a build runs after that time. The deploy workflow rebuilds every 15 minutes, so a story goes live within about 15 minutes of its date.
+
 ## Authors
 
 Edit `src/content/authors/authors.json`. Each author has a name, a role, a bio, initials and a color, which are used for the avatar, the author box and the author page at `/author/<id>/`.
