@@ -40,9 +40,6 @@ function articleHtml(p: Post): string {
     else if (e.type === 'x') parts.push(`<blockquote class="twitter-tweet"><p lang="en" dir="ltr">${esc(e.text)}</p>&mdash; ${esc(e.author)} <a href="${esc(e.url)}">${esc(e.date)}</a></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>`);
     else parts.push(`<blockquote><p>${esc(e.text)}</p><cite>${esc(e.cite)}${e.source ? `, according to ${esc(e.source)}` : ''}</cite></blockquote>`);
   }
-  if (d.sources.length) {
-    parts.push('<h2>Sources</h2><ul>' + d.sources.map((s) => `<li><a href="${esc(s.url)}">${esc(s.name)}${s.title ? `: ${esc(s.title)}` : ''}</a>${s.date ? ` (${esc(s.date)})` : ''}</li>`).join('') + '</ul>');
-  }
   return parts.join('\n');
 }
 

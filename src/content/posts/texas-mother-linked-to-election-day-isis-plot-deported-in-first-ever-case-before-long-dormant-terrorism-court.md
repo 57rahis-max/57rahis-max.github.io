@@ -17,9 +17,9 @@ wpId: 63
 
 <p>A 47-year-old Afghan woman who lived in Fort Worth, Texas, as a lawful permanent resident has been deported to Afghanistan. Hers is the first case ever heard by the Alien Terrorist Removal Court (ATRC), a special federal court that Congress created in 1996. No administration had used it until this summer.</p>
 
-<p>The Justice Department announced on Friday, Sept. 11, 2026, that Nazira Haji Zada had been removed from the country. With her attorneys, she admitted that she counts as an “alien terrorist” under the law and gave up her right to appeal. That ended her permanent resident status, and she is now permanently barred from returning to the United States.</p>
+<p>The Justice Department <a href="https://www.justice.gov/opa/pr/department-justice-removes-alien-terrorist-first-use-united-states-alien-terrorist-removal" target="_blank" rel="noopener">announced</a> on Friday, Sept. 11, 2026, that Nazira Haji Zada had been removed from the country. With her attorneys, she admitted that she counts as an “alien terrorist” under the law and gave up her right to appeal. That ended her permanent resident status, and she is now permanently barred from returning to the United States.</p>
 
-<p>Haji Zada came to the U.S. as a permanent resident in 2018 and was never charged with a crime. Her case was a civil deportation proceeding, not a criminal prosecution. According to court records reported by NPR, her admission cannot be used against her in a criminal case.</p>
+<p>Haji Zada came to the U.S. as a permanent resident in 2018 and was never charged with a crime. Her case was a civil deportation proceeding, not a criminal prosecution. According to court records <a href="https://www.npr.org/2026/09/12/nx-s1-5967476/alien-removal-court-deportation-afganistan" target="_blank" rel="noopener">reported by NPR</a>, her admission cannot be used against her in a criminal case.</p>
 
 
 <h2>Timeline of the case</h2>
@@ -29,7 +29,7 @@ wpId: 63
 
 <li><strong>Late July:</strong> She was arrested at her Fort Worth home.</li>
 
-<li><strong>July 30, 2026:</strong> The court held its first-ever public hearing, in Washington, D.C., before Chief Judge Joan N. Ericksen, who normally sits as a federal judge in Minnesota. Ericksen turned down the defense’s request to free her, and she stayed in custody.</li>
+<li><strong>July 30, 2026:</strong> The court held its <a href="https://www.nbcnews.com/politics/justice-department/doj-holds-first-ever-hearing-alien-terrorist-removal-court-created-199-rcna589987" target="_blank" rel="noopener">first-ever public hearing</a>, in Washington, D.C., before Chief Judge Joan N. Ericksen, who normally sits as a federal judge in Minnesota. Ericksen turned down the defense’s request to free her, and she stayed in custody.</li>
 
 <li><strong>Aug. 20, 2026:</strong> Haji Zada agreed to be deported and gave up her right to challenge her detention. Judge Ericksen signed the removal order the same day.</li>
 
@@ -38,7 +38,7 @@ wpId: 63
 
 <h2>How the court works</h2>
 
-<p>The ATRC is made up of five federal judges from different parts of the country, appointed by the Chief Justice of the United States. It lets the government deport non-citizens it labels terrorists using classified evidence that is kept secret when releasing it would put national security at risk. The government only has to prove its case by a “preponderance of the evidence,” meaning more likely than not. That is a much lower bar than “beyond a reasonable doubt” in a criminal trial. Either side can appeal to the U.S. Court of Appeals for the D.C. Circuit.</p>
+<p>The ATRC is <a href="https://abcnews4.com/news/nation-world/afghan-national-deported-in-first-ever-use-of-alien-terrorist-removal-court-jonathan-fahey-election-day-2024-noncitizens-federal-court-fort-worth-texas-isis-nazira-haji-zada-ak47-rifle-doj-trump-administration" target="_blank" rel="noopener">made up of five federal judges</a> from different parts of the country, appointed by the Chief Justice of the United States. It lets the government deport non-citizens it labels terrorists using classified evidence that is kept secret when releasing it would put national security at risk. The government only has to prove its case by a “preponderance of the evidence,” meaning more likely than not. That is a much lower bar than “beyond a reasonable doubt” in a criminal trial. Either side can appeal to the U.S. Court of Appeals for the D.C. Circuit.</p>
 
 <p>The Justice Department said it used classified information to show that Haji Zada is a terrorist. It also said it gave her and her lawyers about half a terabyte of other documents supporting its case, and the government filed an unclassified summary of its allegations. People facing the court cannot review the classified evidence itself and, unlike criminal defendants, cannot challenge how that evidence was gathered.</p>
 
@@ -51,7 +51,7 @@ wpId: 63
 <p>Neither man went to trial. Both pleaded guilty in federal court in Oklahoma City:</p>
 
 <ul>
-<li><strong>Abdullah Haji Zada</strong> was prosecuted as an adult. He pleaded guilty in April 2025 to receiving guns and ammunition for use in a terrorism crime. In November 2025 he was sentenced to 15 years in federal prison, the maximum for that charge.</li>
+<li><strong>Abdullah Haji Zada</strong> was prosecuted as an adult. He pleaded guilty in April 2025 to receiving guns and ammunition for use in a terrorism crime. In November 2025 he was <a href="https://www.justice.gov/opa/pr/afghan-national-sentenced-serve-15-years-federal-prison-after-plotting-election-day-terror" target="_blank" rel="noopener">sentenced to 15 years in federal prison</a>, the maximum for that charge.</li>
 
 <li><strong>Tawhedi</strong>, now 28, pleaded guilty in June 2025 to trying and conspiring to provide material support to ISIS, and to a related firearms charge. He faces up to 35 years in prison but has not been sentenced. In February 2026, after a court-ordered psychological evaluation, U.S. District Judge Scott Palk ruled him mentally incompetent to be sentenced. Palk ordered more evaluation and treatment at a federal prison medical facility.</li>
 </ul>
@@ -60,7 +60,7 @@ wpId: 63
 
 <h2>What the government accused her of</h2>
 
-<p>Federal officials called Haji Zada the family’s matriarch and said she supported the attack plan. According to government filings described by the Justice Department, NPR and NBC News, prosecutors alleged that:</p>
+<p>Federal officials called Haji Zada the family’s matriarch and said she supported the attack plan. According to government filings described by the Justice Department, <a href="https://www.npr.org/2026/07/30/g-s1-136289/alien-terrorist-removal-court-isis-terror-plot" target="_blank" rel="noopener">NPR</a> and <a href="https://www.nbcnews.com/politics/justice-department/doj-holds-first-ever-hearing-alien-terrorist-removal-court-created-199-rcna589987" target="_blank" rel="noopener">NBC News</a>, prosecutors alleged that:</p>
 
 <ul>
 <li>she pledged loyalty to ISIS and, with her son-in-law, pushed her children to adopt the group’s beliefs and swear loyalty to it;</li>
@@ -78,7 +78,7 @@ wpId: 63
 
 <h2>Defense: agreeing to leave is not approval of the court</h2>
 
-<p>Haji Zada’s court-appointed lawyers, federal public defenders Matthew Farley and Mary Manning Petras, issued a statement Friday. They said her agreement to leave “should not be seen as an endorsement of this court’s legitimacy.”</p>
+<p>Haji Zada’s court-appointed lawyers, federal public defenders Matthew Farley and Mary Manning Petras, <a href="https://www.npr.org/2026/09/12/nx-s1-5967476/alien-removal-court-deportation-afganistan" target="_blank" rel="noopener">issued a statement</a> after the order was made public. They said her agreement to leave “should not be seen as an endorsement of this court’s legitimacy.”</p>
 
 <p>They argued that hauling permanent residents into court while refusing to show them or their lawyers the evidence against them violates the Constitution’s due process guarantee. They predicted the ATRC will be struck down as unconstitutional once a judge rules on the question. At the July 30, 2026, hearing, Farley argued that the proceeding violated several of her constitutional rights and asked the judge to throw out the case. Right up to her deportation, the defense was pressing the court to make the Justice Department share its evidence.</p>
 

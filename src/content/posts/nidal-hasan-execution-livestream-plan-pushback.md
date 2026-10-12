@@ -31,7 +31,7 @@ sources:
 
 <p>A Pentagon plan to livestream the firing-squad execution of Nidal Hasan, the former Army psychiatrist convicted of killing 13 people at Fort Hood, Texas, in 2009, has drawn objections from Republican lawmakers and from the archbishop who serves Catholics in the U.S. military.</p>
 
-<p>Hasan is scheduled to be executed on Dec. 3, 2026, in what would be the U.S. military’s first execution since 1961, <a href="https://www.cbsnews.com/news/republican-opposition-livestream-fort-hood-shooter-execution/" target="_blank" rel="noopener">CBS News</a> and <a href="https://abcnews.com/US/wireStory/archbishop-us-military-catholic-soldiers-serve-firing-squad-137203047" target="_blank" rel="noopener">The Associated Press</a> reported. President Donald Trump approved the firing-squad execution in early October 2026.</p>
+<p>Hasan is scheduled to be executed on Dec. 3, 2026, in what would be the U.S. military’s first execution since 1961, <a href="https://www.cbsnews.com/news/republican-opposition-livestream-fort-hood-shooter-execution/" target="_blank" rel="noopener">CBS News</a> and <a href="https://abcnews.com/US/wireStory/archbishop-us-military-catholic-soldiers-serve-firing-squad-137203047" target="_blank" rel="noopener">The Associated Press</a> reported. President Donald Trump <a href="https://www.scrippsnews.com/us-news/crime/trump-approves-firing-squad-execution-for-fort-hood-shooter-nidal-hasan" target="_blank" rel="noopener">approved the firing-squad execution</a> in early October 2026.</p>
 
 <h2>Who objects</h2>
 
@@ -43,7 +43,7 @@ sources:
 
 <h2>Who supports it</h2>
 
-<p>Homeland Security Secretary Markwayne Mullin defended the plan on CBS’s “Face the Nation” on Sunday, Oct. 11, 2026. “I think people need to understand, if you attack America, we will come after you and we will make sure that the punishment fits the crime,” he said. “No one has to watch it if they don’t choose to.”</p>
+<p>Homeland Security Secretary Markwayne Mullin defended the plan on <a href="https://www.cbsnews.com/news/markwayne-mullin-nidal-hasan-public-execution-pentagon/" target="_blank" rel="noopener">CBS’s “Face the Nation”</a> on Sunday, Oct. 11, 2026. “I think people need to understand, if you attack America, we will come after you and we will make sure that the punishment fits the crime,” he said. “No one has to watch it if they don’t choose to.”</p>
 
 <p>Rep. Andy Ogles of Tennessee was the only Republican member of Congress to publicly voice clear support for the livestream, CBS News reported. “Public execution is what this terrorist deserves,” he wrote on X.</p>
 

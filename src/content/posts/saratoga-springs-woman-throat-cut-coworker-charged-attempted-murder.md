@@ -34,8 +34,8 @@ sources:
 
 <p>Firefighters were called shortly after 8 p.m. to a report that a car had hit Augie’s To-Go, a restaurant at Lake and Forest avenues. They found the driver with a serious cut to her neck that did not appear to be related to the crash, police said.</p>
 
-<p>The two worked together in Saratoga Springs, and after their shift he asked her for a ride home, police said. As she drove, he attacked her, then pulled out a knife and cut her throat. She jumped out of the car while it was still moving and called for help, and people nearby came to her aid.</p>
+<p>The two worked together in Saratoga Springs, and after their shift he asked her for a ride home, police said. As she drove, he attacked her, then pulled out a knife and cut her throat. She <a href="https://www.foxnews.com/us/coworker-accused-slashing-womans-throat-ride-home-victim-escaped-moving-car-police" target="_blank" rel="noopener">jumped out of the car while it was still moving</a> and called for help, and people nearby came to her aid.</p>
 
-<p>Cruz Torres tried to run but was detained by officers, police said. The woman was taken to Saratoga Hospital and then airlifted to Albany Medical Center. Police said the motive remains unclear.</p>
+<p>Cruz Torres tried to run but was detained by officers, police said. The woman was taken to Saratoga Hospital and then airlifted to Albany Medical Center. Police did not give a motive for the attack.</p>
 
 <p>The allegations have not been proven in court.</p>

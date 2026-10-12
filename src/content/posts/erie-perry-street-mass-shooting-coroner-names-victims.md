@@ -60,6 +60,8 @@ sources:
 
 <p>Lorah said it was too soon to discuss a motive, though he suggested mental health may have played a role. He said investigators would talk to relatives and examine the phones of the two women killed outside. “They knew something was going on at that house,” he said.</p>
 
-<p>The city of Erie said in a statement that the shooting had brought “shock and sorrow” to the community. “Our thoughts are with the victims, their loved ones and everyone impacted by tonight’s tragedy,” the statement said.</p>
+<p>The city of Erie said in a statement that the shooting had brought “shock and sorrow” to the community, <a href="https://www.scrippsnews.com/us-news/crime/erie-pennsylvania-shooting-kills-9-including-2-children" target="_blank" rel="noopener">Scripps News</a> reported. “Our thoughts are with the victims, their loved ones and everyone impacted by tonight’s tragedy,” the statement said.</p>
 
 <p>Erie is about 120 miles north of Pittsburgh.</p>
+
+<p>The same night, five members of one family died in <a href="/douglas-georgia-five-family-members-dead-murder-suicide/">an apparent murder-suicide at their home in Douglas, Georgia</a>.</p>

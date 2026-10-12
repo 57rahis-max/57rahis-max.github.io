@@ -103,17 +103,6 @@ const shareText = encodeURIComponent(d.title);
         )}
         {hasX && <script is:inline async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>}
 
-        {d.sources.length > 0 && (
-          <section class="sources" aria-label="Sources">
-            <h2>Sources</h2>
-            <ul>
-              {d.sources.map((s) => (
-                <li><a href={s.url} target="_blank" rel="noopener" aria-label={s.title ? `${s.name}: ${s.title} (opens in a new tab)` : `${s.name} (opens in a new tab)`}>{s.name}{s.title && <>: {s.title}</>}</a>{s.date && <span class="meta"> ({s.date})</span>}</li>
-              ))}
-            </ul>
-          </section>
-        )}
-
         <div class="share" role="group" aria-label="Share this story" data-pagefind-ignore>
           <span class="meta">Share</span>
           <a href={`https://x.com/intent/post?url=${shareUrl}&text=${shareText}`} target="_blank" rel="noopener">X</a>
@@ -159,10 +148,6 @@ const shareText = encodeURIComponent(d.title);
   .hero img { width: 100%; height: auto; }
   .art-grid { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 56px; }
   .embeds { max-width: var(--measure); display: grid; gap: 28px; margin-top: 28px; }
-  .sources { max-width: var(--measure); margin-top: 36px; padding-top: 18px; border-top: 2px solid var(--ink); }
-  .sources h2 { font: 800 13px/1 var(--sans); letter-spacing: .12em; text-transform: uppercase; margin: 0 0 12px; }
-  .sources ul { padding-left: 1.1em; margin: 0; font-size: 15px; }
-  .sources li { margin: 6px 0; }
   .share { display: flex; gap: 14px; align-items: center; margin: 28px 0 0; font: 700 14px/1 var(--sans); }
   .share a { text-decoration: none; padding: 8px 12px; border: 1px solid var(--ink); }
   .art-side { position: sticky; top: 64px; align-self: start; border-left: 1px solid var(--rule); padding-left: 28px; margin-left: -28px; }

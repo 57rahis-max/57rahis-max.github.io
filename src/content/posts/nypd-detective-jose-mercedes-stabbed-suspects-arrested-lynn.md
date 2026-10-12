@@ -39,4 +39,6 @@ sources:
 
 <p>Homeland Security officials said both men are in the United States illegally, amNewYork and <a href="https://www.foxnews.com/us/nypd-detective-gives-update-condition-illegal-immigrant-duo-allegedly-stabbed-7-times" target="_blank" rel="noopener">Fox News</a> reported.</p>
 
+<p>Days after the arrests, on Oct. 10, 2026, <a href="/philadelphia-officer-shane-seiber-killed-eric-lewis-charged/">Philadelphia police officer Shane Seiber was shot and killed</a> after responding to a call about a man with a gun.</p>
+
 <p>The allegations have not been proven in court.</p>

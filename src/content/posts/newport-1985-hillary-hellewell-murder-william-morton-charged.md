@@ -40,4 +40,6 @@ sources:
 
 <p>Neronha, who knew Hellewell, said investigators have found answers in four previously unsolved cases over the past year using newer DNA technology.</p>
 
+<p>In Chicago, police said on Oct. 12, 2026, that they had identified <a href="/chicago-1960-gloria-kowalewicz-killer-former-police-officer/">the man who killed 8-year-old Gloria Kowalewicz in 1960</a>, a former officer who died in 2006.</p>
+
 <p>The allegations have not been proven in court.</p>
