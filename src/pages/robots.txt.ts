@@ -1,3 +1,11 @@
 export function GET() {
-  return new Response(`User-agent: *\nAllow: /\n\nSitemap: https://maxcrime.com/sitemap-index.xml\n`, { headers: { 'Content-Type': 'text/plain' } });
+  const body = [
+    'User-agent: *',
+    'Allow: /',
+    '',
+    'Sitemap: https://maxcrime.com/sitemap-index.xml',
+    'Sitemap: https://maxcrime.com/news-sitemap.xml',
+    '',
+  ].join('\n');
+  return new Response(body, { headers: { 'Content-Type': 'text/plain' } });
 }

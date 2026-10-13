@@ -21,7 +21,10 @@ interface Props {
 }
 const { title, seoTitle, description = SITE.description, image, imageAlt, type = 'website', published, modified, schema = [], noindex = false, home = false } = Astro.props;
 const canonical = new URL(Astro.url.pathname, SITE.url).href;
-const fullTitle = title === SITE.name ? `${SITE.name}: ${SITE.tagline}` : `${seoTitle ?? title} | ${SITE.name}`;
+// The site name is added only when it fits: search results cut a title near
+// 70 characters, and the headline matters more than the brand.
+const short = seoTitle ?? title;
+const fullTitle = title === SITE.name ? `${SITE.name}: ${SITE.tagline}` : short.includes(SITE.name) || `${short} | ${SITE.name}`.length > 70 ? short : `${short} | ${SITE.name}`;
 const ogImage = image ? new URL(image, SITE.url).href : new URL('/og-default.png', SITE.url).href;
 ---
 <!doctype html>

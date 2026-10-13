@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build && pagefind --site dist && node scripts/check-feed.mjs",
+    "build": "astro build && pagefind --site dist && node scripts/check-feed.mjs && node scripts/check-sitemaps.mjs",
     "preview": "astro preview",
     "check": "node scripts/check-content.mjs",
     "images": "python3 scripts/thumbs.py"
@@ -12,7 +12,6 @@
   "dependencies": {
     "@astrojs/markdown-remark": "^7.3.2",
     "@astrojs/rss": "^4.0.19",
-    "@astrojs/sitemap": "^3.7.4",
     "astro": "^7.3.6",
     "hast-util-sanitize": "^5.0.2",
     "rehype-raw": "^7.0.0",

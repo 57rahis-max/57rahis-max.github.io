@@ -5,8 +5,8 @@ export type Post = CollectionEntry<'posts'>;
 /**
  * Every published story. A story dated in the future is scheduled: it is left
  * out of every page, list, feed and sitemap until a build runs after its time.
- * The deploy workflow rebuilds every 15 minutes, so a scheduled story goes live
- * within about 15 minutes of its date (GitHub may delay scheduled runs a little).
+ * scheduler/worker.js starts a deploy when a story is due; GitHub's own
+ * 15-minute schedule is a best-effort fallback that can skip hours.
  */
 export async function allPosts(): Promise<Post[]> {
   const now = Date.now();

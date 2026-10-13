@@ -10,7 +10,7 @@ A fast, static crime-news site built with [Astro](https://astro.build). No datab
 - **Structured data**:
   - `NewsArticle` on every story, and `LiveBlogPosting` with `liveBlogUpdate` on live stories.
   - `BreadcrumbList`, `ProfilePage`/`Person` on author pages, and `WebSite` + `NewsMediaOrganization` with publishing, corrections and ethics policies.
-- **SEO**: canonical URLs, Open Graph and Twitter cards, `sitemap-index.xml`, `rss.xml` and `robots.txt`.
+- **SEO**: canonical URLs, Open Graph and Twitter cards, `rss.xml` and `robots.txt`. Sitemaps: `sitemap-index.xml` lists `post-`, `page-`, `category-`, `author-` and `news-sitemap.xml` (Google News: the last two days). The WordPress addresses (`sitemap.xml`, `sitemap_index.xml`, `wp-sitemap.xml`) serve the same index. `scripts/check-sitemaps.mjs` fails the build if a public page is missing, listed twice, or a listed URL has no page.
 - **Embeds as data**: a story lists its `embeds` in the frontmatter (a YouTube video, an X post, a pull quote), and the page renders them with the matching component. The YouTube player loads only on click, from youtube-nocookie; an X post is readable without JavaScript.
 - **Bodies are sanitized**: story HTML is reduced to a fixed allowlist of tags and attributes at build time (`astro.config.mjs`). Scripts, iframes, inline event handlers and `javascript:` links never reach a reader, whatever a story file contains.
 - **Newsroom checks in CI**: `npm run check` blocks a deploy if a story has an image without alt text, a date without a year, relative wording such as "currently" or "latest", or charges reported without "The allegations have not been proven in court."
@@ -64,7 +64,7 @@ Story text…
 
 Put images in `public/images/<year>/<month>/`.
 
-**Scheduling:** give a story a future `date` (up to 7 days ahead) and push it. It stays off the site, the feed and the sitemap until a build runs after that time. The deploy workflow rebuilds every 15 minutes, so a story goes live within about 15 minutes of its date.
+**Scheduling:** give a story a future `date` (up to 7 days ahead) and push it. It stays off the site, the feed and the sitemap until a build runs after that time. The deploy workflow has a 15-minute schedule, but GitHub runs schedules on a best-effort basis and can skip hours. The reliable trigger is `scheduler/worker.js`, a Cloudflare Worker that reads `/next-publish.json` every five minutes and starts a deploy when a story is due (setup steps are in the file).
 
 ## Authors
 
