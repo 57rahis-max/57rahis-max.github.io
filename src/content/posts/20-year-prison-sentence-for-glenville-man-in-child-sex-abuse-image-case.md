@@ -5,7 +5,7 @@ description: "Gregory Magin, 46, of Glenville was sentenced to 20 years in feder
 date: 2026-09-19T20:01:16Z
 updated: 2026-09-19T20:01:17Z
 author: henry
-category: "Courts"
+category: "Crime News"
 image:
   src: "/images/2026/09/glenville-magin-sentence-card.jpg"
   alt: "Case summary: Gregory Magin, 46, of Glenville pleaded guilty on March 2, 2026, and was sentenced on August 4, 2026, to 20 years in federal prison and 15 years of supervised release."

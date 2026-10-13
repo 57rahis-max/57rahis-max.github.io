@@ -4,7 +4,7 @@ seoTitle: "Alvaro Pulido in U.S. Custody in Venezuela Bribery Case"
 description: "Alvaro Pulido, 62, charged in Miami in 2019 and 2021 over alleged bribes for Venezuelan contracts, is in U.S. custody, officials said Oct. 11, 2026."
 date: 2026-10-12T19:25:00Z
 author: henry
-category: "Courts"
+category: "Crime News"
 tags: ["Venezuela", "money laundering", "Florida"]
 image:
   src: "/images/2026/10/alvaro-pulido-custody-card.jpg"

@@ -4,7 +4,7 @@ seoTitle: "Plan to Livestream Nidal Hasan Execution Draws GOP Pushback"
 description: "Nidal Hasan is set to be executed by firing squad Dec. 3, 2026. A Pentagon plan to livestream it has drawn objections from Republicans and an archbishop."
 date: 2026-10-12T18:55:00Z
 author: alex
-category: "Courts"
+category: "Crime News"
 tags: ["death penalty", "military", "Texas"]
 image:
   src: "/images/2026/10/nidal-hasan-execution-card.jpg"

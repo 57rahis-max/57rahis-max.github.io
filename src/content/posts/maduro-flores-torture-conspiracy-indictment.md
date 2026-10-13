@@ -4,7 +4,7 @@ seoTitle: "Maduro, Cilia Flores Charged With Torture Conspiracy in New York"
 description: "A superseding indictment unsealed Oct. 8, 2026, in New York charges Nicolás Maduro and Cilia Flores with conspiracy to commit torture."
 date: 2026-10-12T19:05:00Z
 author: henry
-category: "Courts"
+category: "Crime News"
 tags: ["Venezuela", "New York"]
 image:
   src: "/images/2026/10/moynihan-courthouse-manhattan-file-photo.jpg"

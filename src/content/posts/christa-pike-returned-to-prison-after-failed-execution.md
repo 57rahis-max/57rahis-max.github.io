@@ -4,7 +4,7 @@ seoTitle: "Christa Pike Returned to Prison After Failed Lethal Injection"
 description: "Christa Pike, who survived Tennessee’s Sept. 30, 2026, execution attempt, has left the hospital and is back at the women’s prison, her lawyers said."
 date: 2026-10-13T03:20:00Z
 author: alex
-category: "Courts"
+category: "Crime News"
 tags: ["Tennessee", "death penalty"]
 image:
   src: "/images/2026/10/christa-pike-back-in-prison-card.jpg"

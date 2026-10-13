@@ -4,7 +4,7 @@ description: "Adrian Washington pleaded guilty to aggravated assault in the Brad
 date: 2026-09-05T21:27:16Z
 updated: 2026-09-05T21:27:25Z
 author: alex
-category: "Courts"
+category: "Crime News"
 image:
   src: "/images/2026/09/bradford-adrian-washington-booking-photo.jpg"
   alt: "Booking photo of Adrian Washington"

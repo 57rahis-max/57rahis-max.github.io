@@ -4,7 +4,7 @@ seoTitle: "Christa Pike Wakes After Failed Execution; Judge Orders Evidence Kept
 description: "Christa Pike woke up days after Tennessee's failed attempt to execute her. On Oct. 7, 2026, a judge ordered the state to preserve evidence from it."
 date: 2026-10-07T19:12:56Z
 author: alex
-category: "Courts"
+category: "Crime News"
 image:
   src: "/images/2026/10/christa-pike-davidson-county-courthouse.jpg"
   alt: "Davidson County Courthouse in Nashville, Tennessee"

@@ -1,3 +1,4 @@
+import { categorySlug } from './categories';
 export const SITE = {
   name: 'Max Crime',
   url: 'https://maxcrime.com',
@@ -10,7 +11,8 @@ export const SITE = {
 export const NAV = [
   { label: 'Latest', href: '/' },
   { label: 'Crime News', href: '/category/crime-news/' },
-  { label: 'Courts', href: '/category/courts/' },
+  { label: 'Local News', href: '/category/local-news/' },
+  { label: 'Crime & Tragedy', href: '/category/crime-tragedy/' },
   { label: 'Live', href: '/live/' },
 ];
 
@@ -72,7 +74,7 @@ export const readingMinutes = (text: string) => {
 };
 
 export const slugify = (s: string) => s.toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-export const categoryUrl = (c: string) => `/category/${slugify(c)}/`;
+export const categoryUrl = (c: string) => `/category/${categorySlug(c)}/`;
 export const postUrl = (id: string) => `/${id}/`;
 export const authorUrl = (id: string) => `/author/${id}/`;
 

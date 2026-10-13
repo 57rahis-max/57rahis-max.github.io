@@ -4,7 +4,7 @@ seoTitle: "Christa Pike Set to Be First Woman Executed in Tennessee in 200 Years
 description: "The Supreme Court denied Christa Pike's stay request. Tennessee plans to execute her Sept. 30, its first execution of a woman in over 200 years."
 date: 2026-09-29T22:29:03Z
 author: henry
-category: "Courts"
+category: "Crime News"
 image:
   src: "/images/2026/09/christa-pike-execution-date-card.jpg"
   alt: "Tennessee case card: Christa Pike's execution is set for Sept. 30, 2026. Sept. 23, 2026: Tennessee Supreme Court decision that Pike's lawyers asked the U.S. Supreme Court to review. Sept. 28, 2026…"

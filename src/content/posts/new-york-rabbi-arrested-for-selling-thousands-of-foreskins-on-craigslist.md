@@ -5,7 +5,7 @@ description: "The claim that a New York rabbi sold foreskins on Craigslist origi
 date: 2021-03-11T00:42:00Z
 updated: 2026-09-23T00:37:55Z
 author: staff
-category: "Crime News"
+category: "Crime"
 image:
   src: "/images/2026/09/rabbi-craigslist-claim-fact-check-card.jpg"
   alt: "Fact check case card: False: the “rabbi sold foreskins on Craigslist” story is satire. Where it began: World News Daily Report, whose disclaimer says its articles are satire and its characters…"

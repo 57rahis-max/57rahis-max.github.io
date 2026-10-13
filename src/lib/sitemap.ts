@@ -1,6 +1,7 @@
 import { getCollection } from 'astro:content';
 import { allPosts, lastTouched, type Post } from './posts';
-import { SITE, slugify } from './site';
+import { SITE } from './site';
+import { CATEGORIES } from './categories';
 
 // The sitemaps, built from the same published list as every page, so a
 // scheduled story is left out until it goes live. sitemap-index.xml lists
@@ -55,12 +56,9 @@ export async function pageSitemap() {
 /** The same sections src/pages/category/[cat].astro builds. */
 export async function categorySitemap() {
   const posts = await allPosts();
-  const cats = new Set(posts.map((p) => slugify(p.data.category)));
-  cats.add('courts');
-  return xml(urlset([...cats].map((slug) => ({
-    loc: abs(`/category/${slug}/`),
-    lastmod: newest(posts.filter((p) => slugify(p.data.category) === slug || (slug === 'courts' && p.data.tags.includes('courts')))),
-  }))));
+  return xml(urlset(CATEGORIES.map(({ name, slug }) => ({ slug, inCat: posts.filter((p) => p.data.category === name) }))
+    .filter((c) => c.inCat.length > 0)
+    .map((c) => ({ loc: abs(`/category/${c.slug}/`), lastmod: newest(c.inCat) }))));
 }
 
 export async function authorSitemap() {

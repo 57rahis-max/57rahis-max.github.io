@@ -4,7 +4,7 @@ seoTitle: "Faith Hedgepeth Murder Trial Opens 14 Years After UNC Killing"
 description: "Opening statements began Oct. 7, 2026, in the trial of Miguel Salguero Olivares, accused of killing UNC student Faith Hedgepeth in 2012."
 date: 2026-10-07T20:04:29Z
 author: alex
-category: "Courts"
+category: "Crime News"
 image:
   src: "/images/2026/10/hedgepeth-durham-county-courthouse.jpg"
   alt: "Durham County Courthouse in Durham, North Carolina"

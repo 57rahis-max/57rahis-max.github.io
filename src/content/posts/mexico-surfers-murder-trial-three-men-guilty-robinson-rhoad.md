@@ -4,7 +4,7 @@ seoTitle: "3 Guilty in Killing of Australian Brothers and US Surfer in Mexico"
 description: "A Mexican judge found three men guilty on Oct. 9, 2026, of killing Callum and Jake Robinson and American Jack Carter Rhoad on a 2024 surf trip in Baja."
 date: 2026-10-13T02:50:00Z
 author: henry
-category: "Courts"
+category: "Crime News"
 tags: ["Mexico"]
 image:
   src: "/images/2026/10/baja-surfers-verdict-card.jpg"

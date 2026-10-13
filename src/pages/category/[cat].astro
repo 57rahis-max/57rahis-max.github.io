@@ -2,18 +2,15 @@
 import Base from '../../layouts/Base.astro';
 import PostCard from '../../components/PostCard.astro';
 import { allPosts, type Post } from '../../lib/posts';
-import { slugify, isInfoCard } from '../../lib/site';
+import { isInfoCard } from '../../lib/site';
+import { CATEGORIES } from '../../lib/categories';
 import { breadcrumbs } from '../../lib/schema';
 
 export async function getStaticPaths() {
   const posts = await allPosts();
-  const cats = new Map<string, string>();
-  for (const p of posts) cats.set(slugify(p.data.category), p.data.category);
-  if (!cats.has('courts')) cats.set('courts', 'Courts');
-  return [...cats].map(([slug, name]) => ({
-    params: { cat: slug },
-    props: { name, posts: posts.filter((p) => slugify(p.data.category) === slug || (slug === 'courts' && p.data.tags.includes('courts'))) },
-  }));
+  // As on WordPress, a category has a page once it has a story.
+  return CATEGORIES.map(({ name, slug }) => ({ params: { cat: slug }, props: { name, posts: posts.filter((p) => p.data.category === name) } }))
+    .filter((c) => c.props.posts.length > 0);
 }
 const { name, posts } = Astro.props as { name: string; posts: Post[] };
 // A section front: the newest story leads with the next three beside it, then the rest four across.

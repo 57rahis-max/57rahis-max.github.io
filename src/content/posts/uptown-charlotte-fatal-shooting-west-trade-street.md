@@ -5,7 +5,7 @@ description: "Tyrell Deshawn Valentine, 36, faces a murder charge in the Sept. 6
 date: 2026-09-07T23:16:18Z
 updated: 2026-09-07T23:16:20Z
 author: alex
-category: "Crime News"
+category: "Crime & Tragedy"
 image:
   src: "/images/2026/09/charlotte-west-trade-street-shooting-card.jpg"
   alt: "Charlotte, North Carolina case card: Suspect arrested in South Carolina after an uptown shooting. Sept. 6, 2026, before 4 a.m.: Manuel De Jesus Martinez, 33, was found shot in the 700 block of West…"

@@ -1,6 +1,7 @@
 import { defineCollection, reference } from 'astro:content';
 import { glob, file } from 'astro/loaders';
 import { z } from 'astro/zod';
+import { CATEGORY_NAMES } from './lib/categories';
 
 const IMAGE_PATH = /^\/images\/\d{4}\/\d{2}\/[A-Za-z0-9._-]+\.(?:jpe?g|png|webp)$/;
 
@@ -32,7 +33,7 @@ const posts = defineCollection({
     date: z.coerce.date(),
     updated: z.coerce.date().optional(),
     author: reference('authors'),
-    category: z.enum(['Crime News', 'Courts', 'News']).default('Crime News'),
+    category: z.enum(CATEGORY_NAMES).default('Crime News'),
     tags: z.array(z.string().max(40)).max(12).default([]),
     image: image.optional(),
     sources: z.array(z.object({ name: z.string().max(80), title: z.string().max(200).optional(), url: z.string().regex(/^https?:\/\/[^\s"'<>]+$/, 'source url must be http(s)'), date: z.string().max(40).optional() })).default([]),

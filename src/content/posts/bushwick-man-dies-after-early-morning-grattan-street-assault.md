@@ -3,7 +3,7 @@ title: "Bushwick Man Dies After Early-Morning Grattan Street Assault"
 description: "Florencio Ramos Martinez, 42, died after an early-morning assault outside his Grattan Street building in Bushwick on Sept. 4, 2026. No arrest was announced."
 date: 2026-09-04T22:35:53Z
 author: henry
-category: "Crime News"
+category: "NY Post Killed"
 image:
   src: "/images/2026/09/bushwick-grattan-street-assault-card.jpg"
   alt: "Bushwick, Brooklyn case card: Man, 42, dies after an assault outside his Grattan Street building. Sept. 4, 2026, about 3:40 a.m.: Florencio Ramos Martinez argued with another man outside 152…"

@@ -5,7 +5,7 @@ description: "One dead and seven injured after a house party shooting on Weir St
 date: 2026-09-06T15:24:03Z
 updated: 2026-09-06T22:11:00Z
 author: henry
-category: "Crime News"
+category: "Crime & Tragedy"
 image:
   src: "/images/2026/09/taunton-weir-street-shooting-card.jpg"
   alt: "Taunton, Massachusetts case card: One dead, seven injured in a shooting at a house party. Sept. 6, 2026, about 12:30 a.m.: Several 911 calls reported shots fired near Weir and Sumner streets…"

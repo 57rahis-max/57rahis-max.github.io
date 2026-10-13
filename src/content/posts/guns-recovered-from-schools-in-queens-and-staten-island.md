@@ -4,7 +4,7 @@ description: "Loaded firearms were recovered from high schools in Queens and Sta
 date: 2026-09-17T23:30:01Z
 updated: 2026-09-19T17:30:50Z
 author: alex
-category: "Crime News"
+category: "Local News"
 image:
   src: "/images/2026/09/nyc-school-guns-card.jpg"
   alt: "New York City schools case card: Loaded guns found at schools in Staten Island and Queens. Sept. 14, 2026, Staten Island: School safety agents found a loaded gun in an 18-year-old student's bag at…"

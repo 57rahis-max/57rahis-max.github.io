@@ -24,10 +24,14 @@ const second = take(posts, 1);                      // under the lead, text only
 const centre = take(posts.filter(isPhoto), 2);      // two photo stories in the middle column
 const latest = posts.filter((p) => !used.has(p.id)).slice(0, 8); // the rail does not repeat the lead package beside it
 const crime = take(posts.filter((p) => p.data.category === 'Crime News'), 4);
-const courtPool = posts.filter((p) => p.data.category === 'Courts' && !used.has(p.id));
-const courtLead = courtPool.find(isPhoto) ?? courtPool[0];
-const courts = courtLead ? [courtLead, ...courtPool.filter((p) => p.id !== courtLead.id).slice(0, 4)] : [];
-courts.forEach((p) => used.add(p.id));
+// The second section is the category with the most stories after Crime News.
+const counts = new Map<string, number>();
+for (const p of posts) if (p.data.category !== 'Crime News' && !used.has(p.id)) counts.set(p.data.category, (counts.get(p.data.category) ?? 0) + 1);
+const sectionName = [...counts].sort((a, b) => b[1] - a[1])[0]?.[0];
+const sectionPool = posts.filter((p) => p.data.category === sectionName && !used.has(p.id));
+const sectionLead = sectionPool.find(isPhoto) ?? sectionPool[0];
+const section = sectionLead ? [sectionLead, ...sectionPool.filter((p) => p.id !== sectionLead.id).slice(0, 4)] : [];
+section.forEach((p) => used.add(p.id));
 const more = take(posts, 12);
 ---
 <Base title={SITE.name} home schema={[website, { '@context': 'https://schema.org', ...publisher }]}>
@@ -80,12 +84,12 @@ const more = take(posts, 12);
       </section>
     )}
 
-    {courts.length > 0 && (
-      <section aria-labelledby="h-courts" class="block">
-        <div class="rule-head"><h2 id="h-courts">Courts &amp; trials</h2><a class="all" href={categoryUrl('Courts')}>All court stories</a></div>
+    {section.length > 0 && sectionName && (
+      <section aria-labelledby="h-section" class="block">
+        <div class="rule-head"><h2 id="h-section">{sectionName}</h2><a class="all" href={categoryUrl(sectionName)}>All {sectionName}</a></div>
         <div class="courts">
-          <div class="courts-lead"><PostCard post={courts[0]} size="lead" kicker={false} /></div>
-          <ul class="hairlines courts-list">{courts.slice(1).map((p) => <li><PostCard post={p} size="side" kicker={false} /></li>)}</ul>
+          <div class="courts-lead"><PostCard post={section[0]} size="lead" kicker={false} /></div>
+          <ul class="hairlines courts-list">{section.slice(1).map((p) => <li><PostCard post={p} size="side" kicker={false} /></li>)}</ul>
         </div>
       </section>
     )}

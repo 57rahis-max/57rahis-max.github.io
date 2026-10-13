@@ -4,7 +4,7 @@ seoTitle: "Fire Damages State Fair of Texas Game Booth; No Injuries"
 description: "An early-morning fire damaged a Midway game booth at the State Fair of Texas in Dallas. No injuries were reported, and officials said operations would continue."
 date: 2026-10-06T16:32:35Z
 author: henry
-category: "Crime News"
+category: "Local News"
 image:
   src: "/images/2026/10/state-fair-of-texas-midway-2026.jpg"
   alt: "An aerial view of the State Fair of Texas Midway at Fair Park with the Texas Star Ferris wheel and blue booth canopies"

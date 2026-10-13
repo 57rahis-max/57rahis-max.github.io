@@ -4,7 +4,7 @@ seoTitle: "Arcadia Couple Plead Not Guilty in Surrogate Child Abuse Case"
 description: "Guojun Xuan and Silvia Zhang pleaded not guilty Oct. 6, 2026, to charges of abusing at least 14 surrogate-born children at their Arcadia, California, home."
 date: 2026-10-07T20:53:34Z
 author: henry
-category: "Courts"
+category: "Crime News"
 image:
   src: "/images/2026/10/arcadia-surrogacy-case-summary.jpg"
   alt: "Summary card: two adults charged in Arcadia, California, with abusing at least 14 surrogate-born children; bail set at $20 million each; both pleaded not guilty"

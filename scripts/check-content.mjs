@@ -22,7 +22,8 @@ import { load as yaml } from 'js-yaml';
 const dir = 'src/content/posts';
 const problems = [];
 const authors = new Set(JSON.parse(readFileSync('src/content/authors/authors.json', 'utf8')).map((a) => a.id));
-const CATEGORIES = ['Crime News', 'Courts', 'News'];
+// The WordPress categories, read from src/lib/categories.ts so the two cannot drift apart.
+const CATEGORIES = [...readFileSync('src/lib/categories.ts', 'utf8').matchAll(/name: "([^"]+)"/g)].map((m) => m[1]);
 const DESCRIPTION_MAX = 160;
 const IMPORT_CUTOFF = new Date('2026-10-09T00:00:00Z'); // the WordPress import; nothing newer may claim wpId
 const MONTH_DAY = /\b(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)[a-z]*\.? (\d{1,2})(?:st|nd|rd|th)?\b(?!,? ?\d{4})(?!\d)(?![–-]\d)(?! [A-Z][a-z]+ \d{4})/g;
