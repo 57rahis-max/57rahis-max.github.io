@@ -53,7 +53,7 @@ export async function pageSitemap() {
   ]));
 }
 
-/** The same sections src/pages/category/[cat].astro builds. */
+/** The same sections src/pages/category/[...cat].astro builds. */
 export async function categorySitemap() {
   const posts = await allPosts();
   return xml(urlset(CATEGORIES.map(({ name, slug }) => ({ slug, inCat: posts.filter((p) => p.data.category === name) }))

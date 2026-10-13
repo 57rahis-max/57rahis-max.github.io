@@ -1,12 +1,14 @@
-// The categories of the WordPress site, with their WordPress names and URL
-// slugs (maxcrime.com/category/<slug>/), exactly as they were. New stories
+// The categories of the original Max Crime WordPress site, with their names
+// and URL slugs (maxcrime.com/category/<slug>/), exactly as they were.
+// Coronavirus News, Weather and Westland Local were sub-categories of News,
+// so their URLs sit under /category/news/ (Wayback Machine, 2021-2022). New stories
 // use one of these; a category gets a page once it has a story, as on
 // WordPress.
 export const CATEGORIES = [
   { name: "Animals", slug: "animals" },
   { name: "Celebrity", slug: "celebrity" },
   { name: "CNN Shooting", slug: "cnn-shooting" },
-  { name: "Coronavirus News", slug: "coronavirus-news" },
+  { name: "Coronavirus News", slug: "news/coronavirus-news" },
   { name: "Crime", slug: "crime" },
   { name: "Crime & Tragedy", slug: "crime-tragedy" },
   { name: "Crime News", slug: "crime-news" },
@@ -34,7 +36,8 @@ export const CATEGORIES = [
   { name: "Tragedy", slug: "tragedy" },
   { name: "True Crime", slug: "true-crime" },
   { name: "Viral News", slug: "viral-news" },
-  { name: "Westland Local", slug: "westland-local" },
+  { name: "Weather", slug: "news/weather" },
+  { name: "Westland Local", slug: "news/westland-local" },
   { name: "Uncategorized", slug: "uncategorized" },
 ] as const;
 
