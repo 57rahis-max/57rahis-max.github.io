@@ -7,10 +7,10 @@ author: henry
 category: "Crime News"
 tags: ["Election fraud", "Federal court"]
 image:
-  src: "/images/2026/10/election-crimes-16-charged-card.jpg"
-  alt: "Case card summarizing 14 non-citizen voting cases, one double-voting case and one late-wife ballot case"
-  caption: "The cases in the Justice Department’s Oct. 12, 2026, announcement."
-  credit: "Graphic: Max Crime"
+  src: "/images/2026/10/doj-building-washington.jpg"
+  alt: "Robert F. Kennedy Department of Justice Building, a large limestone government building on a Washington street corner"
+  caption: "File photo: The Robert F. Kennedy Department of Justice Building in Washington, D.C., in 2014."
+  credit: "Photo: Gunnar Klack / <a href=\"https://commons.wikimedia.org/wiki/File:2014-04-04-Robert-F-Kennedy-Department-of-Justice-Building-Washington-DC.jpg\">Wikimedia Commons</a> (CC BY-SA 4.0)"
 sources:
   - name: "U.S. Department of Justice"
     title: "Justice Department Announces Charges Involving 16 Individuals for Election Crimes"

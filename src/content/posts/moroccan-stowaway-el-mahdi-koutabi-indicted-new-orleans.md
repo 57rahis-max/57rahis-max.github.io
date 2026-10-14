@@ -7,10 +7,10 @@ author: henry
 category: "Crime News"
 tags: ["Louisiana", "New Orleans", "Federal court"]
 image:
-  src: "/images/2026/10/new-orleans-stowaway-case-card.jpg"
-  alt: "Case card for federal case 2:26-cr-00232 listing the ship’s departure from Morocco, the discovery aboard, the arrival in Louisiana and the indictment"
-  caption: "The voyage and the charge, from the criminal complaint and the U.S. Attorney’s Office."
-  credit: "Graphic: Max Crime"
+  src: "/images/2026/10/cargo-ship-mississippi-new-orleans.jpg"
+  alt: "A large container ship stacked with cargo on the Mississippi River at New Orleans"
+  caption: "File photo: A container ship on the Mississippi River at New Orleans in 2018. It is not the Unity Moon."
+  credit: "Photo: Infrogmation of New Orleans / <a href=\"https://commons.wikimedia.org/wiki/File:Big_Ship_Going_Up_Mississippi_River_past_French_Quarter_New_Orleans_Aug_2018_02.jpg\">Wikimedia Commons</a> (CC BY-SA 4.0)"
 sources:
   - name: "U.S. Attorney’s Office, Eastern District of Louisiana"
     title: "Moroccan Stowaway Indicted"

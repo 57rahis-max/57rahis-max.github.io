@@ -7,10 +7,10 @@ author: alex
 category: "Crime News"
 tags: ["California", "Sacramento", "Guns", "Federal court"]
 image:
-  src: "/images/2026/10/uribe-national-guard-case-card.jpg"
-  alt: "Case card for federal case 2:24-cr-00017 listing the 2022 rifle count, the April 2026 ruling, the May verdict and the October sentence"
-  caption: "The case, from the federal court record and the U.S. Attorney’s Office."
-  credit: "Graphic: Max Crime"
+  src: "/images/2026/10/matsui-courthouse-sacramento.jpg"
+  alt: "Robert T. Matsui United States Courthouse in Sacramento at dusk, its name on the plaza wall"
+  caption: "File photo: The Robert T. Matsui United States Courthouse in Sacramento, California, in 2016."
+  credit: "Photo: Tony Webster / <a href=\"https://commons.wikimedia.org/wiki/File:Robert_T._Matsui_United_States_Courthouse,_Sacramento_CAED_(26060003625).jpg\">Wikimedia Commons</a> (CC BY-SA 2.0)"
 sources:
   - name: "U.S. Attorney’s Office, Eastern District of California"
     title: "Former National Guard task force member sentenced for illegal firearm possession offenses that came to light during an investigation into leaks of sensitive operational information"

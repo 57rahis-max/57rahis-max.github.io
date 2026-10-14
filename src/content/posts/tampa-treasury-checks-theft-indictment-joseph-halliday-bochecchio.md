@@ -7,10 +7,10 @@ author: alex
 category: "Crime News"
 tags: ["Florida", "Tampa", "Fraud", "Federal court"]
 image:
-  src: "/images/2026/10/tampa-treasury-checks-case-card.jpg"
-  alt: "Case card describing how stolen Treasury checks were deposited using fake driver’s licenses, and the three charges"
-  caption: "The scheme alleged in the indictment, as described by federal prosecutors."
-  credit: "Graphic: Max Crime"
+  src: "/images/2026/10/federal-courthouse-tampa.jpg"
+  alt: "The federal courthouse in Tampa, a white building with palm trees in front"
+  caption: "File photo: The federal courthouse in Tampa, Florida, in 2011."
+  credit: "Photo: Ebyabe / <a href=\"https://commons.wikimedia.org/wiki/File:Tampa_FL_US_crths02.jpg\">Wikimedia Commons</a> (CC BY-SA 3.0)"
 sources:
   - name: "U.S. Attorney’s Office, Middle District of Florida"
     title: "Three Individuals Arrested for Attempting to Steal More Than $2 Million in Treasury Checks"

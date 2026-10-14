@@ -7,10 +7,10 @@ author: alex
 category: "Crime News"
 tags: ["Illinois", "Chicago", "Federal court"]
 image:
-  src: "/images/2026/10/chicago-helicopter-laser-case-card.jpg"
-  alt: "Case card for federal case 1:26-cr-00526 listing the Aug. 11 laser incident, the indictment, the arrest and the Dec. 3 hearing"
-  caption: "The case so far, from the indictment and the federal docket."
-  credit: "Graphic: Max Crime"
+  src: "/images/2026/10/chicago-police-helicopter.jpg"
+  alt: "A white and blue Chicago Police Department helicopter in flight"
+  caption: "File photo: A Chicago Police Department helicopter over Lake Michigan in August 2007. It is not the aircraft involved in this case."
+  credit: "Photo: Kelly Martin / <a href=\"https://commons.wikimedia.org/wiki/File:Bell_206_KM_6159_city_of_chicago_police_helicopter_august_2007.jpg\">Wikimedia Commons</a> (CC BY-SA 3.0)"
 sources:
   - name: "U.S. Attorney’s Office, Northern District of Illinois"
     title: "Man Indicted in Federal Court for Allegedly Aiming Laser Pointer at Chicago Police Helicopter"

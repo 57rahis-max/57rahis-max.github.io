@@ -7,10 +7,10 @@ author: henry
 category: "Crime News"
 tags: ["Massachusetts", "Fraud", "Federal court"]
 image:
-  src: "/images/2026/10/brockton-ruel-treasury-check-case-card.jpg"
-  alt: "Case card for federal case 1:26-cr-10139 listing the May 2025 deposit, the bank reversal, the guilty plea and the sentence"
-  caption: "The case, from the court record and the U.S. Attorney’s Office."
-  credit: "Graphic: Max Crime"
+  src: "/images/2026/10/moakley-courthouse-boston.jpg"
+  alt: "The curved glass front of the John Joseph Moakley United States Courthouse in Boston"
+  caption: "File photo: The John Joseph Moakley United States Courthouse, the federal courthouse in Boston, in 2008."
+  credit: "Photo: Danielle Walquist / <a href=\"https://commons.wikimedia.org/wiki/File:2008_MoakleyCourthouse_Boston_2669012840.jpg\">Wikimedia Commons</a> (CC BY 2.0)"
 sources:
   - name: "U.S. Attorney’s Office, District of Massachusetts"
     title: "Brockton Woman Sentenced for Theft of Government Funds in Connection with Stolen $931,000 Tax Refund Check"

@@ -7,10 +7,10 @@ author: henry
 category: "Crime News"
 tags: ["Kentucky", "Louisville", "Federal court"]
 image:
-  src: "/images/2026/10/louisville-hayes-escape-case-card.jpg"
-  alt: "Case card for federal case 3:26-cr-00147 listing the 2021 carjacking sentence, the April 22 escape and the Oct. 7 indictment"
-  caption: "The case, from federal court records and the U.S. Attorney’s Office."
-  credit: "Graphic: Max Crime"
+  src: "/images/2026/10/gene-snyder-courthouse-louisville.jpg"
+  alt: "Gene Snyder United States Courthouse, a columned stone building on West Broadway in Louisville"
+  caption: "File photo: The Gene Snyder United States Courthouse in Louisville, Kentucky."
+  credit: "Photo: Nyttend / <a href=\"https://commons.wikimedia.org/wiki/File:Gene_Snyder_US_Courthouse.jpg\">Wikimedia Commons</a> (public domain)"
 sources:
   - name: "U.S. Attorney’s Office, Western District of Kentucky"
     title: "Louisville Man Charged with Escape from Federal Custody and Possession of a Firearm by a Prohibited Person"

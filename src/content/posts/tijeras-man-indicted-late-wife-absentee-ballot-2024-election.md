@@ -7,10 +7,10 @@ author: alex
 category: "Crime News"
 tags: ["New Mexico", "Election fraud", "Federal court"]
 image:
-  src: "/images/2026/10/tijeras-dead-wife-ballot-case-card.jpg"
-  alt: "Case card for federal case 1:26-cr-05184 listing four dates from October 2024 to Oct. 14, 2026, and the maximum penalty"
-  caption: "The case so far, from the federal court docket and the U.S. Attorney’s Office."
-  credit: "Graphic: Max Crime"
+  src: "/images/2026/10/domenici-courthouse-albuquerque.jpg"
+  alt: "Pete V. Domenici United States Courthouse, a tan stone building on an Albuquerque street corner"
+  caption: "File photo: The Pete V. Domenici United States Courthouse in Albuquerque, New Mexico, in 2022."
+  credit: "Photo: Xnatedawgx / <a href=\"https://commons.wikimedia.org/wiki/File:Pete_V._Domenici_United_States_Courthouse_2022-05-30.jpg\">Wikimedia Commons</a> (CC BY-SA 4.0)"
 sources:
   - name: "U.S. Attorney’s Office, District of New Mexico"
     title: "Tijeras Man Indicted for Attempting to Cast Deceased Wife’s Absentee Ballot in 2024 Election"

@@ -7,10 +7,10 @@ author: henry
 category: "Crime News"
 tags: ["Maryland", "Arizona", "Air travel", "Federal court"]
 image:
-  src: "/images/2026/10/lundeen-flight-diversion-case-card.jpg"
-  alt: "Case card for federal case 1:26-cr-00359 listing the Sept. 3 flight, the sealed indictment, the release order and the passport deadline"
-  caption: "The federal case, from the court docket and the U.S. Attorney’s Office."
-  credit: "Graphic: Max Crime"
+  src: "/images/2026/10/baltimore-inner-harbor-skyline.jpg"
+  alt: "Downtown Baltimore office towers across the water of the Inner Harbor"
+  caption: "File photo: Downtown Baltimore across the Inner Harbor in 2016. The federal case is in U.S. District Court in Baltimore."
+  credit: "Photo: Famartin / <a href=\"https://commons.wikimedia.org/wiki/File:2016-07-27_09_21_00_View_north-northwest_across_the_Inner_Harbor_towards_downtown_Baltimore_from_the_Baltimore_Science_Center_in_Baltimore_City,_Maryland.jpg\">Wikimedia Commons</a> (CC BY-SA 4.0)"
 sources:
   - name: "U.S. Attorney’s Office, District of Maryland"
     title: "Arizona Man Indicted on Assault Charges in Connection With Incident Resulting in Emergency Landing at Baltimore Airport"

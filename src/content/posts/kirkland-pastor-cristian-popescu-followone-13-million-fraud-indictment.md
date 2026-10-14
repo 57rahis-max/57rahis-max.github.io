@@ -7,10 +7,10 @@ author: alex
 category: "Crime News"
 tags: ["Washington", "Fraud", "Federal court"]
 image:
-  src: "/images/2026/10/followone-popescu-fraud-case-card.jpg"
-  alt: "Case card for the Followone fraud case listing the $1.4 billion claimed value, the arraignment and the Dec. 21, 2026, trial date"
-  caption: "The Followone case, from the indictment as described by federal prosecutors."
-  credit: "Graphic: Max Crime"
+  src: "/images/2026/10/us-courthouse-seattle.jpg"
+  alt: "The U.S. Courthouse in Seattle behind the tall bronze sculpture Pillar Arc and a lawn"
+  caption: "File photo: The U.S. Courthouse in Seattle, home of the federal court where the case is being heard, in 2008."
+  credit: "Photo: Carol M. Highsmith / <a href=\"https://commons.wikimedia.org/wiki/File:Sculpture_%22Pillar_Arc%22_located_at_the_exterior_of_the_U.S._Courthouse,_Seattle,_Washington_LCCN2010720393.tif\">Wikimedia Commons</a> (public domain)"
 sources:
   - name: "U.S. Attorney’s Office, Western District of Washington"
     title: "Pastor of Kirkland, Washington, church indicted on ten counts of wire fraud and five counts of money laundering in $13 million fraud scheme"

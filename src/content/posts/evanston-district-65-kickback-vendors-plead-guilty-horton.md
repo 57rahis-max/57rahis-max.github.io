@@ -7,10 +7,10 @@ author: alex
 category: "Crime News"
 tags: ["Illinois", "Evanston", "Schools", "Federal court"]
 image:
-  src: "/images/2026/10/district-65-kickback-case-card.jpg"
-  alt: "Case card listing the four District 65 kickback defendants, when each pleaded guilty and their sentencing dates"
-  caption: "Where each defendant stands, from the U.S. Attorney’s Office and the federal docket."
-  credit: "Graphic: Max Crime"
+  src: "/images/2026/10/dirksen-courthouse-chicago.jpg"
+  alt: "The dark steel-and-glass Dirksen United States Courthouse on a Chicago street"
+  caption: "File photo: The Everett McKinley Dirksen United States Courthouse in Chicago, where the case is being heard, in 2013."
+  credit: "Photo: Ken Lund / <a href=\"https://commons.wikimedia.org/wiki/File:Dirksen_United_States_Courthouse,_Chicago_Loop,_Chicago,_Illinois_(11004248426).jpg\">Wikimedia Commons</a> (CC BY-SA 2.0)"
 sources:
   - name: "U.S. Attorney’s Office, Northern District of Illinois"
     title: "Federal Investigation Into Kickback Scheme at Evanston/Skokie School District 65 Results in Two More Guilty Pleas"
