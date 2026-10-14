@@ -6,9 +6,10 @@ date: 2026-09-05T21:49:07Z
 author: henry
 category: "Crime News"
 image:
-  src: "/images/2026/09/buford-laurel-crossing-shooting-card.jpg"
-  alt: "Buford, Georgia case card: One dead, two hospitalized in a triple shooting. Saturday, Sept. 5, 2026: A man was killed and two people were hospitalized at an apartment complex near 1400 Laurel…"
-  credit: "Graphic: Max Crime"
+  src: "/images/2026/10/buford-georgia-main-street.jpg"
+  alt: "Main Street in Buford, Georgia, with a Welcome to Historic Buford sign"
+  caption: "File photo: Main Street in Buford, Georgia, in 2012."
+  credit: "Photo: SudoGhost / <a href=\"https://commons.wikimedia.org/wiki/File:Buford_Georgia_Main_Street.jpg\">Wikimedia Commons</a> (CC BY-SA 3.0)"
 wpId: 45
 ---
 

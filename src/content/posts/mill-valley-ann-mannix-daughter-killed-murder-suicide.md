@@ -7,9 +7,10 @@ author: alex
 category: "Crime News"
 tags: ["California"]
 image:
-  src: "/images/2026/10/mill-valley-mannix-card.jpg"
-  alt: "Case card: Ann Mannix, 65, Katherine Mannix, 24, and Kevin Mannix, 68, were found dead near Mill Valley on Oct. 11, 2026, in a suspected double murder-suicide."
-  credit: "Graphic: Max Crime"
+  src: "/images/2026/10/mill-valley-downtown.jpg"
+  alt: "Shop windows along Miller Avenue in downtown Mill Valley, California"
+  caption: "File photo: Shops in downtown Mill Valley, California, in 2012."
+  credit: "Photo: Frank Schulenburg / <a href=\"https://commons.wikimedia.org/wiki/File:Shops_in_the_Mill_Valley_downtown_area_(2012).jpg\">Wikimedia Commons</a> (CC BY-SA 3.0)"
 sources:
   - name: "CBS News San Francisco"
     title: "Former SFPD deputy chief, sergeant husband, daughter identified in Marin County murder-suicide"

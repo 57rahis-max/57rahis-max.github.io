@@ -7,9 +7,10 @@ updated: 2026-09-06T14:57:44Z
 author: alex
 category: "Crime News"
 image:
-  src: "/images/2026/09/fresno-backyard-shooting-card.jpg"
-  alt: "Fresno, California case card: Three shot at a backyard celebration, including a 2-year-old. Sept. 5, 2026, about 10:15 p.m.: Officers responded to a ShotSpotter alert in the 3100 block of East…"
-  credit: "Graphic: Max Crime"
+  src: "/images/2026/10/downtown-fresno.jpg"
+  alt: "The Fresno County Courthouse, a tall building with a patterned facade, behind a park"
+  caption: "File photo: The Fresno County Courthouse in Fresno, California, in 2007."
+  credit: "Photo: Mfield, Matthew Field / <a href=\"https://commons.wikimedia.org/wiki/File:Fresno_county_courthouse.jpg\">Wikimedia Commons</a> (CC BY-SA 3.0)"
 wpId: 47
 ---
 

@@ -6,9 +6,10 @@ updated: 2026-09-19T17:30:50Z
 author: alex
 category: "Local News"
 image:
-  src: "/images/2026/09/nyc-school-guns-card.jpg"
-  alt: "New York City schools case card: Loaded guns found at schools in Staten Island and Queens. Sept. 14, 2026, Staten Island: School safety agents found a loaded gun in an 18-year-old student's bag at…"
-  credit: "Graphic: Max Crime"
+  src: "/images/2026/10/nypd-car-queens.jpg"
+  alt: "An NYPD patrol car parked outside the Queens County Criminal Court"
+  caption: "File photo: An NYPD patrol car outside the Queens County Criminal Court in 2024."
+  credit: "Photo: Famartin / <a href=\"https://commons.wikimedia.org/wiki/File:2024-06-19_11_14_16_New_York_City_Police_Department_car_at_the_Queens_County_Criminal_Court_in_Queens,_New_York_City,_New_York.jpg\">Wikimedia Commons</a> (CC BY-SA 4.0)"
 wpId: 75
 ---
 

@@ -7,9 +7,10 @@ author: alex
 category: "Crime News"
 tags: ["Pennsylvania", "police"]
 image:
-  src: "/images/2026/10/philadelphia-officer-seiber-card.jpg"
-  alt: "Case card: Officer Shane Seiber, 40, was killed and his partner wounded on Oct. 10, 2026, in West Philadelphia; Eric Lewis, 35, is charged with murder. The allegations have not been proven in court."
-  credit: "Graphic: Max Crime"
+  src: "/images/2026/10/walnut-street-west-philadelphia.jpg"
+  alt: "Walnut Street lined with rowhouses and trees in West Philadelphia"
+  caption: "File photo: Walnut Street just west of 52nd Street in West Philadelphia in 2022."
+  credit: "Photo: Famartin / <a href=\"https://commons.wikimedia.org/wiki/File:2022-10-24_09_54_39_View_west_along_Pennsylvania_State_Route_3_(Walnut_Street)_just_west_of_52nd_Street_in_Philadelphia,_Pennsylvania.jpg\">Wikimedia Commons</a> (CC BY-SA 4.0)"
 sources:
   - name: "CBS News Philadelphia"
     title: "Gunman charged after 1 Philadelphia police officer killed, another wounded in shooting"

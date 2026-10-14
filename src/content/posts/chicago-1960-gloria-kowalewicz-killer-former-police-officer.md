@@ -7,9 +7,10 @@ author: henry
 category: "Crime News"
 tags: ["Illinois", "cold case"]
 image:
-  src: "/images/2026/10/gloria-kowalewicz-cold-case-card.jpg"
-  alt: "Case card: Chicago police say former officer Thomas F. McInerney Jr., who died in 2006, killed 8-year-old Gloria Kowalewicz in 1960; DNA and a fingerprint led to him."
-  credit: "Graphic: Max Crime"
+  src: "/images/2026/10/chicago-police-vehicle.jpg"
+  alt: "A white Chicago Police Department truck on a downtown street"
+  caption: "File photo: A Chicago Police Department vehicle in 2024."
+  credit: "Photo: Kyah117 / <a href=\"https://commons.wikimedia.org/wiki/File:Chicago_Police,_Ford_Super_Duty_(2024).jpg\">Wikimedia Commons</a> (CC BY 4.0)"
 sources:
   - name: "NBC News"
     title: "Chicago police find killer in 65-year-old cold case murder of little girl — one of their own"

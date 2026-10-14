@@ -7,9 +7,10 @@ author: alex
 category: "Crime News"
 tags: ["New York", "police"]
 image:
-  src: "/images/2026/10/nypd-detective-mercedes-card.jpg"
-  alt: "Case card: two men accused of stabbing off-duty NYPD Detective Jose Mercedes on Oct. 2, 2026, were arrested in Lynn, Massachusetts, on Oct. 7, 2026."
-  credit: "Graphic: Max Crime"
+  src: "/images/2026/10/downtown-lynn-massachusetts.jpg"
+  alt: "A view over the rooftops of downtown Lynn, Massachusetts, toward the sea"
+  caption: "File photo: Downtown Lynn, Massachusetts, in 2021."
+  credit: "Photo: Terageorge / <a href=\"https://commons.wikimedia.org/wiki/File:Downtown_Lynn,_MA_(May_2021).jpg\">Wikimedia Commons</a> (CC BY-SA 4.0)"
 sources:
   - name: "amNewYork"
     title: "Duo wanted for stabbing off-duty NYPD detective in Bronx are caught hiding in Massachusetts basement"

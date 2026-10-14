@@ -7,9 +7,10 @@ author: alex
 category: "Crime News"
 tags: ["death penalty", "military", "Texas"]
 image:
-  src: "/images/2026/10/nidal-hasan-execution-card.jpg"
-  alt: "Case card: Nidal Hasan, convicted of killing 13 at Fort Hood in 2009, is scheduled to be executed by firing squad on Dec. 3, 2026; a plan to livestream it has drawn pushback."
-  credit: "Graphic: Max Crime"
+  src: "/images/2026/10/old-usdb-fort-leavenworth.jpg"
+  alt: "The old United States Disciplinary Barracks building, a cream stone structure, at Fort Leavenworth, Kansas"
+  caption: "File photo: The old United States Disciplinary Barracks building at Fort Leavenworth, Kansas."
+  credit: "Photo: Makuakane / <a href=\"https://commons.wikimedia.org/wiki/File:Old_United_States_Disciplinary_Barracks_(USDB),_Fort_Leavenworth,_Kansas.JPG\">Wikimedia Commons</a> (CC BY-SA 3.0)"
 sources:
   - name: "CBS News"
     title: "Republican concerns mount over livestreaming Fort Hood shooter's execution"

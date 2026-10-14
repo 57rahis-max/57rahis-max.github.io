@@ -7,9 +7,10 @@ updated: 2026-09-19T20:48:39Z
 author: henry
 category: "Crime News"
 image:
-  src: "/images/2026/09/ewa-beach-boy-12-gun-case-card.jpg"
-  alt: "Ewa Beach, Hawaii case card: Boy, 12, charged after police say he pulled a gun on a girl. Sept. 17, 2026, about 7:40 a.m.: Police say he brandished a gun at a 13-year-old girl near a business on…"
-  credit: "Graphic: Max Crime"
+  src: "/images/2026/10/ewa-beach-hawaii.jpg"
+  alt: "A coastal road and trees along the shore at Ewa Beach on Oahu, Hawaii"
+  caption: "File photo: Ewa Beach on Oahu, Hawaii, in 2016."
+  credit: "Photo: Thomas Woodtli / <a href=\"https://commons.wikimedia.org/wiki/File:Ewa_Beach,_Hawaii_(27734893651).jpg\">Wikimedia Commons</a> (CC BY-SA 2.0)"
 wpId: 86
 ---
 

@@ -7,9 +7,10 @@ author: henry
 category: "Crime News"
 tags: ["Georgia"]
 image:
-  src: "/images/2026/10/douglas-georgia-shooting-card.jpg"
-  alt: "Case card: five adult family members died in an apparent murder-suicide at a home in Douglas, Georgia, on Oct. 9, 2026; police have not released their names."
-  credit: "Graphic: Max Crime"
+  src: "/images/2026/10/downtown-douglas-georgia.jpg"
+  alt: "Two-story brick and painted storefronts at a corner in downtown Douglas, Georgia"
+  caption: "File photo: Buildings in the Downtown Douglas Historic District in Douglas, Georgia, in 2016."
+  credit: "Photo: Bubba73 / <a href=\"https://commons.wikimedia.org/wiki/File:Downtown_Douglas_Historic_District_(52).jpg\">Wikimedia Commons</a> (CC BY-SA 3.0)"
 sources:
   - name: "The Associated Press via ABC News"
     title: "4 family members and shooter dead in rural Georgia shooting"

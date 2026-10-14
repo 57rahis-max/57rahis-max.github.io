@@ -6,9 +6,10 @@ updated: 2026-09-06T14:36:40Z
 author: henry
 category: "Crime News"
 image:
-  src: "/images/2026/09/chicago-two-teens-shot-card.jpg"
-  alt: "Chicago case card: Two teenage boys wounded in separate shootings. Sept. 5, 2026, about 8:07 p.m.: A 15-year-old was shot in the 6800 block of South Dorchester Avenue, police said. About 11:09…"
-  credit: "Graphic: Max Crime"
+  src: "/images/2026/10/chicago-police-car.jpg"
+  alt: "A white Chicago Police squad car with blue stripes driving on a city street"
+  caption: "File photo: A Chicago Police Department squad car in 2008."
+  credit: "Photo: Daniel Schwen / <a href=\"https://commons.wikimedia.org/wiki/File:Chicago_police_pan.jpg\">Wikimedia Commons</a> (CC BY-SA 4.0)"
 wpId: 50
 ---
 

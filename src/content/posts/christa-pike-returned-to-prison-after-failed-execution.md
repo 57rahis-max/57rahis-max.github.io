@@ -7,9 +7,10 @@ author: alex
 category: "Crime News"
 tags: ["Tennessee", "death penalty"]
 image:
-  src: "/images/2026/10/christa-pike-back-in-prison-card.jpg"
-  alt: "Case card: Christa Pike, who survived Tennessee’s Sept. 30, 2026, execution attempt, is back at the Deborah K. Johnson Rehabilitation Center, her lawyers said Oct. 10, 2026."
-  credit: "Graphic: Max Crime"
+  src: "/images/2026/10/tennessee-state-capitol.jpg"
+  alt: "The Tennessee State Capitol, a columned stone building with a tower, in Nashville"
+  caption: "File photo: The Tennessee State Capitol in Nashville in 2009."
+  credit: "Photo: euthman / <a href=\"https://commons.wikimedia.org/wiki/File:Tennessee_state_capitol_2009.jpg\">Wikimedia Commons</a> (CC BY-SA 2.0)"
 sources:
   - name: "Scripps News"
     title: "Christa Pike back in Tennessee prison after surviving lethal injection"

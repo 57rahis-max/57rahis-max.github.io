@@ -7,9 +7,10 @@ author: alex
 category: "Crime News"
 tags: ["Rhode Island"]
 image:
-  src: "/images/2026/10/providence-bus-stop-stabbing-card.jpg"
-  alt: "Case card: a 2-year-old girl and her mother were stabbed at a Providence bus stop on Oct. 7, 2026; Nelson Blanco, 46, is charged. The allegations have not been proven in court."
-  credit: "Graphic: Max Crime"
+  src: "/images/2026/10/downtown-providence.jpg"
+  alt: "Downtown Providence, Rhode Island, with office towers above the river"
+  caption: "File photo: Downtown Providence, Rhode Island, in 2008."
+  credit: "Photo: Kenneth C. Zirkel / <a href=\"https://commons.wikimedia.org/wiki/File:Downtown_Providence_Rhode_Island_2008.jpg\">Wikimedia Commons</a> (CC BY-SA 4.0)"
 sources:
   - name: "NBC Boston"
     title: "New details on Providence stabbing involving mother and 2-year-old"

@@ -7,9 +7,10 @@ author: henry
 category: "Crime News"
 tags: ["Venezuela", "money laundering", "Florida"]
 image:
-  src: "/images/2026/10/alvaro-pulido-custody-card.jpg"
-  alt: "Case card: Alvaro Pulido, indicted in Miami in 2019 and 2021, was taken into U.S. custody, officials said Oct. 11, 2026. The allegations have not been proven in court."
-  credit: "Graphic: Max Crime"
+  src: "/images/2026/10/ferguson-courthouse-miami.jpg"
+  alt: "The Wilkie D. Ferguson Jr. United States Courthouse in Miami, seen across a lawn with palm trees"
+  caption: "File photo: The Wilkie D. Ferguson Jr. United States Courthouse, the federal courthouse in Miami."
+  credit: "Photo: Carol M. Highsmith / <a href=\"https://commons.wikimedia.org/wiki/File:Environmental_art_%22Flutter%22_at_the_NE_and_SE_lawn_quadrants_of_the_Wilkie_D._Ferguson,_Jr.,_U.S._Courthouse,_Miami,_Florida_LCCN2010720278.tif\">Wikimedia Commons</a> (public domain)"
 sources:
   - name: "The Associated Press via ABC News"
     title: "Fugitive businessman taken into US custody in Venezuela bribery case"

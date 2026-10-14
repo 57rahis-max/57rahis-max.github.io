@@ -7,9 +7,10 @@ updated: 2026-09-19T20:01:17Z
 author: henry
 category: "Crime News"
 image:
-  src: "/images/2026/09/glenville-magin-sentence-card.jpg"
-  alt: "Case summary: Gregory Magin, 46, of Glenville pleaded guilty on March 2, 2026, and was sentenced on August 4, 2026, to 20 years in federal prison and 15 years of supervised release."
-  credit: "Graphic: Max Crime"
+  src: "/images/2026/10/foley-courthouse-albany.jpg"
+  alt: "The James T. Foley U.S. Post Office and Courthouse, a white stone building in Albany, New York"
+  caption: "File photo: The James T. Foley U.S. Post Office and Courthouse, the federal courthouse in Albany, New York."
+  credit: "Photo: Carol M. Highsmith / <a href=\"https://commons.wikimedia.org/wiki/File:Exterior,_James_T._Foley_U.S._Post_Office_and_Courthouse,_Albany,_New_York_LCCN2010718852.tif\">Wikimedia Commons</a> (public domain)"
 wpId: 83
 ---
 

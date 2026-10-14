@@ -7,9 +7,10 @@ updated: 2026-09-05T16:33:57Z
 author: alex
 category: "Crime News"
 image:
-  src: "/images/2026/09/dover-cava-shooting-card.jpg"
-  alt: "Dover, Delaware case card: Foster Trader, 18, killed in a shooting outside a CAVA restaurant. About 9:47 p.m., Friday: Officers were called to reports of gunfire at CAVA, 1037 North DuPont Highway…"
-  credit: "Graphic: Max Crime"
+  src: "/images/2026/10/loockerman-street-dover.jpg"
+  alt: "Brick storefronts and parked cars along Loockerman Street in downtown Dover, Delaware"
+  caption: "File photo: Loockerman Street in downtown Dover, Delaware, in 2025."
+  credit: "Photo: w_lemay / <a href=\"https://commons.wikimedia.org/wiki/File:Loockerman_Street,_Dover,_DE_-_54435252564.jpg\">Wikimedia Commons</a> (CC BY-SA 2.0)"
 wpId: 21
 ---
 

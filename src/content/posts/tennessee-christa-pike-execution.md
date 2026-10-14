@@ -6,9 +6,10 @@ date: 2026-09-29T22:29:03Z
 author: henry
 category: "Crime News"
 image:
-  src: "/images/2026/09/christa-pike-execution-date-card.jpg"
-  alt: "Tennessee case card: Christa Pike's execution is set for Sept. 30, 2026. Sept. 23, 2026: Tennessee Supreme Court decision that Pike's lawyers asked the U.S. Supreme Court to review. Sept. 28, 2026…"
-  credit: "Graphic: Max Crime"
+  src: "/images/2026/10/tennessee-state-capitol.jpg"
+  alt: "The Tennessee State Capitol, a columned stone building with a tower, in Nashville"
+  caption: "File photo: The Tennessee State Capitol in Nashville in 2009."
+  credit: "Photo: euthman / <a href=\"https://commons.wikimedia.org/wiki/File:Tennessee_state_capitol_2009.jpg\">Wikimedia Commons</a> (CC BY-SA 2.0)"
 wpId: 121
 ---
 

@@ -5,9 +5,10 @@ date: 2026-09-04T22:35:53Z
 author: henry
 category: "NY Post Killed"
 image:
-  src: "/images/2026/09/bushwick-grattan-street-assault-card.jpg"
-  alt: "Bushwick, Brooklyn case card: Man, 42, dies after an assault outside his Grattan Street building. Sept. 4, 2026, about 3:40 a.m.: Florencio Ramos Martinez argued with another man outside 152…"
-  credit: "Graphic: Max Crime"
+  src: "/images/2026/10/bushwick-brooklyn.jpg"
+  alt: "The tiled platform of the Bushwick Avenue–Aberdeen Street subway station in Brooklyn"
+  caption: "File photo: The Bushwick Avenue–Aberdeen Street subway station in Bushwick, Brooklyn."
+  credit: "Photo: JL Wong / <a href=\"https://commons.wikimedia.org/wiki/File:Bushwick_Aberdeen_vc.jpg\">Wikimedia Commons</a> (CC BY 2.0)"
 wpId: 17
 ---
 

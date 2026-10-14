@@ -7,9 +7,10 @@ updated: 2026-09-12T23:21:53Z
 author: henry
 category: "News"
 image:
-  src: "/images/2026/09/alien-terrorist-removal-court-case-card.jpg"
-  alt: "Alien Terrorist Removal Court case card: The court's first case ends in deportation. July 15, 2026: The Justice Department asks the court to deport Nazira Haji Zada. Aug. 20, 2026: She agrees to be…"
-  credit: "Graphic: Max Crime"
+  src: "/images/2026/10/prettyman-courthouse-washington.jpg"
+  alt: "The entrance of the E. Barrett Prettyman United States Courthouse in Washington, D.C."
+  caption: "File photo: The E. Barrett Prettyman United States Courthouse in Washington, D.C., in July 2026."
+  credit: "Photo: G. Edward Johnson / <a href=\"https://commons.wikimedia.org/wiki/File:E_Barrett_Prettyman_court_house_front_Washington_DC_2026-07-31_11-10-38.jpg\">Wikimedia Commons</a> (CC BY 4.0)"
 wpId: 63
 ---
 

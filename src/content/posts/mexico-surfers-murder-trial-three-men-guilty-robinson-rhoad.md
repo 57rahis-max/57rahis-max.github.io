@@ -7,9 +7,10 @@ author: henry
 category: "Crime News"
 tags: ["Mexico"]
 image:
-  src: "/images/2026/10/baja-surfers-verdict-card.jpg"
-  alt: "Case card: three men were found guilty on Oct. 9, 2026, of killing Callum and Jake Robinson and Jack Carter Rhoad in Baja California in 2024; sentences are due Oct. 16, 2026."
-  credit: "Graphic: Max Crime"
+  src: "/images/2026/10/ensenada-malecon.jpg"
+  alt: "The seafront promenade in Ensenada, Baja California, with cranes at the port beyond"
+  caption: "File photo: The malecón, or seafront promenade, in Ensenada, Baja California, in 2011."
+  credit: "Photo: Isaacmoon / <a href=\"https://commons.wikimedia.org/wiki/File:Malec%C3%B3n_en_Ensenada,_Baja_California.JPG\">Wikimedia Commons</a> (CC BY-SA 3.0)"
 sources:
   - name: "Reuters via The Star"
     title: "Mexican court finds three men guilty of 2024 killing of Australian, US surfers"

@@ -7,9 +7,10 @@ author: henry
 category: "Crime News"
 tags: ["Minnesota", "schools"]
 image:
-  src: "/images/2026/10/eden-prairie-homecoming-shooting-card.jpg"
-  alt: "Case card: Adam Abdihakeem Adam, 18, charged in the Oct. 2, 2026, Eden Prairie homecoming shooting, posted a $100,000 bond on Oct. 10, 2026."
-  credit: "Graphic: Max Crime"
+  src: "/images/2026/10/eden-prairie-minnesota.jpg"
+  alt: "A new light rail station and tracks in Eden Prairie, Minnesota"
+  caption: "File photo: The Eden Prairie Town Center light rail station in Eden Prairie, Minnesota, in 2024."
+  credit: "Photo: Eóin / <a href=\"https://commons.wikimedia.org/wiki/File:Eden_Prairie_Town_Center_station.jpg\">Wikimedia Commons</a> (CC BY 4.0)"
 sources:
   - name: "FOX 9 Minneapolis-St. Paul"
     title: "Eden Prairie Homecoming shooting suspect released on bond ahead of Monday court appearance"

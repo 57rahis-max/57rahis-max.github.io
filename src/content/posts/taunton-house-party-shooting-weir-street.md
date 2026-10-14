@@ -7,9 +7,10 @@ updated: 2026-09-06T22:11:00Z
 author: henry
 category: "Crime & Tragedy"
 image:
-  src: "/images/2026/09/taunton-weir-street-shooting-card.jpg"
-  alt: "Taunton, Massachusetts case card: One dead, seven injured in a shooting at a house party. Sept. 6, 2026, about 12:30 a.m.: Several 911 calls reported shots fired near Weir and Sumner streets…"
-  credit: "Graphic: Max Crime"
+  src: "/images/2026/10/taunton-green.jpg"
+  alt: "A fountain and trees on Taunton Green in Taunton, Massachusetts"
+  caption: "File photo: Taunton Green in Taunton, Massachusetts, in 2017."
+  credit: "Photo: Daderot / <a href=\"https://commons.wikimedia.org/wiki/File:Taunton_Green_-_Taunton,_Massachusetts_-_DSC01848.jpg\">Wikimedia Commons</a> (CC0)"
 wpId: 57
 ---
 

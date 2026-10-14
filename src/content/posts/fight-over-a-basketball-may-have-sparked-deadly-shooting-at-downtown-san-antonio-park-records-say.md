@@ -6,9 +6,10 @@ date: 2026-09-04T21:13:41Z
 author: alex
 category: "Crime News"
 image:
-  src: "/images/2026/09/san-antonio-hemisfair-shooting-card.jpg"
-  alt: "San Antonio, Texas case card: Basketball dispute preceded the fatal Hemisfair shooting, records say. Aug. 30, 2026, before 5 a.m.: Jonathan Alderete, 35, was shot in the 600 block of Hemisfair…"
-  credit: "Graphic: Max Crime"
+  src: "/images/2026/10/downtown-san-antonio.jpg"
+  alt: "Downtown San Antonio lit up at dusk, with the Tower of the Americas in the distance"
+  caption: "File photo: Downtown San Antonio at dusk in 2012."
+  credit: "Photo: Katie Haugland Bowen / <a href=\"https://commons.wikimedia.org/wiki/File:San_antonio_blue_hour.jpg\">Wikimedia Commons</a> (CC BY 2.0)"
 wpId: 10
 ---
 
