@@ -12,7 +12,7 @@
  */
 import { getEntry } from 'astro:content';
 import { allPosts, lastTouched, sortedUpdates, type Post } from './posts';
-import { SITE, postUrl, fmtDateTime } from './site';
+import { SITE, postUrl, fmtDateTime, categoryUrl } from './site';
 import { sanitizeCredit, sanitizeUpdate } from './html';
 
 const abs = (p: string) => new URL(p, SITE.url).href;
@@ -43,8 +43,11 @@ function articleHtml(p: Post): string {
   return parts.join('\n');
 }
 
-export async function feedXml(): Promise<string> {
-  const posts = (await allPosts()).slice(0, 50);
+/** The whole site, or one category's stories (WordPress's /category/<slug>/feed/). */
+export async function feedXml(category?: { name: string; slug: string }): Promise<string> {
+  const posts = (await allPosts()).filter((p) => !category || p.data.category === category.name).slice(0, 50);
+  const home = category ? abs(categoryUrl(category.name)) : `${SITE.url}/`;
+  const self = category ? `${home}feed/` : `${SITE.url}/feed/`;
   const names = new Map<string, string>();
   for (const p of posts) if (!names.has(p.data.author.id)) names.set(p.data.author.id, (await getEntry(p.data.author))?.data.name ?? SITE.name);
   const newest = posts.length ? new Date(Math.max(...posts.map((p) => lastTouched(p).getTime()))) : new Date();
@@ -65,12 +68,12 @@ export async function feedXml(): Promise<string> {
   return `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:nb="https://www.newsbreak.com/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:media="http://search.yahoo.com/mrss/" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>${esc(SITE.name)}</title>
-    <link>${SITE.url}/</link>
+    <title>${esc(category ? `${SITE.name}: ${category.name}` : SITE.name)}</title>
+    <link>${home}</link>
     <description>${esc(SITE.description)}</description>
     <language>en-us</language>
     <lastBuildDate>${newest.toUTCString()}</lastBuildDate>
-    <atom:link href="${SITE.url}/feed/" rel="self" type="application/rss+xml"/>
+    <atom:link href="${self}" rel="self" type="application/rss+xml"/>
     <image><url>${abs('/logo.png')}</url><title>${esc(SITE.name)}</title><link>${SITE.url}/</link></image>
 ${items.join('\n')}
   </channel>
@@ -80,3 +83,6 @@ ${items.join('\n')}
 
 export const feedResponse = async () =>
   new Response(await feedXml(), { headers: { 'Content-Type': 'application/rss+xml; charset=utf-8' } });
+
+export const categoryFeedResponse = async (category: { name: string; slug: string }) =>
+  new Response(await feedXml(category), { headers: { 'Content-Type': 'application/rss+xml; charset=utf-8' } });

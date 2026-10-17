@@ -6,6 +6,9 @@ import { readFileSync } from 'node:fs';
 const xml = readFileSync('dist/feed/index.xml', 'utf8');
 const problems = [];
 if (xml !== readFileSync('dist/rss.xml', 'utf8')) problems.push('/rss.xml differs from /feed/');
+// The WordPress feed addresses a partner may still hold serve the same feed.
+for (const v of ['rss2', 'rss', 'atom', 'rdf'])
+  if (xml !== readFileSync(`dist/feed/${v}/index.xml`, 'utf8')) problems.push(`/feed/${v}/ differs from /feed/`);
 for (const ns of ['xmlns:nb="https://www.newsbreak.com/"', 'xmlns:dc="http://purl.org/dc/elements/1.1/"', 'xmlns:content="http://purl.org/rss/1.0/modules/content/"'])
   if (!xml.includes(ns)) problems.push(`missing namespace ${ns}`);
 const items = [...xml.matchAll(/<item>([\s\S]*?)<\/item>/g)].map((m) => m[1]);
