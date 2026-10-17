@@ -13,6 +13,7 @@ const INDEX = 'sitemap-index.xml';
 const index = read(INDEX);
 for (const alias of ['sitemap.xml', 'sitemap_index.xml', 'wp-sitemap.xml', 'sitemap-0.xml'])
   if (read(alias) !== index) problems.push(`/${alias} is not the sitemap index`);
+if (read('sitemap-news.xml') !== read('news-sitemap.xml')) problems.push('/sitemap-news.xml is not the news sitemap');
 
 const children = [...index.matchAll(/<sitemap><loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
 if (!children.length) problems.push('the sitemap index lists no sitemaps');
