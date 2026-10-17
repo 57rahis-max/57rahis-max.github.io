@@ -46,7 +46,7 @@ export async function pageSitemap() {
   return xml(urlset([
     { loc: abs('/'), lastmod: newest(posts) },
     { loc: abs('/live/'), lastmod: newest(live) },
-    { loc: abs('/about/') },
+    { loc: abs('/about-us/') },
     { loc: abs('/editorial-standards/') },
     { loc: abs('/corrections/') },
     { loc: abs('/contact/') },

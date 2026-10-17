@@ -38,13 +38,13 @@ for (const loc of children) {
   }
 }
 
-// Every built page except search and 404 must be in a sitemap, and nothing else.
+// Every built page except search, 404 and redirects must be in a sitemap, and nothing else.
 const pages = [];
 (function walk(dir) {
   for (const f of readdirSync(dir)) {
     const p = join(dir, f);
     if (statSync(p).isDirectory()) walk(p);
-    else if (f === 'index.html') pages.push(SITE + '/' + p.slice('dist/'.length, -'index.html'.length));
+    else if (f === 'index.html' && !/http-equiv="refresh"/.test(readFileSync(p, 'utf8'))) pages.push(SITE + '/' + p.slice('dist/'.length, -'index.html'.length));
   }
 })('dist');
 for (const url of pages) {
